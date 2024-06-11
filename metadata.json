@@ -1,0 +1,9 @@
+{
+    "image": "image.png",
+    "name": "Spotify Music!",
+    "author": "Diramix",
+    "description": "Green",
+    "version": "Spotify Free",
+    "css": "style.css",
+    "script": "script.js"
+}
