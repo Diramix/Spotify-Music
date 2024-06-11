@@ -1,4 +1,4 @@
-# Spotify-Music
+# Spotify Music! Developer Preview
 
 Тема "Spotify Music!" для приложения "Яндекс Музыка Beta"
 
