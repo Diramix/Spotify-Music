@@ -26,7 +26,7 @@ body {
     content: url("https://images.squarespace-cdn.com/content/v1/6067cfe95c8d140d4fbcc96d/1618020246019-JKMOH8ZATRDD7HIB59DJ/SPOTIFY+LOGO+new+copy.png?format=100w");
 }
 
-.ControlsBar_likeIcon__mrNiz{
+.TrackPlaylist_controlsBarCell__6clda {
     display: none;
 }
 
@@ -193,10 +193,6 @@ section.PlayerBar_root__cXUnU {
     display: none;
 }
 
-VibeBlock_settingsButton__GeMtO {
-    scale: 0.9;
-}
-
 [data-testid="MY_VIBE_PLAY_BUTTON_PLAYING"] {
     scale: 0.9;
 }
@@ -207,13 +203,14 @@ VibeBlock_settingsButton__GeMtO {
 
 .SearchPlaylistInput_root__o14iM {
     position: fixed;
-    width: 26%;
-    left: -16px;
+    width: -webkit-fill-available;
+    left: 0.5%;
+    right: 73.5%;
     top: 80px;
 }
 
 .BlockHeader_start__ZrGP5 {
-    margin-block-start: 10px;
+    margin-block-start: 1vw;
 }
 
 .NewReleases_item__Gv0iR {
@@ -268,6 +265,10 @@ VibeBlock_settingsButton__GeMtO {
     width: 100%;
     height: 50px;
     background: #262626;
+}
+
+.CompositeHeader_stickyChild_scrolling__wm9_D {
+    width: -webkit-fill-available;
 }
 
 .NewReleaseCard_type__1LjSl  {
@@ -352,6 +353,7 @@ VibeBlock_settingsButton__GeMtO {
     overflow: hidden;
     width: 26%;
     margin-right: 74%;
+    margin-left: 0.5%;
     height: -webkit-fill-available;
     margin-bottom: 14%;
     min-height: 0px;
@@ -374,11 +376,6 @@ VibeBlock_settingsButton__GeMtO {
 
 .TrackChart_chartCell__33_al {
     width: 5px;
-}
-
-. {
-    position: fixed;
-    width: 1000px;
 }
 
 .TracksBlock_root__wVX7U {
@@ -421,6 +418,10 @@ VibeBlock_settingsButton__GeMtO {
     width: -webkit-fill-available;
 }
 
+.DefaultLayout_root_applicationPreserveTitleBar__ygJtq {
+    background: #000000;
+}
+
 .VibeButton_image__TsHnH {
     display: none;
 }
@@ -449,10 +450,6 @@ VibeBlock_settingsButton__GeMtO {
     display: none;
 }
 
-.InnerHeader_root_showColor__wMtVK {
-    z-index: 0;
-}
-
 .FullscreenPlayerDesktop_likeButton__sv1hI {
     position: fixed;
     left: 60px;
@@ -469,10 +466,6 @@ VibeBlock_settingsButton__GeMtO {
     background-color: #92434300;
 }
 
-.FullscreenPlayerDesktop_root___8vo1.FullscreenPlayerDesktop_important__dGfiL {
-    --max-track-card-size: 80vw;
-}
-
 .FullscreenPlayerDesktop_content__bl_7V {
     display: flex;
     justify-content: flex-start;
@@ -483,7 +476,7 @@ VibeBlock_settingsButton__GeMtO {
     height: 250px;
     position: absolute;
     bottom: 150px;
-    left: 30px;
+    left: 25px;
     border-radius: 6px;
     min-height: 0;
 }
@@ -500,7 +493,7 @@ VibeBlock_settingsButton__GeMtO {
 
 .FullscreenPlayerDesktop_trackInfo__Px1Ta {
     position: absolute;
-    left: 10%;
+    left: 100px;
     bottom: 140px;
     display: flex;
     justify-content: flex-start;
@@ -550,10 +543,6 @@ VibeBlock_settingsButton__GeMtO {
     text-align: justify;
 }
 
-.TrackPlaylist_controlsBarCell__6clda {
-    display: none;
-}
-
 .BlockHeader_coverContainer__lATZT {
     display: none;
 }
@@ -592,4 +581,20 @@ VibeBlock_settingsButton__GeMtO {
 
 .FullscreenPlayerDesktop_closeButton__MQ64s {
     opacity: 0.5;
+}
+
+[id="familiar"] {
+    position: fixed;
+    width: 26%;
+    left: 0px;
+    top: 55px;
+}
+
+.ArtistPage_releaseBlock__wzo2G {
+    display: fixed;
+    left: 0px;
+}
+
+.PageHeaderAlbum_playControl__fFyS9 {
+    background: #1ED760;
 }
