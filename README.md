@@ -1,8 +1,10 @@
 # Spotify Music! Developer Preview
 
-Мой Discord сервер: https://discord.gg/ky6bcdy7KA
+ᓚᘏᗢ котик ждёт твоей монетки(
+https://www.donationalerts.com/r/diramix
 
-Donations Alerts: https://www.donationalerts.com/r/diramix
+А это Discord сервер
+https://discord.gg/ky6bcdy7KA
 
 Тема "Spotify Music!" для приложения "Яндекс Музыка Beta"
 
