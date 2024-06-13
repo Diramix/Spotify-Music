@@ -2,8 +2,8 @@
     "image": "image.png",
     "name": "Spotify Music!",
     "author": "Diramix",
-    "description": "Green",
-    "version": "Spotify Free",
+    "description": "Spotify Free",
+    "version": "Developer Preview 3",
     "css": "style.css",
     "script": "script.js"
 }
