@@ -57,6 +57,12 @@ body {
     content: url("https://images.squarespace-cdn.com/content/v1/6067cfe95c8d140d4fbcc96d/1618020246019-JKMOH8ZATRDD7HIB59DJ/SPOTIFY+LOGO+new+copy.png?format=100w");
 }
 
+/*Стрелочки над плейлистами свверху*/
+.MixedEntitiesBlock_controls__mOhq7,
+.TracksBlock_controls__nzIRh {
+    flex-direction: column;
+}
+
 /*Плеер*/
 .PlayerBar_root__cXUnU {
     height: 90px;
@@ -68,7 +74,7 @@ body {
     border-radius: 0px 0px 0px 0px;
     grid-area: content;
     position: fixed;
-    left: 5px;
+    left: 0px;
     bottom: 0px;
     --player-cover-width: 60px;
     --player-cover-height: 60px;
@@ -96,6 +102,7 @@ body {
 
 /*Замена ненужной надписи*/
 .YMDRPC {
+    display: none;
     visibility: hidden;
     position: relative;
 }
@@ -130,11 +137,12 @@ body {
 }
 
 /*Поиск*/
-.SearchPage_header__BOkdn {
-    top: -15px;
+.SearchPage_input__TSbxK {
+    position: fixed;
+    top: 11.5px;
     left: 30%;
     width: 40%;
-    position: fixed;
+    z-index: 2;
 }
 
 /*История поиска*/
@@ -144,6 +152,11 @@ body {
     left: 0.5%;
     right: 73.5%;
     top: 80px;
+}
+
+/*Страница поиска*/
+.SearchPage_tabCarousel__9cWOl {
+    left: 10px;
 }
 
 /*Кнопки сверху на главной*/
@@ -224,6 +237,17 @@ body {
     width: 50px;
 }
 
+/*Кнопка Сбросить*/
+.Rkdd2vKC_3xa1eUdRdHP {
+    display: clip;
+}
+
+/*3 Точки*/
+.ControlsBar_contextMenuWrapper__NHkn_ {
+    position: fixed;
+    margin-right: 2.2%;
+}
+
 /*Кнопки фуллскрина*/
 .SonataFullscreenControlsDesktop_root__l4a2W {
     position: absolute;
@@ -234,14 +258,14 @@ body {
 /*Вайб блок*/
 .VibeBlock_root__z7LtR {
     position: fixed;
-    margin-top: 22%;
+    margin-top: 23vw;
     border-radius: 10px 10px 10px 10px;
     overflow: hidden;
     width: 26%;
     margin-right: 74%;
     margin-left: 0.5%;
     height: -webkit-fill-available;
-    margin-bottom: 14%;
+    margin-bottom: 14vw;
     min-height: 0px;
 }
 
@@ -422,6 +446,8 @@ section.PlayerBar_root__cXUnU,
 .TrackChart_controlsBarCell__Xd5pn,
 .Footer_root__ugyur,
 .CollectionPage_description__A3dny,
+.NewReleaseCard_explicitMark__juwvu,
+.sqs620_Fxut2ZNH0Nzce,
 .mdbxU6IWInQTsVjwnapn,
 .VibeButton_image__TsHnH,
 .Meta_explicitMark__ocnCV,
@@ -432,22 +458,24 @@ section.PlayerBar_root__cXUnU,
 .NavbarDesktop_user__dzbuH,
 .BlockHeader_description__hAk9D,
 .Pin_meta__MzX_7,
-.TrackPlaylist_controlsBarCell__6clda,
 .ZrkG6gNYcr4h3hfkhyT1,
 .Tab_image__Hen3_,
 .Tab_subtitle__fLp9S,
 .NewRelease_artistCaption__1F8A9,
 .bBh7lvgdfF7bqNqlK78Q,
 .VibeAnimation_root_visible__S7kXl,
+.ControlsBar_explicitMark__w9l80,
 .NewRelease_fade__rVE0_,
 .MixedEntitiesListItem_buttonArrow__Emsn1,
 .ControlsBar_duration__RawSk,
-.MixedEntitiesListItem_controlsBarCell__J78Qc {
+.MixedEntitiesListItem_controlsBarCell__J78Qc,
+.NewRelease_artists__wGTaP,
+.ControlsBar_likeIcon__mrNiz,
+.ControlsBar_dislikeIcon__ENXh_ {
     display: none;
 }
 
 /*Другое*/
-
 ._MWOVuZRvUQdXKTMcOPx {
     opacity: 1;
 }
