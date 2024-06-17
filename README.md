@@ -1,4 +1,4 @@
-![1](https://github.com/Diramix/Spotify-Music/assets/79011730/c2011202-ee67-47a2-9237-de1b4663f3ee)# Spotify Music! Developer Preview
+# Spotify Music! Developer Preview
 
 ᓚᘏᗢ котик ждёт твоей монетки(
 https://www.donationalerts.com/r/diramix
