@@ -8,6 +8,7 @@
 ![8](https://github.com/Diramix/Spotify-Music/assets/79011730/7d972431-93c0-45da-b403-39a77f52b702)
 # Spotify Music! Developer Preview
 
+### DA, DS и Boosty:
 ᓚᘏᗢ котик ждёт твоей монетки(
 https://www.donationalerts.com/r/diramix
 
@@ -17,9 +18,11 @@ https://boosty.to/diramix
 А это Discord сервер
 https://discord.gg/ky6bcdy7KA
 
+### База:
+
 Тема "Spotify Music!" для приложения "Яндекс Музыка Beta"
 
-Как установить!?!?!?!?!?
+### Как установить!?!?!?!?!?
 
 1. Сначала вам нужно скачать мод: https://github.com/PulseSync-Official/YMusic-DRPC.
    
