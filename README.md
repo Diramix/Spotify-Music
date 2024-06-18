@@ -11,6 +11,9 @@
 ᓚᘏᗢ котик ждёт твоей монетки(
 https://www.donationalerts.com/r/diramix
 
+Boosty
+https://boosty.to/diramix
+
 А это Discord сервер
 https://discord.gg/ky6bcdy7KA
 
