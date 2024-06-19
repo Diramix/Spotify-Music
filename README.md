@@ -6,7 +6,7 @@
 ![6](https://github.com/Diramix/Spotify-Music/assets/79011730/6f3236be-bbed-4537-b4f5-c573899259eb)
 ![7](https://github.com/Diramix/Spotify-Music/assets/79011730/6da2b2f6-3155-4e21-b745-a13e1391e7c1)
 ![8](https://github.com/Diramix/Spotify-Music/assets/79011730/7d972431-93c0-45da-b403-39a77f52b702)
-# Spotify Music! Developer Preview
+# Spotify Music! Public Release
 
 ### DA, DS и Boosty:
    ᓚᘏᗢ котик ждёт твоей монетки(
