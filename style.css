@@ -1,3 +1,8 @@
+/*БЫСТРЫЕ НАСТРОЙКИ*/
+.YMDRPC {
+	display: none;
+}
+
 body {
     background-color: #000000;
     min-width: 1px;
@@ -9,6 +14,7 @@ body {
     --ym-background-color-primary-enabled-basic: #000000;
     --ym-background-color-primary-enabled-player: #121212;
     --ym-controls-color-primary-default-hovered: #1ED760;
+    --ym-controls-color-primary-default-enabled: #1ED760;
 }
 
 /*Для вас и Тренды*/
@@ -49,7 +55,7 @@ body {
 .MainPage_beta__y32vb {
     background: #ff000000;
     position: fixed;
-    margin-left: -34px;
+    margin-left: -35px;
     top: -27px;
 }
 
@@ -62,6 +68,7 @@ body {
 .TracksBlock_controls__nzIRh {
     flex-direction: column;
 }
+
 
 /*Плеер*/
 .PlayerBar_root__cXUnU {
@@ -79,6 +86,11 @@ body {
     --player-cover-width: 60px;
     --player-cover-height: 60px;
     --player-average-color-background: hsl(0, 0%, 0%);
+}
+
+/*Левый блок плеера*/
+.PlayerBarDesktop_info__56v53 {
+    margin-left: 6px;
 }
 
 /*Кнопки плеера*/
@@ -102,7 +114,6 @@ body {
 
 /*Замена ненужной надписи*/
 .YMDRPC {
-    display: none;
     visibility: hidden;
     position: relative;
 }
@@ -131,9 +142,8 @@ body {
     color: #ffff00;
 }
 
-/*Скроллбар*/
-::-webkit-scrollbar {
- width: 0;
+.Skeleton_tab__zvQx2 {
+    scale: 0.9;
 }
 
 /*Поиск*/
@@ -142,7 +152,6 @@ body {
     top: 11.5px;
     left: 30%;
     width: 40%;
-    z-index: 2;
 }
 
 /*История поиска*/
@@ -195,6 +204,10 @@ body {
     overflow: hidden;
 }
 
+.Skeleton_tracksContainer__NXPrC {
+    width: 100%;
+}
+
 /*Закрепы*/
 .PinItem_root__WSoCn {
     border-radius: 3px 3px 3px 3px;
@@ -209,12 +222,6 @@ body {
     height: -webkit-fill-available;
     top: 212px;
     bottom: 90px;
-}
-
-/*Вайб блок*/
-.MainPage_vibe__XEBbh {
-    left: 0px;
-    right: 0px;
 }
 
 /*Длинные кнопки сверху вкладки "Тренды"*/
@@ -244,8 +251,8 @@ body {
 
 /*3 Точки*/
 .ControlsBar_contextMenuWrapper__NHkn_ {
-    position: fixed;
-    margin-right: 2.2%;
+    position: absolute;
+    margin-right: 40px;
 }
 
 /*Кнопки фуллскрина*/
@@ -258,15 +265,19 @@ body {
 /*Вайб блок*/
 .VibeBlock_root__z7LtR {
     position: fixed;
-    margin-top: 23vw;
     border-radius: 10px 10px 10px 10px;
     overflow: hidden;
-    width: 26%;
-    margin-right: 74%;
-    margin-left: 0.5%;
     height: -webkit-fill-available;
-    margin-bottom: 14vw;
     min-height: 0px;
+}
+
+.MainPage_vibe__XEBbh {
+    top: 28.5%;
+    bottom: 2.5%;
+    height: -webkit-fill-available;
+    width: 27%;
+    left: 0px;
+    right: 0px;
 }
 
 /*Расположение блока*/
@@ -288,6 +299,10 @@ body {
     position: fixed;
     top: 90px;
     left: 0px;
+}
+
+[data-testid="OPEN_PLAYLIST"] {
+    display: flex;
 }
 
 /*Таймлайн фуллскрина*/
@@ -436,13 +451,20 @@ section.PlayerBar_root__cXUnU,
     background: #1f1f1f00;
 }
 
+/*ИСКРА*/
+[data-testid="OPEN_PLAYLIST"] {
+    display: flex;
+    position: static;
+    width: 100%;
+    flex-direction: column;
+}
+
 /* ONLY display: none; */
 .NewReleaseCard_type__1LjSl,
 .NewRelease_fade__rVE0_,
 .NavbarDesktop_logo__Z4jGx,
 .P6gOmyFtXyetUz0dqhF3,
 .web_newreleases_album_31499697,
-[data-testid="OPEN_PLAYLIST"],
 .TrackChart_controlsBarCell__Xd5pn,
 .Footer_root__ugyur,
 .CollectionPage_description__A3dny,
