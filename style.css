@@ -1,7 +1,15 @@
 /*БЫСТРЫЕ НАСТРОЙКИ*/
-.YMDRPC {
-	display: none;
-}
+
+    /*Надпись «Spotify Music!»*/
+    .YMDRPC {
+    	display: none;
+    }
+
+    /*Кнопка «beta» - логотип «Spotify»*/
+    .MainPage_beta__y32vb {
+        display: clip;
+        opacity: 1;
+    }
 
 body {
     background-color: #000000;
@@ -13,8 +21,8 @@ body {
     --ym-background-color-primary-enabled-content: #121212;
     --ym-background-color-primary-enabled-basic: #000000;
     --ym-background-color-primary-enabled-player: #121212;
-    --ym-controls-color-primary-default-hovered: #1ED760;
-    --ym-controls-color-primary-default-enabled: #1ED760;
+    --ym-controls-color-primary-default-hovered: #1FDE64;
+    --ym-controls-color-primary-default-enabled: #1FDE64;
 }
 
 /*Для вас и Тренды*/
@@ -23,6 +31,19 @@ body {
     width: -webkit-fill-available;
     margin-left:-16px;
     height: 80px;
+}
+
+/*Историю прослушивания в разделе «Для вас»*/
+.LikesAndHistory_root__KCuz_ {
+    position: absolute;
+    bottom: -100px;
+    height: 101px;
+    z-index: 2;
+}
+
+.LikesAndHistoryItem_root__oI1gk {
+    border-radius: 5px;
+    background: #262626;
 }
 
 /*Это база, это знать надо*/
@@ -49,6 +70,7 @@ body {
     top: 62px;
     bottom: 90px;
     margin-right: 57px;
+    border-width: 0;
 }
 
 /*Кнопка BETA*/
@@ -75,6 +97,7 @@ body {
     height: 90px;
     width: -webkit-fill-available;
     border-radius: 0px;
+    border-width: 0
 }
 
 .PlayerBarDesktop_root__d2Hwi {
@@ -127,7 +150,7 @@ body {
     font-weight: 600;
     right: 43px;
     content: "Spotify";
-    color: #1ED760;
+    color: #1FDE64;
 }
 
 .YMDRPC::before {
@@ -181,11 +204,11 @@ body {
 }
 
 /*Кнопка Моя волна*/
-[data-testid="MY_VIBE_PLAY_BUTTON_PLAYING"] {
+[data-test-id="MY_VIBE_PLAY_BUTTON_PLAYING"] {
     scale: 0.9;
 }
 
-[data-testid="MY_VIBE_PLAY_BUTTON_NOT_PLAYING"] {
+[data-test-id="MY_VIBE_PLAY_BUTTON_NOT_PLAYING"] {
     scale: 0.9;
 }
 
@@ -193,7 +216,7 @@ body {
     min-width: 160px;
 }
 
-/*Блок хеадер*/
+/*Знакомое вас*/
 .BlockHeader_start__ZrGP5 {
     margin-block-start: 1vw;
 }
@@ -233,10 +256,13 @@ body {
     width: 100%;
     height: 50px;
     background: #262626;
+    border-width: 0;
 }
 
 /*Картинка альбома длинных кнопок*/
 .NewReleaseCard_image__7nTy8 {
+
+
     border-radius: 3px 0px 0px 3px;
     margin-left: -9px;
     top: 22.65%;
@@ -301,7 +327,7 @@ body {
     left: 0px;
 }
 
-[data-testid="OPEN_PLAYLIST"] {
+[data-test-id="OPEN_PLAYLIST"] {
     display: flex;
 }
 
@@ -316,10 +342,11 @@ body {
 }
 
 /*Вайб кнопка*/
-.VibeButton_button__QyJ91 {
+.VibeButton_button__tXFAm {
     border-radius: 5px 5px 5px 5px;
     width: 100%;
     background: #ffffff15;
+    border-width: 0;
 }
 
 .Vibes_item__0EPx7 {
@@ -330,7 +357,8 @@ body {
 .NeuromusicButton_button__kT4GN {
     border-radius: 5px 5px 5px 5px;
     width: 100%;
-    background: #ffffff15;
+    background: #262626;
+    border-width: 0;
 }
 
 /*Кнопка лайка в фуллскрине*/
@@ -441,7 +469,14 @@ body {
 .PageHeaderArtist_playControl__N_3l_,
 .PageHeaderPlaylist_playControl__yRQfm,
 .PageHeaderAlbum_playControl__fFyS9 {
-background: #1ED760;
+    background: #1FDE64;
+}
+
+/*ONLY color: color;*/
+
+.Seq0GowcqQmiA9LdLP_g,
+.PlayButtonWithCover_playButtonIcon__DRjkN  {
+    color: #1FDE64;
 }
 
 section.PlayerBar_root__cXUnU,
@@ -452,7 +487,7 @@ section.PlayerBar_root__cXUnU,
 }
 
 /*ИСКРА*/
-[data-testid="OPEN_PLAYLIST"] {
+[data-test-id="OPEN_PLAYLIST"] {
     display: flex;
     position: static;
     width: 100%;
@@ -471,10 +506,12 @@ section.PlayerBar_root__cXUnU,
 .NewReleaseCard_explicitMark__juwvu,
 .sqs620_Fxut2ZNH0Nzce,
 .mdbxU6IWInQTsVjwnapn,
-.VibeButton_image__TsHnH,
+.VibeButton_image__GOwKJ,
 .Meta_explicitMark__ocnCV,
 .VibeButton_subtitle__e_Di0,
 .FullscreenPlayerDesktop_menuButton__0kKtl,
+[data-test-id="LIKES_HISTORY_COVERS"],
+.LikesAndHistoryItem_covers__9k_yw,
 .BlockHeader_coverContainer__lATZT,
 .InnerHeader_title__5aVLP,
 .NavbarDesktop_user__dzbuH,
@@ -483,6 +520,7 @@ section.PlayerBar_root__cXUnU,
 .ZrkG6gNYcr4h3hfkhyT1,
 .Tab_image__Hen3_,
 .Tab_subtitle__fLp9S,
+.LikesAndHistoryItem_cover__QlRhz,
 .NewRelease_artistCaption__1F8A9,
 .bBh7lvgdfF7bqNqlK78Q,
 .VibeAnimation_root_visible__S7kXl,
@@ -533,9 +571,11 @@ section.PlayerBar_root__cXUnU,
 }
 
 .RvWjZle1erRBXzJEF9Zj {
-    position: fixed;
-    right: -5px;
-    top: 0px;
+    position: relative;
+    margin-top: 100%;
+    bottom: 45px;
+    margin-left: 100%;
+    right: 45px;
 }
 
 .NewRelease_root__W0T4a::before {
