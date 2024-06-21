@@ -1,5 +1,5 @@
 ![1](https://github.com/Diramix/Spotify-Music/assets/79011730/36cf0146-6397-4ca0-8dfe-0c8d7077d62a)
-![2](https://github.com/Diramix/Spotify-Music/assets/79011730/87f9f9b8-e719-4a50-81e2-d03e6098a43d)
+![2](https://github.com/Diramix/Spotify-Music/assets/79011730/77b4e12b-e3ee-4539-b3e4-6ae8029cd021)
 ![3](https://github.com/Diramix/Spotify-Music/assets/79011730/6557b94c-9764-4588-a082-5e02acc26fb8)
 ![4](https://github.com/Diramix/Spotify-Music/assets/79011730/06dfcb24-82bd-4ba6-b924-374a7e93076f)
 ![5](https://github.com/Diramix/Spotify-Music/assets/79011730/86db0450-2193-4aaa-8aa5-3a257c42c941)
