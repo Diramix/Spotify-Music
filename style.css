@@ -345,7 +345,7 @@ body {
 .VibeButton_button__tXFAm {
     border-radius: 5px 5px 5px 5px;
     width: 100%;
-    background: #ffffff15;
+    background: #262626;
     border-width: 0;
 }
 
@@ -472,10 +472,15 @@ body {
     background: #1FDE64;
 }
 
+/*Таб кнопки*/
+[aria-controls="-0-tabpanel"] {
+    border-color: #1FDE64;
+}
+
 /*ONLY color: color;*/
 
 .Seq0GowcqQmiA9LdLP_g,
-.PlayButtonWithCover_playButtonIcon__DRjkN  {
+.PlayButtonWithCover_playButtonIcon__DRjkN {
     color: #1FDE64;
 }
 
@@ -576,6 +581,11 @@ section.PlayerBar_root__cXUnU,
     bottom: 45px;
     margin-left: 100%;
     right: 45px;
+}
+
+.VibeCard_control__SM3H4 {
+    right: -25px;
+    bottom: -25px;
 }
 
 .NewRelease_root__W0T4a::before {
