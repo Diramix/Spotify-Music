@@ -1,11 +1,5 @@
 ![1](https://github.com/Diramix/Spotify-Music/assets/79011730/36cf0146-6397-4ca0-8dfe-0c8d7077d62a)
-![2](https://github.com/Diramix/Spotify-Music/assets/79011730/77b4e12b-e3ee-4539-b3e4-6ae8029cd021)
-![3](https://github.com/Diramix/Spotify-Music/assets/79011730/6557b94c-9764-4588-a082-5e02acc26fb8)
-![4](https://github.com/Diramix/Spotify-Music/assets/79011730/06dfcb24-82bd-4ba6-b924-374a7e93076f)
-![5](https://github.com/Diramix/Spotify-Music/assets/79011730/86db0450-2193-4aaa-8aa5-3a257c42c941)
-![6](https://github.com/Diramix/Spotify-Music/assets/79011730/6f3236be-bbed-4537-b4f5-c573899259eb)
-![7](https://github.com/Diramix/Spotify-Music/assets/79011730/6da2b2f6-3155-4e21-b745-a13e1391e7c1)
-![8](https://github.com/Diramix/Spotify-Music/assets/79011730/7d972431-93c0-45da-b403-39a77f52b702)
+
 # Spotify Music! Public Release
 
 ### DA, DS и Boosty:
@@ -35,3 +29,12 @@
    5. И выберете тему в приложении мода.
       
    6. Всё!
+
+#Скриншоты
+![2](https://github.com/Diramix/Spotify-Music/assets/79011730/77b4e12b-e3ee-4539-b3e4-6ae8029cd021)
+![3](https://github.com/Diramix/Spotify-Music/assets/79011730/6557b94c-9764-4588-a082-5e02acc26fb8)
+![4](https://github.com/Diramix/Spotify-Music/assets/79011730/06dfcb24-82bd-4ba6-b924-374a7e93076f)
+![5](https://github.com/Diramix/Spotify-Music/assets/79011730/86db0450-2193-4aaa-8aa5-3a257c42c941)
+![6](https://github.com/Diramix/Spotify-Music/assets/79011730/6f3236be-bbed-4537-b4f5-c573899259eb)
+![7](https://github.com/Diramix/Spotify-Music/assets/79011730/6da2b2f6-3155-4e21-b745-a13e1391e7c1)
+![8](https://github.com/Diramix/Spotify-Music/assets/79011730/7d972431-93c0-45da-b403-39a77f52b702)
