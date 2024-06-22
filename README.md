@@ -30,7 +30,7 @@
       
    6. Всё!
 
-#Скриншоты
+# Скриншоты
 ![2](https://github.com/Diramix/Spotify-Music/assets/79011730/77b4e12b-e3ee-4539-b3e4-6ae8029cd021)
 ![3](https://github.com/Diramix/Spotify-Music/assets/79011730/6557b94c-9764-4588-a082-5e02acc26fb8)
 ![4](https://github.com/Diramix/Spotify-Music/assets/79011730/06dfcb24-82bd-4ba6-b924-374a7e93076f)
