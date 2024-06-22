@@ -23,6 +23,7 @@ body {
     --ym-background-color-primary-enabled-player: #121212;
     --ym-controls-color-primary-default-hovered: #1FDE64;
     --ym-controls-color-primary-default-enabled: #1FDE64;
+    --ym-controls-color-primary-outline-selected_stroke: #1FDE64;
 }
 
 /*Для вас и Тренды*/
@@ -33,7 +34,7 @@ body {
     height: 80px;
 }
 
-/*Историю прослушивания в разделе «Для вас»*/
+/*История прослушивания в разделе «Для вас»*/
 .LikesAndHistory_root__KCuz_ {
     position: absolute;
     bottom: -100px;
@@ -44,6 +45,10 @@ body {
 .LikesAndHistoryItem_root__oI1gk {
     border-radius: 5px;
     background: #262626;
+}
+
+.LikesAndHistoryItem_root__oI1gk:hover {
+    background: #363636;
 }
 
 /*Это база, это знать надо*/
@@ -191,6 +196,16 @@ body {
     left: 10px;
 }
 
+.SearchPage_filter__5xzTL {
+    border-color: #262626;
+    background: #262626;
+}
+
+.SearchPage_filter__5xzTL:hover {
+    border-color: #363636;
+    background: #363636;
+}
+
 /*Кнопки сверху на главной*/
 .NewRelease_image__Vw6_k {
     opacity: 0;
@@ -204,10 +219,7 @@ body {
 }
 
 /*Кнопка Моя волна*/
-[data-test-id="MY_VIBE_PLAY_BUTTON_PLAYING"] {
-    scale: 0.9;
-}
-
+[data-test-id="MY_VIBE_PLAY_BUTTON_PLAYING"],
 [data-test-id="MY_VIBE_PLAY_BUTTON_NOT_PLAYING"] {
     scale: 0.9;
 }
@@ -216,7 +228,7 @@ body {
     min-width: 160px;
 }
 
-/*Знакомое вас*/
+/*Знакомое вам*/
 .BlockHeader_start__ZrGP5 {
     margin-block-start: 1vw;
 }
@@ -257,6 +269,10 @@ body {
     height: 50px;
     background: #262626;
     border-width: 0;
+}
+
+.NewRelease_card__yn06x:hover {
+    background: #363636;
 }
 
 /*Картинка альбома длинных кнопок*/
@@ -345,8 +361,12 @@ body {
 .VibeButton_button__tXFAm {
     border-radius: 5px 5px 5px 5px;
     width: 100%;
-    background: #ffffff15;
+    background: #262626;
     border-width: 0;
+}
+
+.VibeButton_button__tXFAm:hover {
+    background: #363636;
 }
 
 .Vibes_item__0EPx7 {
@@ -359,6 +379,10 @@ body {
     width: 100%;
     background: #262626;
     border-width: 0;
+}
+
+.NeuromusicButton_button__kT4GN:hover {
+    background: #363636;
 }
 
 /*Кнопка лайка в фуллскрине*/
@@ -460,6 +484,17 @@ body {
     opacity: 0.5;
 }
 
+/*Кнопка "Для вас и Тренды"*/
+[aria-label="Тренды"],
+[aria-label="Для вас"] {
+    max-height: 40px;
+    min-height: 40px;
+}
+
+.MainPage_header__lPh0v {
+    height: 60px;
+}
+
 /* ONLY background: color; */
 .FullscreenPlayerDesktop_content__bl_7V,
 .DefaultLayout_root_applicationPreserveTitleBar__ygJtq {
@@ -475,7 +510,7 @@ body {
 /*ONLY color: color;*/
 
 .Seq0GowcqQmiA9LdLP_g,
-.PlayButtonWithCover_playButtonIcon__DRjkN  {
+.PlayButtonWithCover_playButtonIcon__DRjkN {
     color: #1FDE64;
 }
 
@@ -578,6 +613,11 @@ section.PlayerBar_root__cXUnU,
     right: 45px;
 }
 
+.VibeCard_control__SM3H4 {
+    right: -25px;
+    bottom: -25px;
+}
+
 .NewRelease_root__W0T4a::before {
     display: flex;
     flex-direction: column;
@@ -613,4 +653,26 @@ section.PlayerBar_root__cXUnU,
 .ArtistPage_releaseBlock__wzo2G {
     display: fixed;
     left: 0px;
+}
+
+.MixCard_root__9tPLV {
+    border-radius: 5px;
+}
+
+.MixCard_root__9tPLV:hover {
+    background: #363636;
+}
+
+[aria-selected="true"],
+[aria-pressed="true"] {
+    border-color: #1FDE64;
+}
+
+[aria-selected="true"]:hover,
+[aria-pressed="true"]:hover {
+    border-color: #1FDE64;
+}
+
+[data-test-id="MAIN_TABS"] {
+   margin-top: -5px;
 }
