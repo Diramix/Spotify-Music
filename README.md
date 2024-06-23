@@ -15,10 +15,10 @@
 ## Сделано на
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" height="40px" width="40px" /></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" height="40px" width="40px" /></a>
 
-### Ссылки
+## Ссылки
 ᓚᘏᗢ котик ждёт твоей монетки(https://boosty.to/diramix
 
-### Установка
+## Установка
 1. Сначала вам нужно скачать мод: https://github.com/PulseSync-Official/YMusic-DRPC.
 2. Установите его по инструкции репазитория PulseSync.
 3. Теперь качаем тему.
