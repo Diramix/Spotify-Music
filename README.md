@@ -40,4 +40,5 @@
 <a href="https://choosealicense.com/licenses/unlicense/"><img src="https://raw.githubusercontent.com/johnturner4004/readme-generator/master/src/components/assets/images/unlicense.svg" height=40 />The Unlicense</a>
 
 ## Контакты
+### Discord сервер где вы можете связаться с автором темы
 [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/ky6bcdy7KA)
