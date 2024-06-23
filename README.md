@@ -5,17 +5,17 @@
 # Spotify Music! Public Release
 
 ## Стол контента
-- [Powered By](#Powered-by)
+- [Сделано на](#Сделано-на)
 - [Сриншоты](#Сриншоты)
 - [Ссылки](#Ссылки)
 - [Установка](#Установка)
 - [Лицензия](#Лицензия)
 - [Контакты](#Контакты)
 
-## Powered By
+## Сделано на
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" height="40px" width="40px" /></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" height="40px" width="40px" /></a>
 
-## Ссылки
+### Ссылки
 ᓚᘏᗢ котик ждёт твоей монетки(https://boosty.to/diramix
 
 ### Установка
