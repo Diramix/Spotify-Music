@@ -5,6 +5,7 @@
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" height="40px" width="40px" /></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" height="40px" width="40px" /></a>
     
 # Spotify Music! Public Release
+[[ > Русский < ]](https://github.com/Diramix/Spotify-Music/blob/Public/README.md) - [[ English ]](https://github.com/Diramix/Spotify-Music/blob/Public/doc/en/readme.md)
 
 ## Стол контента
 - [Ссылки](#Ссылки)
@@ -43,5 +44,5 @@
 ![8](https://github.com/Diramix/Spotify-Music/assets/79011730/7d972431-93c0-45da-b403-39a77f52b702)
 
 ## Контакты
-### Discord сервер где вы можете связаться с автором темы
+### Discord сервер где вы можете связаться с автором темы.
 [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/ky6bcdy7KA)
