@@ -13,12 +13,14 @@
 - [Контакты](#Контакты)
 
 ## Ссылки
-<a href="https://boosty.to/diramix">
-  <img width="100" alt="ᓚᘏᗢ котик ждёт твоей монетки" src="https://i.imgur.com/kVUV5rV.png">
-</a>
-<a href="https://discord.gg/ky6bcdy7KA">
-  <img width="100" alt="Discord" src="https://i.imgur.com/1BW96c2.png">
-</a>
+<p>
+    <a href="https://boosty.to/diramix">
+      <img width="100" alt="ᓚᘏᗢ котик ждёт твоей монетки" src="https://i.imgur.com/kVUV5rV.png">
+    </a>
+    <a href="https://discord.gg/ky6bcdy7KA">
+      <img width="100" alt="Discord" src="https://i.imgur.com/1BW96c2.png">
+    </a
+</p>
 
 ## Установка
 1. Сначала вам нужно скачать мод: https://github.com/PulseSync-Official/YMusic-DRPC.
