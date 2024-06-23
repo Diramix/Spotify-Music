@@ -14,7 +14,7 @@
 - [Контакты](#Контакты)
 
 ## Ссылки
-ᓚᘏᗢ котик ждёт твоей монетки(https://boosty.to/diramix
+ᓚᘏᗢ котик ждёт твоей монетки( https://boosty.to/diramix
 
 ## Установка
 1. Сначала вам нужно скачать мод: https://github.com/PulseSync-Official/YMusic-DRPC.
