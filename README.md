@@ -17,9 +17,7 @@
 Spotify тема для Яндекс Музыки beta
 
 ## Ссылки
-<style>
-</style>
-<div  style="margin: 0 auto;text-align:center;overflow:hidden;border-radius:0px;background:#ffffff;border:0px solid #ffffff;padding:0px;max-width:calc(100% - 0px);width:700px">
+<div  style="margin: 0 auto;text-align:center;overflow:hidden;border-radius:0px;background:#ffffff;border:0px solid #ffffff;padding:0px;max-width:calc(100% - 0px);width:300px">
 	<div  style="display: inline-block;position:relative;vertical-align: middle;padding:0px">
 		<img src="https://static.tildacdn.com/tild6534-3063-4261-b839-643438356539/boosty.png" style="max-width:100%;width:100%"/>
 	</div>
