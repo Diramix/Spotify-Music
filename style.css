@@ -249,14 +249,17 @@ body {
 }
 
 .NavbarDesktop_pinsList___jXIM {
-    bottom: 3px;
+    bottom: 109px;
 }
 
 .PinsList_content__9RG7s {
     position: fixed;
     height: -webkit-fill-available;
-    top: 212px;
+    top: 240px;
     bottom: 90px;
+    width: 61px;
+    right: -2.6px;
+    z-index: 2;
 }
 
 /*Длинные кнопки сверху вкладки "Тренды"*/
@@ -277,8 +280,6 @@ body {
 
 /*Картинка альбома длинных кнопок*/
 .NewReleaseCard_image__7nTy8 {
-
-
     border-radius: 3px 0px 0px 3px;
     margin-left: -9px;
     top: 22.65%;
@@ -495,6 +496,16 @@ body {
     height: 60px;
 }
 
+/*Подкаст плейлист*/
+[data-test-id="NON_MUSIC_OPEN_PLAYLIST"] {
+    position: static;
+    width: 100%;
+}
+
+.xfFtKQpgAYvC2jI1tBtS {
+    height: 170px;
+}
+
 /* ONLY background: color; */
 .FullscreenPlayerDesktop_content__bl_7V,
 .DefaultLayout_root_applicationPreserveTitleBar__ygJtq {
@@ -508,7 +519,6 @@ body {
 }
 
 /*ONLY color: color;*/
-
 .Seq0GowcqQmiA9LdLP_g,
 .PlayButtonWithCover_playButtonIcon__DRjkN {
     color: #1FDE64;
