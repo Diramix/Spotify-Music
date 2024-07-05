@@ -26,6 +26,17 @@ body {
     --ym-controls-color-primary-outline-selected_stroke: #1FDE64;
 }
 
+/*Дев панель*/
+.DevPanel_root__Gu7qn {
+    position: fixed;
+    background: #000;
+    z-index: 9999;
+}
+
+.DevPanel_panel__LnoO2 {
+    background: #000;
+}
+
 /*Для вас и Тренды*/
 .MainPage_header__lPh0v {
     overflow: hidden;
@@ -57,18 +68,19 @@ body {
 }
 
 .DefaultLayout_root__7J0wo {
-    position: fixed;
+    /*Я е**л этот fixed, relative. Какой д*дик придумал этот ваш css???*/
+    position: !important; /*<-- Г*ВНО*/
     top: 55px;
     margin-left: 100%;
-    right: -177px;
+    right: 72px;
     grid-template: 
     "navbar playerbar content"
     "navbar playerbar content" auto/auto 1fr;
-    grid-template-columns: fit-content fit-content auto; 
+    grid-template-columns: fit-content fit-content auto;
 }
 
 .DefaultLayout_content__md70Z {
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
     grid-area: content;
     position: fixed;
     left: 27%;
@@ -528,7 +540,7 @@ section.PlayerBar_root__cXUnU,
 .SonataFullscreenControlsDesktop_sonataButton__qmSTF,
 .FullscreenPlayerDesktop_controls__57AQi,
 .PlayerBar_root__cXUnU * .cpeagBA1_PblpJn8Xgtv {
-    background: #1f1f1f00;
+    background: #000;
 }
 
 /*ИСКРА*/
