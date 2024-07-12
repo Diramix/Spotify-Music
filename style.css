@@ -1,7 +1,8 @@
 /*БЫСТРЫЕ НАСТРОЙКИ*/
 
     /*Надпись «Spotify Music!»*/
-    .YMDRPC {
+    .YMDRPC,
+    .PSB {
     	display: none;
     }
 
@@ -108,7 +109,6 @@ body {
     flex-direction: column;
 }
 
-
 /*Плеер*/
 .PlayerBar_root__cXUnU {
     height: 90px;
@@ -153,12 +153,14 @@ body {
 }
 
 /*Замена ненужной надписи*/
-.YMDRPC {
+.YMDRPC,
+.PSB {
     visibility: hidden;
     position: relative;
 }
 
-.YMDRPC::after {
+.YMDRPC::after,
+.PSB::after {
     width: 50px;
     visibility: visible;
     position: absolute;
@@ -170,7 +172,8 @@ body {
     color: #1FDE64;
 }
 
-.YMDRPC::before {
+.YMDRPC::before,
+.PSB::before {
     width: 45px;
     visibility: visible;
     position: absolute;
@@ -348,7 +351,7 @@ body {
     width: 5px;
 }
 
-/*Расположение блока*/
+/*Расположение блока плейлистов*/
 .TracksBlock_root__wVX7U {
     width: 26%;
     position: fixed;
@@ -405,8 +408,17 @@ body {
     bottom: 40px;
     width: 65px;
     height: 63px;
-    background: #23761900;
     opacity: 1;
+}
+
+.FullscreenPlayerDesktop_likeButton__sv1hI:hover {
+    position: fixed;
+    left: 60px;
+    bottom: 40px;
+    width: 65px;
+    height: 63px;
+    opacity: 1;
+    color: #1FDE64;
 }
 
 /*Картинка Фуллскрина*/
@@ -420,8 +432,8 @@ body {
     width: 250px;
     height: 250px;
     position: absolute;
-    bottom: 150px;
-    left: 25px;
+    bottom: 163px;
+    left: 7%;
     border-radius: 6px;
     min-height: 0;
 }
@@ -438,8 +450,9 @@ body {
 /*Мета фуллскрина*/
 .FullscreenPlayerDesktop_trackInfo__Px1Ta {
     position: absolute;
-    left: 100px;
-    bottom: 140px;
+    margin-left: 75px;
+    left: 7%;
+    bottom: 153px;
     display: flex;
     justify-content: flex-start;
 }
@@ -519,7 +532,6 @@ body {
 }
 
 /* ONLY background: color; */
-.FullscreenPlayerDesktop_content__bl_7V,
 .DefaultLayout_root_applicationPreserveTitleBar__ygJtq {
     background: #000000;
 }
@@ -698,4 +710,44 @@ section.PlayerBar_root__cXUnU,
 
 [data-test-id="MAIN_TABS"] {
    margin-top: -5px;
+}
+
+/*Кнопки фуллскрина*/
+.kprKZx99igczv4y5NX8O  {
+    background: #0006;
+    scale: 1;
+}
+
+.kprKZx99igczv4y5NX8O  {
+    background: #0006;
+    scale: 1.1;
+}
+
+[data-test-id="NEXT_TRACK_BUTTON"],
+[data-test-id="PREVIOUS_TRACK_BUTTON"] {
+    background: 0;
+    opacity: 0.4;
+    scale: 1;
+}
+
+[data-test-id="NEXT_TRACK_BUTTON"]:hover,
+[data-test-id="PREVIOUS_TRACK_BUTTON"]:hover,
+[data-test-id="SHUFFLE_BUTTON"]:hover {
+    background: 0;
+    opacity: 1;
+    scale: 0.95;
+}
+
+[data-test-id="SHUFFLE_BUTTON"],
+[data-test-id="REPEAT_BUTTON"] {
+    background: 0;
+    color: #fff;
+    opacity: 0.8;
+}
+
+[data-test-id="SHUFFLE_BUTTON"]:hover,
+[data-test-id="REPEAT_BUTTON"]:hover {
+    background: 0;
+    color: #fff;
+    opacity: 1;
 }
