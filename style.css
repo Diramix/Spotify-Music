@@ -1,7 +1,8 @@
 /*БЫСТРЫЕ НАСТРОЙКИ*/
 
     /*Надпись «Spotify Music!»*/
-    .YMDRPC {
+    .YMDRPC,
+    .PSB {
     	display: none;
     }
 
@@ -24,6 +25,17 @@ body {
     --ym-controls-color-primary-default-hovered: #1FDE64;
     --ym-controls-color-primary-default-enabled: #1FDE64;
     --ym-controls-color-primary-outline-selected_stroke: #1FDE64;
+}
+
+/*Дев панель*/
+.DevPanel_root__Gu7qn {
+    position: fixed;
+    background: #000;
+    z-index: 9999;
+}
+
+.DevPanel_panel__LnoO2 {
+    background: #000;
 }
 
 /*Для вас и Тренды*/
@@ -57,18 +69,19 @@ body {
 }
 
 .DefaultLayout_root__7J0wo {
-    position: fixed;
+    /*Я е**л этот fixed, relative. Какой д*дик придумал этот ваш css???*/
+    position: !important; /*<-- Г*ВНО*/
     top: 55px;
     margin-left: 100%;
-    right: -177px;
+    right: 72px;
     grid-template: 
     "navbar playerbar content"
     "navbar playerbar content" auto/auto 1fr;
-    grid-template-columns: fit-content fit-content auto; 
+    grid-template-columns: fit-content fit-content auto;
 }
 
 .DefaultLayout_content__md70Z {
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px;
     grid-area: content;
     position: fixed;
     left: 27%;
@@ -141,12 +154,14 @@ body {
 }
 
 /*Замена ненужной надписи*/
-.YMDRPC {
+.YMDRPC,
+.PSB {
     visibility: hidden;
     position: relative;
 }
 
-.YMDRPC::after {
+.YMDRPC::after,
+.PSB::after {
     width: 50px;
     visibility: visible;
     position: absolute;
@@ -158,7 +173,8 @@ body {
     color: #1FDE64;
 }
 
-.YMDRPC::before {
+.YMDRPC::before,
+.PSB::before {
     width: 45px;
     visibility: visible;
     position: absolute;
@@ -249,13 +265,13 @@ body {
 }
 
 .NavbarDesktop_pinsList___jXIM {
-    bottom: 3px;
+    bottom: 109px;
 }
 
 .PinsList_content__9RG7s {
     position: fixed;
     height: -webkit-fill-available;
-    top: 212px;
+    top: 240px;
     bottom: 90px;
     width: 61px;
     right: -2.6px;
@@ -336,7 +352,7 @@ body {
     width: 5px;
 }
 
-/*Расположение блока*/
+/*Расположение блока плейлистов*/
 .TracksBlock_root__wVX7U {
     width: 26%;
     position: fixed;
@@ -496,6 +512,16 @@ body {
     height: 60px;
 }
 
+/*Подкаст плейлист*/
+[data-test-id="NON_MUSIC_OPEN_PLAYLIST"] {
+    position: static;
+    width: 100%;
+}
+
+.xfFtKQpgAYvC2jI1tBtS {
+    height: 170px;
+}
+
 /* ONLY background: color; */
 .FullscreenPlayerDesktop_content__bl_7V,
 .DefaultLayout_root_applicationPreserveTitleBar__ygJtq {
@@ -518,7 +544,7 @@ section.PlayerBar_root__cXUnU,
 .SonataFullscreenControlsDesktop_sonataButton__qmSTF,
 .FullscreenPlayerDesktop_controls__57AQi,
 .PlayerBar_root__cXUnU * .cpeagBA1_PblpJn8Xgtv {
-    background: #1f1f1f00;
+    background: #000;
 }
 
 /*ИСКРА*/
@@ -566,7 +592,8 @@ section.PlayerBar_root__cXUnU,
 .MixedEntitiesListItem_controlsBarCell__J78Qc,
 .NewRelease_artists__wGTaP,
 .ControlsBar_likeIcon__mrNiz,
-.ControlsBar_dislikeIcon__ENXh_ {
+.ControlsBar_dislikeIcon__ENXh_,
+.PinItem_contextMenu__VwiFp {
     display: none;
 }
 
