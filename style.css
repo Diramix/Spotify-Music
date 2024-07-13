@@ -405,7 +405,7 @@ body {
 .FullscreenPlayerDesktop_likeButton__sv1hI {
     position: fixed;
     left: 60px;
-    bottom: 40px;
+    bottom: 35px;
     width: 65px;
     height: 63px;
     opacity: 1;
@@ -414,7 +414,7 @@ body {
 .FullscreenPlayerDesktop_likeButton__sv1hI:hover {
     position: fixed;
     left: 60px;
-    bottom: 40px;
+    bottom: 35px;
     width: 65px;
     height: 63px;
     opacity: 1;
@@ -724,6 +724,7 @@ section.PlayerBar_root__cXUnU,
 }
 
 [data-test-id="NEXT_TRACK_BUTTON"],
+[data-test-id="PREVIOUS_TRACK_BUTTON"]:disabled,
 [data-test-id="PREVIOUS_TRACK_BUTTON"] {
     background: 0;
     opacity: 0.4;
@@ -731,11 +732,16 @@ section.PlayerBar_root__cXUnU,
 }
 
 [data-test-id="NEXT_TRACK_BUTTON"]:hover,
-[data-test-id="PREVIOUS_TRACK_BUTTON"]:hover,
-[data-test-id="SHUFFLE_BUTTON"]:hover {
+[data-test-id="PREVIOUS_TRACK_BUTTON"]:hover {
     background: 0;
     opacity: 1;
     scale: 0.95;
+}
+
+[data-test-id="LIKE_BUTTON"],
+[data-test-id="LIKE_BUTTON"]:hover {
+    background: 0;
+    scale: 1;
 }
 
 [data-test-id="SHUFFLE_BUTTON"],
@@ -750,4 +756,9 @@ section.PlayerBar_root__cXUnU,
     background: 0;
     color: #fff;
     opacity: 1;
+}
+
+/*Контекстное меню*/
+.ControlsBar_contextMenu__8AFkQ {
+    background: 0;
 }
