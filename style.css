@@ -71,7 +71,7 @@ body {
 .DefaultLayout_root__7J0wo {
     /*Я е**л этот fixed, relative. Какой д*дик придумал этот ваш css???*/
     position: !important; /*<-- Г*ВНО*/
-    top: 55px;
+    top: 0; /*14.07.2024 именно с этой даты, я еб*л top: 55; ╰(*°▽°*)╯*/
     margin-left: 100%;
     right: 72px;
     grid-template: 
@@ -728,14 +728,12 @@ section.PlayerBar_root__cXUnU,
 [data-test-id="PREVIOUS_TRACK_BUTTON"] {
     background: 0;
     opacity: 0.4;
-    scale: 1;
 }
 
 [data-test-id="NEXT_TRACK_BUTTON"]:hover,
 [data-test-id="PREVIOUS_TRACK_BUTTON"]:hover {
     background: 0;
     opacity: 1;
-    scale: 0.95;
 }
 
 [data-test-id="LIKE_BUTTON"],
@@ -745,14 +743,20 @@ section.PlayerBar_root__cXUnU,
 }
 
 [data-test-id="SHUFFLE_BUTTON"],
-[data-test-id="REPEAT_BUTTON"] {
+[data-test-id="REPEAT_BUTTON_NO_REPEAT"],
+[data-test-id="REPEAT_BUTTON"],
+[data-test-id="REPEAT_BUTTON_REPEAT_CONTEXT"],
+[data-test-id="REPEAT_BUTTON_REPEAT_ONE"] {
     background: 0;
     color: #fff;
     opacity: 0.8;
 }
 
 [data-test-id="SHUFFLE_BUTTON"]:hover,
-[data-test-id="REPEAT_BUTTON"]:hover {
+[data-test-id="REPEAT_BUTTON_NO_REPEAT"]:hover,
+[data-test-id="REPEAT_BUTTON"]:hover,
+[data-test-id="REPEAT_BUTTON_REPEAT_CONTEXT"]:hover,
+[data-test-id="REPEAT_BUTTON_REPEAT_ONE"]:hover {
     background: 0;
     color: #fff;
     opacity: 1;
@@ -761,4 +765,15 @@ section.PlayerBar_root__cXUnU,
 /*Контекстное меню*/
 .ControlsBar_contextMenu__8AFkQ {
     background: 0;
+}
+
+/*NAVBAR - НАВБАР*/
+.NavbarDesktop_navigation__dLUGW {
+    position: absolute;
+    top: 55px;
+}
+
+/*Сплеш анимация*/
+.SplashScreen_video__wFSy5 {
+    filter: hue-rotate(65deg);
 }
