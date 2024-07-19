@@ -774,6 +774,7 @@ section.PlayerBar_root__cXUnU,
 }
 
 /*Сплеш анимация*/
-.SplashScreen_video__wFSy5 {
+.SplashScreen_video__wFSy5,
+.MainSuspenseLoader_icon__MceTD {
     filter: hue-rotate(65deg);
 }
