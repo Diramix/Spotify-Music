@@ -243,11 +243,6 @@ body {
     min-width: 160px;
 }
 
-/*Знакомое вам*/
-.BlockHeader_start__ZrGP5 {
-    margin-block-start: 1vw;
-}
-
 /*Трекблок*/
 .TracksBlock_trackColumn__PmjA_ {
     position: flex;
@@ -512,7 +507,8 @@ body {
 
 /*Кнопка "Для вас и Тренды"*/
 [aria-label="Тренды"],
-[aria-label="Для вас"] {
+[aria-label="Для вас"],
+[aria-label="Лето не ждёт"] {
     max-height: 40px;
     min-height: 40px;
 }
@@ -777,4 +773,8 @@ section.PlayerBar_root__cXUnU,
 .SplashScreen_video__wFSy5,
 .MainSuspenseLoader_icon__MceTD {
     filter: hue-rotate(65deg);
+}
+
+.FullscreenPlayerDesktop_content__bl_7V {
+    border-width: 0;
 }
