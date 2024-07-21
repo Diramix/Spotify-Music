@@ -243,6 +243,11 @@ body {
     min-width: 160px;
 }
 
+/*Знакомое вам*/
+.BlockHeader_start__ZrGP5 {
+    margin-block-start: 1vw;
+}
+
 /*Трекблок*/
 .TracksBlock_trackColumn__PmjA_ {
     position: flex;
@@ -528,8 +533,11 @@ body {
 }
 
 /* ONLY background: color; */
-.DefaultLayout_root_applicationPreserveTitleBar__ygJtq {
-    background: #000000;
+.DefaultLayout_root_applicationPreserveTitleBar__ygJtq,
+.SyncLyrics_content__lbkWP:after,
+.SyncLyrics_content__lbkWP:before,
+.SyncLyrics_root__6KZg4 {
+    background: #000;
 }
 
 .PageHeaderArtist_playControl__N_3l_,
@@ -777,4 +785,36 @@ section.PlayerBar_root__cXUnU,
 
 .FullscreenPlayerDesktop_content__bl_7V {
     border-width: 0;
+}
+
+/*карусель контролс*/
+.CarouselControls_control__L8t4i {
+    margin-right: 2px;
+}
+
+/*Тайтлбар*/
+.TitleBar_root__QjdOZ {
+    position: fixed;
+    z-index: 9999;
+}
+
+/*Синк лирикс*/
+.SyncLyrics_content__lbkWP {
+    display: block;
+    position: absolute;
+    height: 97%;
+    top: 0;
+}
+
+.SyncLyricsCard_card__6NmKa {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #181818;
+    border-width: 1px;
+    border-color: #262626;
+    border-style: solid;
 }
