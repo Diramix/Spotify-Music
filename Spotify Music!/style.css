@@ -1,8 +1,7 @@
 /*БЫСТРЫЕ НАСТРОЙКИ*/
 
     /*Надпись «Spotify Music!»*/
-    .YMDRPC,
-    .PSB {
+    body > div > p {
     	display: none;
     }
 
@@ -153,14 +152,11 @@ body {
 }
 
 /*Замена ненужной надписи*/
-.YMDRPC,
-.PSB {
+body > div > p {
     visibility: hidden;
-    position: relative;
 }
 
-.YMDRPC::after,
-.PSB::after {
+body > div > p:after {
     width: 50px;
     visibility: visible;
     position: absolute;
@@ -314,7 +310,7 @@ body {
 }
 
 /*Кнопки фуллскрина*/
-.SonataFullscreenControlsDesktop_root__l4a2W {
+body > div > div > div > div > div > div > div > div.SonataFullscreenControlsDesktop_root__l4a2W {
     position: absolute;
     bottom: 37px;
     opacity: 1;
@@ -364,7 +360,7 @@ body {
 }
 
 /*Таймлайн фуллскрина*/
-.FullscreenPlayerDesktop_timeline__4Z6DH {
+body > div > div > div > div > div > div > div.FullscreenPlayerDesktop_timeline__4Z6DH {
     position: absolute;
     bottom: 115px;
 }
@@ -428,7 +424,7 @@ body {
 }
 
 /*Управление картинкой фуллскрина*/
-.FullscreenPoster_cover__WWgNX {
+body > div > div > div > div > div > div > img.FullscreenPoster_cover__WWgNX {
     width: 250px;
     height: 250px;
     position: absolute;
@@ -439,7 +435,7 @@ body {
 }
 
 /*Управление расположением картинки фуллскрина и кнопок*/
-.FullscreenPlayerDesktop_cover__VVsjV {
+body > div > div > div > div > div > div.FullscreenPlayerDesktop_cover__VVsjV {
     position: absolute;
     left: 0;
     right: 0;
@@ -448,7 +444,7 @@ body {
 }
 
 /*Мета фуллскрина*/
-.FullscreenPlayerDesktop_trackInfo__Px1Ta {
+body > div > div > div > div > div > div.FullscreenPlayerDesktop_trackInfo__Px1Ta {
     position: absolute;
     margin-left: 75px;
     left: 7%;
@@ -459,7 +455,7 @@ body {
 
 @media( min-width: 760px )
 {
-    .FullscreenPoster_cover__WWgNX {
+    body > div > div > div > div > div > div > img.FullscreenPoster_cover__WWgNX {
         width: 150px;
         height: 150px;
     }
@@ -470,7 +466,7 @@ body {
 
 @media ( min-width: 1090px )
 {
-    .FullscreenPoster_cover__WWgNX {
+    body > div > div > div > div > div > div > img.FullscreenPoster_cover__WWgNX {
         width: 150px;
         height: 150px;
     }
@@ -480,7 +476,7 @@ body {
 }
 
 /*Нижняя мета фуллскрина*/
-.FullscreenPlayerDesktop_trackMeta__NydsU {
+body > div > div > div > div > div > div > div.FullscreenPlayerDesktop_trackMeta__NydsU {
     display: block;
     position: relative;
     padding: 0 !important;
@@ -488,14 +484,14 @@ body {
 }
 
 /*Верхняя мета фуллскрина*/
-.FullscreenPlayerDesktop_titleContainer__rVpIZ {
+body > div > div > div > div > div > div > div > div > div.FullscreenPlayerDesktop_titleContainer__rVpIZ {
     padding: 0;
     margin: 0;
     justify-content: flex-start;
 }
 
 /*Размер меты фуллскрина*/
-.FullscreenPlayerDesktop_trackContainer__99XuP * .Meta_title__GGBnH {
+body > div > div > div > div > div.FullscreenPlayerDesktop_trackContainer__99XuP * .Meta_title__GGBnH {
     font-size: 42px !important;
     line-height: normal;
 }
@@ -800,21 +796,8 @@ section.PlayerBar_root__cXUnU,
 
 /*Синк лирикс*/
 .SyncLyrics_content__lbkWP {
-    display: block;
-    position: absolute;
-    height: 97%;
-    top: 0;
-}
-
-.SyncLyricsCard_card__6NmKa {
-    position: absolute;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    background: #181818;
-    border-width: 1px;
-    border-color: #262626;
-    border-style: solid;
+    position: fixed;
+    height: 100%;
+    bottom: 0;
+    background: #000;
 }
