@@ -25,12 +25,10 @@
 ## Установка
 1. Сначала вам нужно скачать мод:
    
-    [YMusic-DRPC](https://github.com/PulseSync-Official/YMusic-DRPC) или
-
-   [YMusic-NormalRPC](https://github.com/Diramix/YMusic-NormalRPC)
-2. Установите его по инструкции репазитория «PulseSync» или воспользуйтесь установщиком «NormalRPC».
+    [YMusic-DRPC](https://github.com/PulseSync-Official/YMusic-DRPC)
+2. Установите его по инструкции репазитория «PulseSync» или выпросите установщик у Дирамикса.
 3. Теперь качаем [тему](https://github.com/Diramix/Spotify-Music/archive/refs/heads/Public.zip).
-4. После установки запускаем программу и нажимаем на кнопку «Директория со стилями»/«Папка с темами», кидаете туда ПАПКУ С ТЕМОЙ.
+4. После установки запускаем программу и нажимаем на кнопку «Директория со стилями», кидаете туда ПАПКУ С ТЕМОЙ.
 5. Выберете тему в приложении мода.
 6. Всё!
 
