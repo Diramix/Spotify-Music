@@ -29,12 +29,18 @@ body {
 /*Дев панель*/
 .DevPanel_root__Gu7qn {
     position: fixed;
-    background: #000;
     z-index: 9999;
 }
 
 .DevPanel_panel__LnoO2 {
     background: #000;
+}
+
+body > div > div > button.qU2apWBO1yyEK0lZ3lPO {
+    backdrop-filter: blur(0px);
+    z-index: 99999;
+    background: #000;
+    color: #fff;
 }
 
 /*Для вас и Тренды*/
