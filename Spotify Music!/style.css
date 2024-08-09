@@ -810,6 +810,5 @@ section.PlayerBar_root__cXUnU,
 
 /*PlayerModalRoot*/
 .FullscreenPlayerDesktop_root___8vo1  {
-    width: 100.3%;
-    height: 100.3%;
+    border-width: 0;
 }
