@@ -354,15 +354,16 @@ body > div > div > div > div > div > div > div > div.SonataFullscreenControlsDes
 }
 
 /*Расположение блока плейлистов*/
-.TracksBlock_root__wVX7U {
+[data-intersection-property-id="premiere_web"],
+[data-intersection-property-id="6566650f3c8903348e1df5bf"],
+[data-intersection-property-id="COLLECTION_PLAYLIST_WITH_LIKES"],
+body > div > main > div > div > div > div > div > section[data-intersection-property-id="new_episodes_web"],
+body > div > main > div > div > div > div > div > section[data-intersection-property-id="summer_preopen_playlist"],
+body > div > main > div > div > div > div > div > section[data-intersection-property-id="phonk_playlist_commentary"] {
     width: 26%;
     position: fixed;
     top: 90px;
     left: 0px;
-}
-
-[data-test-id="OPEN_PLAYLIST"] {
-    display: flex;
 }
 
 /*Таймлайн фуллскрина*/
@@ -515,7 +516,8 @@ body > div > div > div > div > div.FullscreenPlayerDesktop_trackContainer__99XuP
 /*Кнопка "Для вас и Тренды"*/
 [aria-label="Тренды"],
 [aria-label="Для вас"],
-[aria-label="Лето не ждёт"] {
+[aria-label="Лето не ждёт"],
+[aria-label="Фонк"] {
     max-height: 40px;
     min-height: 40px;
 }
@@ -607,11 +609,18 @@ section.PlayerBar_root__cXUnU,
 .NewRelease_artists__wGTaP,
 .ControlsBar_likeIcon__mrNiz,
 .ControlsBar_dislikeIcon__ENXh_,
-.PinItem_contextMenu__VwiFp {
+.PinItem_contextMenu__VwiFp,
+.ListeningProgress_text_withTimeLeft__2G9_d,
+[role="progressbar"],
+.TrackNonMusic_controlsBarCell__zWt44 {
     display: none;
 }
 
 /*Другое*/
+.PodcastMeta_podcastName__iQeNK {
+    width: 130px;
+}
+
 ._MWOVuZRvUQdXKTMcOPx {
     opacity: 1;
 }
