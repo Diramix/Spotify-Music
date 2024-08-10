@@ -76,10 +76,10 @@ body > div > div > button.qU2apWBO1yyEK0lZ3lPO {
 /*Это база, это знать надо*/
 .DefaultLayout_root__7J0wo {
     /*Я е**л этот fixed, relative. Какой д*дик придумал этот ваш css???*/
-    position: !important; /*<-- Г*ВНО*/
+    position: fixed; /*<-- Г*ВНО*/
     top: 0; /*14.07.2024 именно с этой даты, я еб*л top: 55; ╰(*°▽°*)╯*/
     margin-left: 100%;
-    right: 72px;
+    right: -14px;
     grid-template: 
     "navbar playerbar content"
     "navbar playerbar content" auto/auto 1fr;
@@ -96,19 +96,6 @@ body > div > div > button.qU2apWBO1yyEK0lZ3lPO {
     top: 62px;
     height: calc(100% - 155px);
     right: 75px;
-    border-width: 0;
-    border-radius: 10px;
-    background: var(--main-color);
-}
-
-.SearchPage_root__i7sE0 {
-    border-radius: 10px;
-    grid-area: content;
-    position: fixed;
-    left: 27%;
-    top: 62px;
-    height: calc(100% - 155px);
-    width: calc(100% - 30.5%);
     border-width: 0;
     border-radius: 10px;
     background: var(--main-color);
@@ -302,7 +289,7 @@ body > div > p:after {
 .NavbarDesktop_navigation__dLUGW {
     bottom: 109px;
     width: 60px;
-    right: 16px;
+    right: -16px;
     margin-top: -9px;
     background: var(--main-color);
     border-radius: 10px 10px 0px 0px;
@@ -314,7 +301,6 @@ body > div > p:after {
     top: 240px;
     bottom: 93px;
     width: 60px;
-    right: -2.6px;
     z-index: 2;
     right: 8px;
     border-radius: 0px 0px 10px 10px;
@@ -722,10 +708,6 @@ section.PlayerBar_root__cXUnU,
 
 .Skeleton_headerContainer__pRHVj {
     margin-block-start: -35px;
-}
-
-.Content_rootOld__g85_m {
-    right: -2px;
 }
 
 .CompositeHeader_stickyChild_scrolling__wm9_D {
