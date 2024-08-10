@@ -3,7 +3,7 @@
     "name": "Spotify Music!",
     "author": "Diramix",
     "description": "Public",
-    "version": "1.14.1",
+    "version": "1.14.2",
     "css": "style.css",
     "script": "script.js"
 }

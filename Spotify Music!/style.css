@@ -114,8 +114,17 @@ body > div > div > button.qU2apWBO1yyEK0lZ3lPO {
     background: var(--main-color);
 }
 
-.PlaylistPageDnDList_root__6Fryw,
-.SearchHistoryPage_root__Wbvyf {
+.PlaylistPage_root__ajyaP,
+.SearchHistoryPage_root__Wbvyf,
+.TagPage_root__EWN9A,
+.BlockEntities_root__sHn14,
+.AlbumPage_root__RMrFx,
+.MusicHistoryPage_root__FYB2m,
+.ChartPage_scrollContainer__VJzA3,
+.CollectionPlaylistsPageContent_scrollContainer__fiLLm,
+.CollectionAlbumsPage_root__qMtcC,
+.LandingPage_root__B2lPp,
+.GenrePlaylistsPage_root__WZwkl {
     border-radius: 10px;
     grid-area: content;
     position: fixed;
