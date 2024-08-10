@@ -110,7 +110,8 @@ body > div > div > button.qU2apWBO1yyEK0lZ3lPO {
 .ChartPage_scrollContainer__VJzA3,
 .CollectionAlbumsPage_root__qMtcC,
 .LandingPage_root__B2lPp,
-.GenrePlaylistsPage_root__WZwkl {
+.GenrePlaylistsPage_root__WZwkl,
+.CollectionPlaylistsPageContent_scrollContainer__fiLLm {
     border-radius: 10px;
     grid-area: content;
     position: fixed;
@@ -123,17 +124,13 @@ body > div > div > button.qU2apWBO1yyEK0lZ3lPO {
     background: var(--main-color);
 }
 
-.CollectionPlaylistsPageContent_scrollContainer__fiLLm {
-    border-radius: 10px;
-    grid-area: content;
-    position: fixed;
-    left: 10px;
-    top: 62px;
-    height: calc(100% - 155px);
-    width: calc(100% - 85px);
-    border-width: 0;
-    border-radius: 10px;
-    background: var(--main-color);
+.CollectionPage_content__c3f8z {
+    overflow: auto;
+    scrollbar-width: 0;
+}
+
+::-webkit-scrollbar {
+    opacity: 0;
 }
 
 .NavbarDesktop_navigation__dLUGW {
