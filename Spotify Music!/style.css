@@ -108,7 +108,6 @@ body > div > div > button.qU2apWBO1yyEK0lZ3lPO {
 .AlbumPage_root__RMrFx,
 .MusicHistoryPage_root__FYB2m,
 .ChartPage_scrollContainer__VJzA3,
-.CollectionPlaylistsPageContent_scrollContainer__fiLLm,
 .CollectionAlbumsPage_root__qMtcC,
 .LandingPage_root__B2lPp,
 .GenrePlaylistsPage_root__WZwkl {
@@ -122,6 +121,24 @@ body > div > div > button.qU2apWBO1yyEK0lZ3lPO {
     border-width: 0;
     border-radius: 10px;
     background: var(--main-color);
+}
+
+.CollectionPlaylistsPageContent_scrollContainer__fiLLm {
+    border-radius: 10px;
+    grid-area: content;
+    position: fixed;
+    left: 10px;
+    top: 62px;
+    height: calc(100% - 155px);
+    width: calc(100% - 85px);
+    border-width: 0;
+    border-radius: 10px;
+    background: var(--main-color);
+}
+
+.NavbarDesktop_navigation__dLUGW {
+    position: absolute;
+    top: 55px;
 }
 
 /*Кнопка BETA*/
@@ -164,6 +181,7 @@ body > div > div > button.qU2apWBO1yyEK0lZ3lPO {
 /*Левый блок плеера*/
 .PlayerBarDesktop_info__56v53 {
     margin-left: 6px;
+    max-width: 90%;
 }
 
 /*Кнопки плеера*/
@@ -282,8 +300,6 @@ body > div > p:after {
 /*Закрепы - NAVBAR - навбар*/
 .PinItem_root__WSoCn {
     border-radius: 3px 3px 3px 3px;
-    width: 50px;
-    background: var(--main-color);
 }
 
 .NavbarDesktop_navigation__dLUGW {
@@ -291,7 +307,6 @@ body > div > p:after {
     width: 60px;
     right: -16px;
     margin-top: -9px;
-    background: var(--main-color);
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -304,7 +319,11 @@ body > div > p:after {
     z-index: 2;
     right: 8px;
     border-radius: 0px 0px 10px 10px;
-    background: var(--main-color);
+}
+
+.mAd9pgMkWVX5ktCgYINQ,
+.Xx9Tg5ugzg1pkf8Zh421 {
+    right: 6px;
 }
 
 /*Длинные кнопки сверху вкладки "Тренды"*/
@@ -641,7 +660,8 @@ section.PlayerBar_root__cXUnU,
 .ListeningProgress_text_withTimeLeft__2G9_d,
 [role="progressbar"],
 .TrackNonMusic_controlsBarCell__zWt44,
-.NavbarDesktop_logoWrapper__89ce6 {
+.NavbarDesktop_logoWrapper__89ce6,
+.NavbarDesktop_collapseButton__XQh9d {
     display: none;
 }
 
@@ -805,12 +825,6 @@ section.PlayerBar_root__cXUnU,
 /*Контекстное меню*/
 .ControlsBar_contextMenu__8AFkQ {
     background: 0;
-}
-
-/*NAVBAR - НАВБАР*/
-.NavbarDesktop_navigation__dLUGW {
-    position: absolute;
-    top: 55px;
 }
 
 /*Сплеш анимация*/
