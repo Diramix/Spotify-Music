@@ -11,6 +11,11 @@
         opacity: 1;
     }
 
+
+:root {
+    --main-color: #121212;
+}
+
 body {
     background-color: #000000;
     min-width: 1px;
@@ -18,9 +23,9 @@ body {
 }
 
 .ym-dark-theme {
-    --ym-background-color-primary-enabled-content: #121212;
+    --ym-background-color-primary-enabled-content: var(--main-color);
     --ym-background-color-primary-enabled-basic: #000000;
-    --ym-background-color-primary-enabled-player: #121212;
+    --ym-background-color-primary-enabled-player: var(--main-color);
     --ym-controls-color-primary-default-hovered: #1FDE64;
     --ym-controls-color-primary-default-enabled: #1FDE64;
     --ym-controls-color-primary-outline-selected_stroke: #1FDE64;
@@ -69,10 +74,6 @@ body > div > div > button.qU2apWBO1yyEK0lZ3lPO {
 }
 
 /*Это база, это знать надо*/
-.DefaultLayout_content__md70Z {
-    border-radius: 10px;
-}
-
 .DefaultLayout_root__7J0wo {
     /*Я е**л этот fixed, relative. Какой д*дик придумал этот ваш css???*/
     position: !important; /*<-- Г*ВНО*/
@@ -85,15 +86,46 @@ body > div > div > button.qU2apWBO1yyEK0lZ3lPO {
     grid-template-columns: fit-content fit-content auto;
 }
 
-.DefaultLayout_content__md70Z {
+.MainPage_root__STXqc,
+.CollectionPage_content__c3f8z,
+.NonMusicPage_root__IPKkH {
     border-radius: 10px;
     grid-area: content;
     position: fixed;
     left: 27%;
     top: 62px;
-    bottom: 90px;
-    margin-right: 57px;
+    height: calc(100% - 155px);
+    right: 75px;
     border-width: 0;
+    border-radius: 10px;
+    background: var(--main-color);
+}
+
+.SearchPage_root__i7sE0 {
+    border-radius: 10px;
+    grid-area: content;
+    position: fixed;
+    left: 27%;
+    top: 62px;
+    height: calc(100% - 155px);
+    width: calc(100% - 30.5%);
+    border-width: 0;
+    border-radius: 10px;
+    background: var(--main-color);
+}
+
+.PlaylistPageDnDList_root__6Fryw,
+.SearchHistoryPage_root__Wbvyf {
+    border-radius: 10px;
+    grid-area: content;
+    position: fixed;
+    left: 10px;
+    top: 62px;
+    height: calc(100% - 155px);
+    width: calc(100% - 85px);
+    border-width: 0;
+    border-radius: 10px;
+    background: var(--main-color);
 }
 
 /*Кнопка BETA*/
@@ -199,15 +231,6 @@ body > div > p:after {
     width: 40%;
 }
 
-/*История поиска*/
-.SearchPlaylistInput_root__o14iM {
-    position: fixed;
-    width: -webkit-fill-available;
-    left: 0.5%;
-    right: 73.5%;
-    top: 80px;
-}
-
 /*Страница поиска*/
 .SearchPage_tabCarousel__9cWOl {
     left: 10px;
@@ -260,23 +283,33 @@ body > div > p:after {
     width: 100%;
 }
 
-/*Закрепы*/
+/*Закрепы - NAVBAR - навбар*/
 .PinItem_root__WSoCn {
     border-radius: 3px 3px 3px 3px;
+    width: 50px;
+    background: var(--main-color);
 }
 
-.NavbarDesktop_pinsList___jXIM {
+.NavbarDesktop_navigation__dLUGW {
     bottom: 109px;
+    width: 60px;
+    right: 16px;
+    margin-top: -9px;
+    background: var(--main-color);
+    border-radius: 10px 10px 0px 0px;
 }
 
 .PinsList_content__9RG7s {
     position: fixed;
     height: -webkit-fill-available;
     top: 240px;
-    bottom: 90px;
-    width: 61px;
+    bottom: 93px;
+    width: 60px;
     right: -2.6px;
     z-index: 2;
+    right: 8px;
+    border-radius: 0px 0px 10px 10px;
+    background: var(--main-color);
 }
 
 /*Длинные кнопки сверху вкладки "Тренды"*/
@@ -612,7 +645,8 @@ section.PlayerBar_root__cXUnU,
 .PinItem_contextMenu__VwiFp,
 .ListeningProgress_text_withTimeLeft__2G9_d,
 [role="progressbar"],
-.TrackNonMusic_controlsBarCell__zWt44 {
+.TrackNonMusic_controlsBarCell__zWt44,
+.NavbarDesktop_logoWrapper__89ce6 {
     display: none;
 }
 
