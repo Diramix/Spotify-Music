@@ -28,6 +28,7 @@
 ![изображение](https://github.com/user-attachments/assets/06cb2ab2-b087-4e06-a8a8-c197b32bb5a3)
 ![изображение](https://github.com/user-attachments/assets/04346e58-2129-4682-bca0-0846410528df)
 ![изображение](https://github.com/user-attachments/assets/5f9f45f3-1f47-4300-8df1-b395138f5bc8)
+![изображение](https://github.com/user-attachments/assets/767472fd-c1f3-41b5-8764-26f178cbd322)
 
 ## Контакты
 ### Discord сервер где вы можете связаться с автором темы.
