@@ -1,45 +1,33 @@
-![1](https://github.com/Diramix/Spotify-Music/assets/79011730/36cf0146-6397-4ca0-8dfe-0c8d7077d62a)
+![Spotify Music! II](https://github.com/user-attachments/assets/97e71e36-0230-4980-800c-92a2f304f549)
 ![License](https://img.shields.io/github/license/Diramix/Spotify-Music.svg?style=for-the-badge)
 
 ### Powered by
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" height="40px" width="40px" /></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" height="40px" width="40px" /></a>
     
-# Spotify Music! Public Release
-
-## Стол контента
-- [Ссылки](#Ссылки)
-- [Установка](#Установка)
-- [Сриншоты](#Сриншоты)
-- [Контакты](#Контакты)
+# Spotify Music! II
 
 ## Ссылки
-<p>
-    <a href="https://boosty.to/diramix">
-      <img width="100" alt="ᓚᘏᗢ котик ждёт твоей монетки" src="https://i.imgur.com/kVUV5rV.png">
-    </a>
-    <a href="https://discord.gg/ky6bcdy7KA">
-      <img width="100" alt="Discord" src="https://i.imgur.com/1BW96c2.png">
-    </a
-</p>
+<a href="https://boosty.to/diramix">
+    <img width="300" alt="ᓚᘏᗢ котик ждёт твоей монетки" src="https://github.com/Diramix/Spotify-Music/blob/SM-2/doc/boosty_button.png?raw=true">
+</a>
 
 ## Установка
 1. Сначала вам нужно скачать мод:
    
     [YMusic-DRPC](https://github.com/PulseSync-Official/YMusic-DRPC)
-2. Установите его по инструкции репазитория «PulseSync» или выпросите установщик у Дирамикса.
-3. Теперь качаем [тему](https://github.com/Diramix/Spotify-Music/archive/refs/heads/Public.zip).
+2. Установите его по инструкции репазитория «PulseSync» или скачайте готовую сборку из [releases](https://github.com/PulseSync-LLC/YMusic-DRPC/releases).
+3. Теперь качаем [тему](https://github.com/Diramix/Spotify-Music/releases).
 4. После установки запускаем программу и нажимаем на кнопку «Директория со стилями», кидаете туда ПАПКУ С ТЕМОЙ.
-5. Выберете тему в приложении мода.
-6. Всё!
+5. ОБЯЗАТЕЛЬНО РАЗВЕРНИТЕ МЕНЮ С ЗАКРЕПАМИ В ЯНДЕКС МУЗЫКЕ!!!
+6. Выберете тему в приложении мода.
+7. Всё!
 
 ## Сриншоты
-![2](https://github.com/user-attachments/assets/a5777cc1-d349-4d8f-9400-1c725c76a803)
-![3](https://github.com/Diramix/Spotify-Music/assets/79011730/6557b94c-9764-4588-a082-5e02acc26fb8)
-![4](https://github.com/Diramix/Spotify-Music/assets/79011730/06dfcb24-82bd-4ba6-b924-374a7e93076f)
-![5](https://github.com/Diramix/Spotify-Music/assets/79011730/86db0450-2193-4aaa-8aa5-3a257c42c941)
-![6](https://github.com/user-attachments/assets/4a906776-8a0e-4ed4-a947-21bacff330aa)
-![7](https://github.com/user-attachments/assets/7fafd73d-8f9f-438b-b741-03bac4551951)
-![8](https://github.com/Diramix/Spotify-Music/assets/79011730/7d972431-93c0-45da-b403-39a77f52b702)
+![изображение](https://github.com/user-attachments/assets/5afe54d2-c997-4274-b851-7c82bd174513)
+![изображение](https://github.com/user-attachments/assets/72bffd09-e179-434d-b28a-1ad16fdd3931)
+![изображение](https://github.com/user-attachments/assets/06cb2ab2-b087-4e06-a8a8-c197b32bb5a3)
+![изображение](https://github.com/user-attachments/assets/04346e58-2129-4682-bca0-0846410528df)
+![изображение](https://github.com/user-attachments/assets/5f9f45f3-1f47-4300-8df1-b395138f5bc8)
 
 ## Контакты
 ### Discord сервер где вы можете связаться с автором темы.
