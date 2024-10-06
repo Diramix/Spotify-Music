@@ -1,814 +1,735 @@
-/*БЫСТРЫЕ НАСТРОЙКИ*/
+root {
+	--spotify-black: #000;
+	--spotify-main: #121212;
+	--spotify: #1ED760;
+}
 
-    /*Надпись «Spotify Music!»*/
-    body > div > p {
-    	display: none;
-    }
-
-    /*Кнопка «beta» - логотип «Spotify»*/
-    .MainPage_beta__y32vb {
-        display: clip;
-        opacity: 1;
-    }
+.ym-font-music,
+.ym-dark-theme,
+.ym-light-theme {
+	--ym-background-color-primary-enabled-basic: var(--spotify-black);
+	--ym-controls-color-primary-default-enabled: #1ED760;
+	--ym-controls-color-primary-outline-selected_stroke: #1ED760;
+	--ym-controls-color-primary-default-hovered: #1ED790;
+}
 
 body {
-    background-color: #000000;
-    min-width: 1px;
-    min-height: 1px;
+	user-select: none;
 }
 
-.ym-dark-theme {
-    --ym-background-color-primary-enabled-content: #121212;
-    --ym-background-color-primary-enabled-basic: #000000;
-    --ym-background-color-primary-enabled-player: #121212;
-    --ym-controls-color-primary-default-hovered: #1FDE64;
-    --ym-controls-color-primary-default-enabled: #1FDE64;
-    --ym-controls-color-primary-outline-selected_stroke: #1FDE64;
+/*Spotify Screen*/
+/*--------------------------------------------*/
+.Spotify_Screen {
+	position: fixed;
+	height: calc(100% - 148px);
+	width: 270px;
+	right: 7px;
+	bottom: 86px;
+	background: #121212;
+	z-index: 1;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 0;
+	border-color: #fff1;
+	overflow-y: scroll;
+}
+/*
+.SM_Background {
+	position: sticky;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+*/
+.Spotify_Screen::-webkit-scrollbar {
+	display: none;
 }
 
-/*Дев панель*/
-.DevPanel_root__Gu7qn {
-    position: fixed;
-    z-index: 9999;
+.SM_Title_Container {
+	position: sticky;
+	width: 100%;
+	height: 64px;
+	top: 0;
+	box-shadow: 0 5px 20px #121212;
+	background: #121212;
+	z-index: 10;
 }
 
-.DevPanel_panel__LnoO2 {
-    background: #000;
-}
-
-body > div > div > button.qU2apWBO1yyEK0lZ3lPO {
-    backdrop-filter: blur(0px);
-    z-index: 99999;
-    background: #000;
-    color: #fff;
-}
-
-/*Для вас и Тренды*/
-.MainPage_header__lPh0v {
+.SM_First_Artist {
+	position: absolute;
+	color: #fff;
+	padding: 25px 0 0 20px;
+	font-size: 17px;
+	font-weight: 500;
+	top: -4px;
+    max-width: 195px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     overflow: hidden;
-    width: -webkit-fill-available;
-    margin-left:-16px;
-    height: 80px;
 }
 
-/*История прослушивания в разделе «Для вас»*/
+.SM_Decorate_Buttons {
+	position: absolute;
+	right: 20px;
+	top: 27px;
+	content: url("https://github.com/Diramix/Spotify-Music/blob/SM-2/web_assets/Spotify-Screen/SM-Decorate-Buttons.png?raw=true");
+}
+
+.SM_Cover {
+	position: ;
+	width: 240px;
+	height: 240px;
+	border-radius: 10px;
+	margin: 25px auto;
+	margin-top: 18px;
+	z-index: 20;
+}
+
+.SM_Decorate_AddToPlaylist_Button {
+	position: absolute;
+	right: 12px;
+	content: url("https://github.com/Diramix/Spotify-Music/blob/SM-2/web_assets/Spotify-Screen/SM-Decorate-AddToPlaylist-Button.png?raw=true");
+	margin-top: 5px;
+}
+
+.SM_Track_Name {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 15px;
+    margin-top: -12px;
+    max-width: 210px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.SM_Artist {
+    color: #fff7;
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 15px;
+    max-width: 210px;
+    margin-top: 1px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.Wiki_Container {
+	position: absolute;
+	top: 403px;
+	height: auto;
+	background: #1F1F1F;
+	width: 250px;
+	left: 10px;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.Info_Title {
+	color: #fff;
+	font-size: 16px;
+	font-weight: 700;
+	text-align: left;
+	padding: 6px;
+}
+
+.Search_Info {
+	margin-top: 5px;
+	padding: 0px 6px 0px 6px;
+}
+
+.Achtung_Alert {
+	color: #ff0;
+	text-align: center;
+	font-style: italic;
+	margin-top: 16px;
+	font-size: 10px;
+	background: #0005;
+	padding: 6px;
+	border-radius: 5px;
+}
+/*--------------------------------------------*/
+
+/*Navbar*/
+/*--------------------------------------------*/
+.NavbarDesktop_root__scYzp {
+	position: fixed;
+	width: 300px;
+	height: calc(100% - 147px);
+	margin-top: 45px;
+	left: 10px;
+	background: #121212;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: #fff1;
+	border-width: 0;
+	z-index: 300;
+}
+
+nav.NavbarDesktop_navigation__dLUGW {
+    max-width: none;
+}
+
+span.NavbarDesktop_title_collapsed__IH9Bc {
+    opacity: 1 !important;
+    -webkit-animation: none !important;
+    animation: none !important;
+}
+
+div.Pin_info_collapsed__bF9ac {
+    opacity: 1 !important;
+}
+
+.SM_Yandex_DJ {
+	position: sticky;
+	width: 100%;
+	height: 65px;
+	border-radius: 7px;
+}
+
+.SM_Yandex_DJ:hover {
+	background: #fff1;
+	cursor: pointer;
+}
+
+.DJ_Cover {
+	position: absolute;
+	margin-left: 10px;
+	margin-top: 9px;
+	width: 48px;
+	height: 48px;
+	background-image: url("https://github.com/Diramix/Spotify-Music/blob/SM-2/web_assets/PinsList/SM-Yandex-DJ.png?raw=true");
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 5px;
+}
+
+.DJ_Title {
+	position: absolute;
+	margin-top: 12px;
+	margin-left: 65px;
+	height: 20px;
+	color: #fff;
+}
+
+.DJ_Description {
+	position: absolute;
+	margin-left: 65px;
+	margin-top: 33px;
+	font-size: 13px;
+	height: 20px;
+	width: 55%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li > a > div.ZrkG6gNYcr4h3hfkhyT1 > span {
+	font-size: 14px;
+	margin-top: 2px;
+}
+
+.NavbarDesktop_navigation__dLUGW {
+	margin-left: -87px;
+	margin-top: 25px;
+}
+
+.PinItem_root__WSoCn {
+	height: 65px;
+}
+
+.PinItem_cover__9TcjE {
+	width: 48px;
+	height: 48px;
+	bottom: 4px;
+}
+
+.Pin_meta__MzX_7 {
+	margin-left: 10px;
+}
+
+.Pin_title__Jw5WW {
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.Pin_subtitle__rb8Gq {
+	margin-top: 3px;
+	font-size: 13px;
+}
+
+body > div > div > div > aside > div > div > nav > ol > li:nth-child(1),
+body > div > div > div > aside > div > div > nav > ol > li:nth-child(2),
+body > div > div > div > aside > div > div > nav > ol > li:nth-child(3) {
+	visibility: hidden;
+}
+
+body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableLinks__H7Hab > nav > ol > li:nth-child(1) > a > div.zpkgiiHgDpbBThy6gavq {
+	visibility: visible;
+	position: fixed;
+	top: 15px;
+	left: 30px;
+	-webkit-app-region: no-drag;
+}
+
+body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableLinks__H7Hab > nav > ol > li:nth-child(2) > a > div.zpkgiiHgDpbBThy6gavq {
+	visibility: visible;
+	position: fixed;
+	top: 15px;
+	left: 78px;
+	-webkit-app-region: no-drag;
+}
+
+body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableLinks__H7Hab > nav > ol > li:nth-child(3) > a > div.zpkgiiHgDpbBThy6gavq {
+	visibility: visible;
+	position: fixed;
+	top: 15px;
+	left: 130px;
+	-webkit-app-region: no-drag;
+}
+
+.NavbarDesktop_navigation__dLUGW {
+	height: 35px;
+}
+
+body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableLinks__H7Hab > nav > ol > li:nth-child(4) > a > div.zpkgiiHgDpbBThy6gavq {
+	position: fixed;
+	margin-top: -227px;
+	left: 35px;
+}
+
+body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableLinks__H7Hab > nav > ol > li:nth-child(4) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span {
+	visibility: hidden;
+}
+
+body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableLinks__H7Hab > nav > ol > li:nth-child(4) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span:before {
+	visibility: visible;
+	content: "Моя медиатека";
+	font-weight: 500;
+	font-size: 15px;
+	position: fixed;
+	margin-top: -111px;
+	margin-left: 130px;
+}
+/*--------------------------------------------*/
+
+/*БАЗА*/
+/*--------------------------------------------*/
+.Content_main__8_wIa {
+	position: fixed;
+	height: -webkit-fill-available;
+	margin-top: 30px;
+	margin-bottom: 86px;
+	left: 317px;
+	right: 11px;
+	border-radius: 10px;
+	border-width: 0;
+}
+
+.MainPage_content__kskSM {
+	background-size: 100% 300px;
+	background-repeat: no-repeat;
+	padding: 0 23px 0 0;
+}
+
+[data-test-id="MAIN_PAGE"] {
+    overflow: scroll;
+    scrollbar-width: none;
+}
+
+[data-test-id="MAIN_PAGE"]::-webkit-scrollbar {
+    display: none;
+}
+/*--------------------------------------------*/
+
+/*Плеер*/
+/*--------------------------------------------*/
+section.PlayerBar_root__cXUnU {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 90px;
+	z-index: 9999;
+	border-radius: 0;
+	background: 0;
+	border-width: 0;
+}
+
+.PlayerBarDesktop_cover__IYLwR {
+	width: 56px;
+	height: 56px;
+	border-radius: 1px;
+}
+
+.PlayerBarDesktop_info__56v53 {
+	margin-left: 5px;
+}
+/*--------------------------------------------*/
+
+/*Релиз нотес*/
+/*--------------------------------------------*/
+.ReleaseNotesModal_root__RSw1p {
+	z-index: 10001;
+}
+
+#\:r0\: > header > h3 {
+	position: fixed;
+    visibility: hidden;
+    right: 139px;
+    top: 13px;
+    z-index: 10;
+}
+
+#\:r0\: > header > h3:before {
+    width: 100px;
+    visibility: visible;
+    position: absolute;
+    font-family: "Metropolis Semi Bold", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    right: 175px;
+    content: "Spotify";
+    color: #1FDE64;
+}
+
+#\:r0\: > header > h3:after {
+    width: 100px;
+    visibility: visible;
+    position: absolute;
+    font-family: "Yandex Sans Display Bold", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    right: 107px;
+    content: "Music! II";
+    color: #ffff00;
+}
+/*--------------------------------------------*/
+
+/*Лайки и история*/
+/*--------------------------------------------*/
 .LikesAndHistory_root__KCuz_ {
     position: absolute;
     bottom: -100px;
     height: 101px;
     z-index: 2;
+    max-width: 100%;
+}
+/*--------------------------------------------*/
+
+/*NEW RELEASE CARD*/
+/*--------------------------------------------*/
+[data-test-id="NEW_RELEASE_CARD"] {
+	height: 50px;
+	border-radius: 5px;
+	background: #fff2;
+	border-width: 0;
 }
 
-.LikesAndHistoryItem_root__oI1gk {
-    border-radius: 5px;
-    background: #262626;
+[data-test-id="NEW_RELEASE_CARD"]:hover {
+	height: 50px;
+	border-radius: 5px;
+	background: #fff3;
+	border-width: 0;
 }
 
-.LikesAndHistoryItem_root__oI1gk:hover {
-    background: #363636;
+.NewReleaseCard_image__7nTy8 {
+	height: 45px;
 }
+/*--------------------------------------------*/
 
-/*Это база, это знать надо*/
-.DefaultLayout_content__md70Z {
-    border-radius: 10px;
-}
-
-.DefaultLayout_root__7J0wo {
-    /*Я е**л этот fixed, relative. Какой д*дик придумал этот ваш css???*/
-    position: !important; /*<-- Г*ВНО*/
-    top: 0; /*14.07.2024 именно с этой даты, я еб*л top: 55; ╰(*°▽°*)╯*/
-    margin-left: 100%;
-    right: 72px;
-    grid-template: 
-    "navbar playerbar content"
-    "navbar playerbar content" auto/auto 1fr;
-    grid-template-columns: fit-content fit-content auto;
-}
-
-.DefaultLayout_content__md70Z {
-    border-radius: 10px;
-    grid-area: content;
-    position: fixed;
-    left: 27%;
-    top: 62px;
-    bottom: 90px;
-    margin-right: 57px;
-    border-width: 0;
-}
-
-/*Кнопка BETA*/
-.MainPage_beta__y32vb {
-    background: #ff000000;
-    position: fixed;
-    margin-left: -35px;
-    top: -27px;
-}
-
-.MainPage_beta__y32vb::after {
-    content: url("https://images.squarespace-cdn.com/content/v1/6067cfe95c8d140d4fbcc96d/1618020246019-JKMOH8ZATRDD7HIB59DJ/SPOTIFY+LOGO+new+copy.png?format=100w");
-}
-
-/*Стрелочки над плейлистами свверху*/
-.MixedEntitiesBlock_controls__mOhq7,
-.TracksBlock_controls__nzIRh {
-    flex-direction: column;
-}
-
-/*Плеер*/
-.PlayerBar_root__cXUnU {
-    height: 90px;
-    width: -webkit-fill-available;
-    border-radius: 0px;
-    border-width: 0
-}
-
-.PlayerBarDesktop_root__d2Hwi {
-    border-radius: 0px 0px 0px 0px;
-    grid-area: content;
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    --player-cover-width: 60px;
-    --player-cover-height: 60px;
-    --player-average-color-background: hsl(0, 0%, 0%);
-}
-
-/*Левый блок плеера*/
-.PlayerBarDesktop_info__56v53 {
-    margin-left: 6px;
-}
-
-/*Кнопки плеера*/
-.PlayerBar_root__cXUnU * .cpeagBA1_PblpJn8Xgtv:hover {
-    background: #ff000000;
-    scale: 1.1;
-}
-
-.PlayerBar_root__cXUnU * .cpeagBA1_PblpJn8Xgtv:disabled {
-    background: #00000000;
-    display: clip;
-}
-
-.SonataControlsDesktop_root__oluUH {
-    scale: 0.9;
-}
-
-.PlayerBarDesktop_infoButtons__iSpa_ {
-    scale: 0.9;
-}
-
-/*Замена ненужной надписи*/
-body > div > p {
-    visibility: hidden;
-}
-
-body > div > p:after {
-    width: 50px;
-    visibility: visible;
-    position: absolute;
-    font-family: "Metropolis Semi Bold", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    right: 43px;
-    content: "Spotify";
-    color: #1FDE64;
-}
-
-.YMDRPC::before,
-.PSB::before {
-    width: 45px;
-    visibility: visible;
-    position: absolute;
-    font-family: "Yandex Sans Display Bold", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    right: 0px;
-    content: "Music!";
-    color: #ffff00;
+/*Табы*/
+/*--------------------------------------------*/
+.Skeleton_header__1uiIw {
+	margin-top: 20px;
+	visibility: visible
+	top: 90px;
+	margin-top: 50px;
 }
 
 .Skeleton_tab__zvQx2 {
-    scale: 0.9;
+	min-height: 35px;
+	max-height: 35px;
 }
 
-/*Поиск*/
-.SearchPage_input__TSbxK {
-    position: fixed;
-    top: 11.5px;
-    left: 30%;
-    width: 40%;
+.Skeleton_tab__zvQx2[aria-selected="true"] {
+	background: #fff;
 }
 
-/*История поиска*/
+.Skeleton_tab__zvQx2[aria-selected="true"] * {
+	color: #000;
+}
+
+.Skeleton_tab__zvQx2[aria-selected="false"] {
+	background: #fff1;
+}
+
+.Skeleton_tab__zvQx2[aria-selected="false"]:hover {
+	background: #fff2;
+}
+
+.Tab_title__hAYZk {
+	font-weight: 450;
+}
+/*--------------------------------------------*/
+
+/*SyncLyrics*/
+/*--------------------------------------------*/
+[data-test-id="FULLSCREEN_PLAYER_MODAL"] {
+	border-width: 0;
+}
+
+.FullscreenPlayerDesktopContent_syncLyrics__6dTfH {
+	height: 85%;
+}
+/*--------------------------------------------*/
+
+/*Playlist Page*/
+/*--------------------------------------------*/
 .SearchPlaylistInput_root__o14iM {
-    position: fixed;
-    width: -webkit-fill-available;
-    left: 0.5%;
-    right: 73.5%;
-    top: 80px;
-}
-
-/*Страница поиска*/
-.SearchPage_tabCarousel__9cWOl {
-    left: 10px;
-}
-
-.SearchPage_filter__5xzTL {
-    border-color: #262626;
-    background: #262626;
-}
-
-.SearchPage_filter__5xzTL:hover {
-    border-color: #363636;
-    background: #363636;
-}
-
-/*Кнопки сверху на главной*/
-.NewRelease_image__Vw6_k {
-    opacity: 0;
-    height: 80px;
-}
-
-.NewReleases_item__Gv0iR {
-    overflow: hidden;
-    position: static;
-    height: 51px;
-}
-
-/*Кнопка Моя волна*/
-[data-test-id="MY_VIBE_PLAY_BUTTON_PLAYING"],
-[data-test-id="MY_VIBE_PLAY_BUTTON_NOT_PLAYING"] {
-    scale: 0.9;
-}
-
-.PlayButton_root__nYKdN {
-    min-width: 160px;
-}
-
-/*Знакомое вам*/
-.BlockHeader_start__ZrGP5 {
-    margin-block-start: 1vw;
-}
-
-/*Трекблок*/
-.TracksBlock_trackColumn__PmjA_ {
-    position: flex;
-    overflow: hidden;
-}
-
-.Skeleton_tracksContainer__NXPrC {
-    width: 100%;
-}
-
-/*Закрепы*/
-.PinItem_root__WSoCn {
-    border-radius: 3px 3px 3px 3px;
-}
-
-.NavbarDesktop_pinsList___jXIM {
-    bottom: 109px;
-}
-
-.PinsList_content__9RG7s {
-    position: fixed;
-    height: -webkit-fill-available;
-    top: 240px;
-    bottom: 90px;
-    width: 61px;
-    right: -2.6px;
-    z-index: 2;
-}
-
-/*Длинные кнопки сверху вкладки "Тренды"*/
-.NewRelease_card__yn06x {
-    top: -15px;
-    position: flex;
-    border-radius: 3px 3px 3px 3px;
-    bottom: 160%;
-    width: 100%;
-    height: 50px;
-    background: #262626;
-    border-width: 0;
-}
-
-.NewRelease_card__yn06x:hover {
-    background: #363636;
-}
-
-/*Картинка альбома длинных кнопок*/
-.NewReleaseCard_image__7nTy8 {
-    border-radius: 3px 0px 0px 3px;
-    margin-left: -9px;
-    top: 22.65%;
-    height: 40px;
-    width: 50px;
-}
-
-/*Кнопка Сбросить*/
-.Rkdd2vKC_3xa1eUdRdHP {
-    display: clip;
-}
-
-/*3 Точки*/
-.ControlsBar_contextMenuWrapper__NHkn_ {
-    position: absolute;
-    margin-right: 40px;
-}
-
-/*Кнопки фуллскрина*/
-body > div > div > div > div > div > div > div > div.SonataFullscreenControlsDesktop_root__l4a2W {
-    position: absolute;
-    bottom: 37px;
-    opacity: 1;
-}
-
-/*Вайб блок*/
-.VibeBlock_root__z7LtR {
-    position: fixed;
-    border-radius: 10px 10px 10px 10px;
-    overflow: hidden;
-    height: -webkit-fill-available;
-    min-height: 0px;
-}
-
-.MainPage_vibe__XEBbh {
-    top: 28.5%;
-    bottom: 2.5%;
-    height: -webkit-fill-available;
-    width: 27%;
-    left: 0px;
-    right: 0px;
-}
-
-/*Расположение блока*/
-.MixedEntitiesBlock_root__Zs8l2 {
-    width: 26%;
-    position: fixed;
-    top: 50px;
-    left: 0px;
-}
-
-/*Стрелочки чартов*/
-.TrackChart_chartCell__33_al {
-    width: 5px;
-}
-
-/*Расположение блока плейлистов*/
-.TracksBlock_root__wVX7U {
-    width: 26%;
-    position: fixed;
-    top: 90px;
-    left: 0px;
-}
-
-[data-test-id="OPEN_PLAYLIST"] {
-    display: flex;
-}
-
-/*Таймлайн фуллскрина*/
-body > div > div > div > div > div > div > div.FullscreenPlayerDesktop_timeline__4Z6DH {
-    position: absolute;
-    bottom: 115px;
-}
-
-.FullscreenPlayerDesktop_root___8vo1.FullscreenPlayerDesktop_important__dGfiL {
-    --max-track-card-size: 87vw;
-}
-
-/*Вайб кнопка*/
-.VibeButton_button__tXFAm {
-    border-radius: 5px 5px 5px 5px;
-    width: 100%;
-    background: #262626;
-    border-width: 0;
-}
-
-.VibeButton_button__tXFAm:hover {
-    background: #363636;
-}
-
-.Vibes_item__0EPx7 {
-    height: 80px;
-}
-
-/*Нейрокнопка*/
-.NeuromusicButton_button__kT4GN {
-    border-radius: 5px 5px 5px 5px;
-    width: 100%;
-    background: #262626;
-    border-width: 0;
-}
-
-.NeuromusicButton_button__kT4GN:hover {
-    background: #363636;
-}
-
-/*Кнопка лайка в фуллскрине*/
-.FullscreenPlayerDesktop_likeButton__sv1hI {
-    position: fixed;
-    left: 60px;
-    bottom: 35px;
-    width: 65px;
-    height: 63px;
-    opacity: 1;
-}
-
-.FullscreenPlayerDesktop_likeButton__sv1hI:hover {
-    position: fixed;
-    left: 60px;
-    bottom: 35px;
-    width: 65px;
-    height: 63px;
-    opacity: 1;
-    color: #1FDE64;
-}
-
-/*Картинка Фуллскрина*/
-.FullscreenPlayerDesktop_content__bl_7V {
-    display: flex;
-    justify-content: flex-start;
-}
-
-/*Управление картинкой фуллскрина*/
-body > div > div > div > div > div > div > img.FullscreenPoster_cover__WWgNX {
-    width: 250px;
-    height: 250px;
-    position: absolute;
-    bottom: 163px;
-    left: 7%;
-    border-radius: 6px;
-    min-height: 0;
-}
-
-/*Управление расположением картинки фуллскрина и кнопок*/
-body > div > div > div > div > div > div.FullscreenPlayerDesktop_cover__VVsjV {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: visible;
-}
-
-/*Мета фуллскрина*/
-body > div > div > div > div > div > div.FullscreenPlayerDesktop_trackInfo__Px1Ta {
-    position: absolute;
-    margin-left: 75px;
-    left: 7%;
-    bottom: 153px;
-    display: flex;
-    justify-content: flex-start;
-}
-
-@media( min-width: 760px )
-{
-    body > div > div > div > div > div > div > img.FullscreenPoster_cover__WWgNX {
-        width: 150px;
-        height: 150px;
-    }
-    .FullscreenPlayerDesktop_trackInfo__Px1Ta {
-        transform: translate(95px, -0px);
-    }
-}
-
-@media ( min-width: 1090px )
-{
-    body > div > div > div > div > div > div > img.FullscreenPoster_cover__WWgNX {
-        width: 150px;
-        height: 150px;
-    }
-    .FullscreenPlayerDesktop_trackInfo__Px1Ta {
-        transform: translate(95px, -0px);
-    }
-}
-
-/*Нижняя мета фуллскрина*/
-body > div > div > div > div > div > div > div.FullscreenPlayerDesktop_trackMeta__NydsU {
-    display: block;
-    position: relative;
-    padding: 0 !important;
-    margin: 0;
-}
-
-/*Верхняя мета фуллскрина*/
-body > div > div > div > div > div > div > div > div > div.FullscreenPlayerDesktop_titleContainer__rVpIZ {
-    padding: 0;
-    margin: 0;
-    justify-content: flex-start;
-}
-
-/*Размер меты фуллскрина*/
-body > div > div > div > div > div.FullscreenPlayerDesktop_trackContainer__99XuP * .Meta_title__GGBnH {
-    font-size: 42px !important;
-    line-height: normal;
-}
-
-/*Мета артиста*/
-.Meta_artists__VnR52 {
-    text-align: justify;
-}
-
-/*Кнопка выхода из фуллскрина*/
-.FullscreenPlayerDesktop_closeButton__MQ64s {
-    opacity: 0.5;
-}
-
-/*Кнопка "Для вас и Тренды"*/
-[aria-label="Тренды"],
-[aria-label="Для вас"],
-[aria-label="Лето не ждёт"] {
-    max-height: 40px;
-    min-height: 40px;
-}
-
-.MainPage_header__lPh0v {
-    height: 60px;
-}
-
-/*Подкаст плейлист*/
-[data-test-id="NON_MUSIC_OPEN_PLAYLIST"] {
-    position: static;
-    width: 100%;
-}
-
-.xfFtKQpgAYvC2jI1tBtS {
-    height: 170px;
-}
-
-/* ONLY background: color; */
-.DefaultLayout_root_applicationPreserveTitleBar__ygJtq,
-.SyncLyrics_content__lbkWP:after,
-.SyncLyrics_content__lbkWP:before,
-.SyncLyrics_root__6KZg4 {
-    background: #000;
-}
-
-.PageHeaderArtist_playControl__N_3l_,
-.PageHeaderPlaylist_playControl__yRQfm,
-.PageHeaderAlbum_playControl__fFyS9 {
-    background: #1FDE64;
-}
-
-/*ONLY color: color;*/
-.Seq0GowcqQmiA9LdLP_g,
-.PlayButtonWithCover_playButtonIcon__DRjkN {
-    color: #1FDE64;
-}
-
-section.PlayerBar_root__cXUnU,
-.SonataFullscreenControlsDesktop_sonataButton__qmSTF,
-.FullscreenPlayerDesktop_controls__57AQi,
-.PlayerBar_root__cXUnU * .cpeagBA1_PblpJn8Xgtv {
-    background: #000;
-}
-
-/*ИСКРА*/
-[data-test-id="OPEN_PLAYLIST"] {
-    display: flex;
-    position: static;
-    width: 100%;
-    flex-direction: column;
-}
-
-/* ONLY display: none; */
-.NewReleaseCard_type__1LjSl,
-.NewRelease_fade__rVE0_,
-.NavbarDesktop_logo__Z4jGx,
-.P6gOmyFtXyetUz0dqhF3,
-.web_newreleases_album_31499697,
-.TrackChart_controlsBarCell__Xd5pn,
-.Footer_root__ugyur,
-.CollectionPage_description__A3dny,
-.NewReleaseCard_explicitMark__juwvu,
-.sqs620_Fxut2ZNH0Nzce,
-.mdbxU6IWInQTsVjwnapn,
-.VibeButton_image__GOwKJ,
-.Meta_explicitMark__ocnCV,
-.VibeButton_subtitle__e_Di0,
-.FullscreenPlayerDesktop_menuButton__0kKtl,
-[data-test-id="LIKES_HISTORY_COVERS"],
-.LikesAndHistoryItem_covers__9k_yw,
-.BlockHeader_coverContainer__lATZT,
-.InnerHeader_title__5aVLP,
-.NavbarDesktop_user__dzbuH,
-.BlockHeader_description__hAk9D,
-.Pin_meta__MzX_7,
-.ZrkG6gNYcr4h3hfkhyT1,
-.Tab_image__Hen3_,
-.Tab_subtitle__fLp9S,
-.LikesAndHistoryItem_cover__QlRhz,
-.NewRelease_artistCaption__1F8A9,
-.bBh7lvgdfF7bqNqlK78Q,
-.VibeAnimation_root_visible__S7kXl,
-.ControlsBar_explicitMark__w9l80,
-.NewRelease_fade__rVE0_,
-.MixedEntitiesListItem_buttonArrow__Emsn1,
-.ControlsBar_duration__RawSk,
-.MixedEntitiesListItem_controlsBarCell__J78Qc,
-.NewRelease_artists__wGTaP,
-.ControlsBar_likeIcon__mrNiz,
-.ControlsBar_dislikeIcon__ENXh_,
-.PinItem_contextMenu__VwiFp {
-    display: none;
-}
-
-/*Другое*/
-._MWOVuZRvUQdXKTMcOPx {
-    opacity: 1;
-}
-
-.SHvrm0VRiLVwGqJJjNO8 {
-    height: 8px;
-    padding: 1px;
-    scale: 1;
-}
-
-.SHvrm0VRiLVwGqJJjNO8:hover {
-    height: 8px;
-    padding: 2px;
-    scale: 1;
-}
-
-.SHvrm0VRiLVwGqJJjNO8:before {
-    height: 4px;
-}
-
-.SonataControlsDesktop_sonataButtons__ux0qT {
-    gap: 10px;
-}
-
-.MixesGrid_mixesTitle__QawnL {
-    position: fixed;
-    top: 50px;
-}
-
-.MixesGrid_mixesGrid__uZQtt {
-    position: fixed;
-    top: 130px;
-}
-
-.RvWjZle1erRBXzJEF9Zj {
-    position: relative;
-    margin-top: 100%;
-    bottom: 45px;
-    margin-left: 100%;
-    right: 45px;
-}
-
-.VibeCard_control__SM3H4 {
-    right: -25px;
-    bottom: -25px;
-}
-
-.NewRelease_root__W0T4a::before {
-    display: flex;
-    flex-direction: column;
-}
-
-[aria-labelledby=":rckt:"] {
-    height: 60px;
-}
-
-.Skeleton_headerContainer__pRHVj {
-    margin-block-start: -35px;
-}
-
-.Content_rootOld__g85_m {
-    right: -2px;
-}
-
-.CompositeHeader_stickyChild_scrolling__wm9_D {
-    width: -webkit-fill-available;
-}
-
-.Neuromusic_item__Q_JI_ {
-    height: 80px;
-}
-
-[id="familiar"] {
-    position: fixed;
-    width: 26%;
-    left: 0px;
-    top: 55px;
-}
-
-.ArtistPage_releaseBlock__wzo2G {
-    display: fixed;
-    left: 0px;
-}
-
-.MixCard_root__9tPLV {
-    border-radius: 5px;
-}
-
-.MixCard_root__9tPLV:hover {
-    background: #363636;
-}
-
-[aria-selected="true"],
-[aria-pressed="true"] {
-    border-color: #1FDE64;
-}
-
-[aria-selected="true"]:hover,
-[aria-pressed="true"]:hover {
-    border-color: #1FDE64;
-}
-
-[data-test-id="MAIN_TABS"] {
-   margin-top: -5px;
-}
-
-/*Кнопки фуллскрина*/
-.kprKZx99igczv4y5NX8O  {
-    background: #0006;
-    scale: 1;
-}
-
-.kprKZx99igczv4y5NX8O  {
-    background: #0006;
-    scale: 1.1;
-}
-
-[data-test-id="NEXT_TRACK_BUTTON"],
-[data-test-id="PREVIOUS_TRACK_BUTTON"]:disabled,
-[data-test-id="PREVIOUS_TRACK_BUTTON"] {
-    background: 0;
-    opacity: 0.4;
-}
-
-[data-test-id="NEXT_TRACK_BUTTON"]:hover,
-[data-test-id="PREVIOUS_TRACK_BUTTON"]:hover {
-    background: 0;
-    opacity: 1;
-}
-
-[data-test-id="LIKE_BUTTON"],
-[data-test-id="LIKE_BUTTON"]:hover {
-    background: 0;
-    scale: 1;
-}
-
-[data-test-id="SHUFFLE_BUTTON"],
-[data-test-id="REPEAT_BUTTON_NO_REPEAT"],
-[data-test-id="REPEAT_BUTTON"],
-[data-test-id="REPEAT_BUTTON_REPEAT_CONTEXT"],
-[data-test-id="REPEAT_BUTTON_REPEAT_ONE"] {
-    background: 0;
-    color: #fff;
-    opacity: 0.8;
-}
-
-[data-test-id="SHUFFLE_BUTTON"]:hover,
-[data-test-id="REPEAT_BUTTON_NO_REPEAT"]:hover,
-[data-test-id="REPEAT_BUTTON"]:hover,
-[data-test-id="REPEAT_BUTTON_REPEAT_CONTEXT"]:hover,
-[data-test-id="REPEAT_BUTTON_REPEAT_ONE"]:hover {
-    background: 0;
-    color: #fff;
-    opacity: 1;
-}
-
-/*Контекстное меню*/
-.ControlsBar_contextMenu__8AFkQ {
+	margin-left: 70%;
+	margin-right: 20px;
+	border-radius: 5px;
+	background: #fff1;
+}
+/*--------------------------------------------*/
+
+/*AlbumCard*/
+/*--------------------------------------------*/
+.AlbumCard_controls__yuO40,
+.PlaylistCard_controls__Ej8Rz,
+.TrackCard_controls__E7Y3L,
+.ArtistCard_controls__jsqqI {
+	visibility: hidden;
+}
+
+.AlbumCard_playButton__mYK9R[data-test-id="PLAY_BUTTON"],
+.PlaylistCard_control__73YUq[data-test-id="PLAY_BUTTON"],
+.TrackCard_control___huPc[data-test-id="PLAY_BUTTON"],
+.ArtistCard_control___qv5j[data-test-id="PLAY_BUTTON"] {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background: #000;
+	color: #1ED760;
+	visibility: visible;
+}
+/*--------------------------------------------*/
+
+/*Обводка слайдеров в Яндекс Музыке*/
+/*--------------------------------------------*/
+.ChangeVolume_root__HDxtA {
+	--slider-thumb-box-shadow-color: #0000;
+}
+
+.ChangeTimecode_slider__P4qmT {
+	--slider-thumb-box-shadow-color: #0000;
+}
+/*--------------------------------------------*/
+
+/*Кнопка BETA*/
+/*--------------------------------------------*/
+.MainPage_beta__y32vb {
+	display: none;
     background: 0;
 }
+/*--------------------------------------------*/
 
-/*NAVBAR - НАВБАР*/
-.NavbarDesktop_navigation__dLUGW {
-    position: absolute;
-    top: 55px;
+/*Настройки качества звука*/
+/*--------------------------------------------*/
+[data-test-id="QUALITY_SETTINGS_CONTEXT_MENU"] {
+	position: absolute;
+	z-index: 260;
+	right: 0;
+	bottom: 0;
+	background: #000;
+	border-radius: 5px 0px 0px 0px;
+	border-width: 1px 0px 0px 1px;
 }
 
-/*Сплеш анимация*/
-.SplashScreen_video__wFSy5,
-.MainSuspenseLoader_icon__MceTD {
-    filter: hue-rotate(65deg);
+.EqualizerPresets_container__ABVY8 {
+	background: #000;
 }
+/*--------------------------------------------*/
 
-.FullscreenPlayerDesktop_content__bl_7V {
-    border-width: 0;
-}
-
-/*карусель контролс*/
-.CarouselControls_control__L8t4i {
-    margin-right: 2px;
+.VibeSettings_root__ufZlV {
+	position: fixed;
+	right: 266px;
+	bottom: -30px;
+	box-shadow: 0 0;
 }
 
 /*Тайтлбар*/
+/*--------------------------------------------*/
 .TitleBar_root__QjdOZ {
-    position: fixed;
-    z-index: 9999;
+	position: fixed;
+	user-select: unset;
+	height: 60px;
+	pointer-events: none;
+	--title-bar-button-width: 100%;
 }
 
-/*Синк лирикс*/
-.SyncLyrics_content__lbkWP {
-    position: fixed;
-    height: 100%;
-    bottom: 0;
-    background: #000;
+.TitleBar_button__9MptL {
+	width: 50px;
+	height: 60px;
+	pointer-events: auto;
+}
+/*--------------------------------------------*/
+
+/*Поиск*/
+/*--------------------------------------------*/
+.SearchPage_content__ycqK5 {
+	margin-top: -70px;
 }
 
-/*PlayerModalRoot*/
-.FullscreenPlayerDesktop_root___8vo1  {
-    border-width: 0;
+.SearchPage_input__TSbxK {
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 9px;
+	height: 45px;
+	width: 40%;
+	max-width: 500px;
+	-webkit-app-region: no-drag;
+	border-width: 0;
 }
+
+body > div > div > div > div > main > div > div > div > svg {
+	scale: 1.5;
+}
+/*--------------------------------------------*/
+
+/*Vibe - Вайб*/
+/*--------------------------------------------*/
+[data-test-id="VIBE_BLOCK"] {
+	display: none;
+}
+
+/*
+@keyframes loading {
+    0% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: -100%;
+    }
+}
+
+.VibeBlock_root__z7LtR {
+    min-height: 320px;
+    max-height: 320px;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.02), rgba(0, 0, 0, 0));
+    background-size: 200% 100%;
+    animation: loading 2s ease-in-out infinite;
+    border-radius: 10px;
+    will-change: transform;
+    margin: 20px 0px 20px 20px;
+}
+
+.rf_Spotify_Sponsor {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	background: #0006;
+	padding: 2px 5px 2px 5px;
+	border-radius: 5px;
+	color: #fff;
+	font-weight: 500;
+}
+*/
+/*--------------------------------------------*/
+
+/*Юзер*/
+/*--------------------------------------------*/
+[aria-label="Ваш профиль"] {
+	position: fixed;
+	right: 160px;
+	top: 13px;
+	-webkit-app-region: no-drag;
+}
+
+.UserProfile_dialog_desktop__0p006 {
+	position: fixed;
+	right: 100px;
+	left: calc(100% - 420px);
+	top: 70px;
+	bottom: calc(100% - 610px);
+}
+/*--------------------------------------------*/
+
+/*Неурокнопки*/
+/*--------------------------------------------*/
+.VibeButton_button__tXFAm,
+.NeuromusicButton_button__kT4GN {
+	border-radius: 5px;
+	background: #fff1;
+	border-width: 0;
+}
+
+.VibeButton_button__tXFAm:hover,
+.NeuromusicButton_button__kT4GN:hover {
+	border-radius: 5px;
+	background: #fff2;
+	border-width: 0;
+}
+/*--------------------------------------------*/
+
+/*Концерты*/
+/*--------------------------------------------*/
+.ConcertCard_date__ECoa3 {
+	width: 64px;
+	height: 64px;
+}
+/*--------------------------------------------*/
+
+/*Контекстное меню*/
+/*--------------------------------------------*/
+.ggP7WX2_erziDHFOo32s {
+	background: #000;
+}
+/*--------------------------------------------*/
+
+/*Сплэш скрин и лого*/
+/*--------------------------------------------*/
+.MainSuspenseLoader_icon__MceTD,
+.SplashScreen_video__wFSy5 {
+	filter: hue-rotate(65deg);
+}
+/*--------------------------------------------*/
+
+/*ONLY display: none;*/
+/*--------------------------------------------*/
+[data-test-id="VIBE_ANIMATION"],
+.UserProfile_userName__PTRuJ,
+.VibeButton_image__GOwKJ,
+.mdbxU6IWInQTsVjwnapn,
+.UserID-Avatar:after,
+.NewRelease_cover__EVFNR,
+.NavbarDesktop_logoWrapper__89ce6,
+.NewReleaseCard_type__1LjSl,
+.l66GiFKS1Ux_BNd603Cu,
+.Tab_image__Hen3_,
+.Tab_subtitle__fLp9S,
+body > div > p,
+.NewReleaseCard_trailerButton__wyoRL,
+[aria-label="Контент не подходит для детей"],
+[data-intersection-property-id="concerts_personal"],
+[data-intersection-property-id="ConcertsTop"],
+body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(1) > a > div.ZrkG6gNYcr4h3hfkhyT1.xENlRAFvRskKnt8LUObC > span,
+body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(1) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span,
+body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(2) > a > div.ZrkG6gNYcr4h3hfkhyT1.xENlRAFvRskKnt8LUObC > span,
+body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(2) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span,
+body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(3) > a > div.ZrkG6gNYcr4h3hfkhyT1.xENlRAFvRskKnt8LUObC > span,
+body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(3) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span,
+.FullscreenPlayerDesktopContent_syncLyricsContent__H_enX:after,
+.FullscreenPlayerDesktopContent_syncLyricsContent__H_enX:before,
+.FullscreenPlayerDesktopContent_sliderContainer__FtBZ7,
+.FullscreenPlayerDesktopControls_root__tviu4,
+.Donations_root__xo2BC,
+.ConcertDate_weekday__fBZXo,
+.ConcertCard_button__GQxNL {
+	display: none;
+}
+/*--------------------------------------------*/

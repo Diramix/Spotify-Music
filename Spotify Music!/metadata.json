@@ -1,9 +1,9 @@
 {
     "image": "image.png",
-    "name": "Spotify Music!",
+    "name": "Spotify Music! II",
     "author": "Diramix",
     "description": "Public",
-    "version": "1.13.4",
+    "version": "2.0.0",
     "css": "style.css",
     "script": "script.js"
 }
