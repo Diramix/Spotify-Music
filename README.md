@@ -26,6 +26,7 @@
 ![изображение](https://github.com/user-attachments/assets/72bffd09-e179-434d-b28a-1ad16fdd3931)
 ![изображение](https://github.com/user-attachments/assets/06cb2ab2-b087-4e06-a8a8-c197b32bb5a3)
 ![изображение](https://github.com/user-attachments/assets/04346e58-2129-4682-bca0-0846410528df)
+![изображение](https://github.com/user-attachments/assets/f49d0006-685e-4d37-b92c-2e7c6fef4971)
 ![изображение](https://github.com/user-attachments/assets/5f9f45f3-1f47-4300-8df1-b395138f5bc8)
 ![изображение](https://github.com/user-attachments/assets/767472fd-c1f3-41b5-8764-26f178cbd322)
 
