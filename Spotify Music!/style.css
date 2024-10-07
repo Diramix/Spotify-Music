@@ -11,6 +11,7 @@ root {
 	--ym-controls-color-primary-default-enabled: #1ED760;
 	--ym-controls-color-primary-outline-selected_stroke: #1ED760;
 	--ym-controls-color-primary-default-hovered: #1ED790;
+	--ym-controls-color-primary-text-hovered: #1ED790;
 }
 
 body {
@@ -205,7 +206,15 @@ div.Pin_info_collapsed__bF9ac {
 	background-size: cover;
 	border-radius: 5px;
 }
-
+/* В разработке
+.DJ_Buttons {
+	width: 50px;
+	height: 50px;
+	background: #f00;
+	background-image: url("https://github.com/Diramix/Spotify-Music/blob/SM-2/web_assets/PinsList/DJ-Buttons.png?raw=true");
+	background-repeat: no-repeat;
+}
+*/
 .DJ_Title {
 	position: absolute;
 	margin-top: 12px;
@@ -262,7 +271,8 @@ body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitle
 
 body > div > div > div > aside > div > div > nav > ol > li:nth-child(1),
 body > div > div > div > aside > div > div > nav > ol > li:nth-child(2),
-body > div > div > div > aside > div > div > nav > ol > li:nth-child(3) {
+body > div > div > div > aside > div > div > nav > ol > li:nth-child(3),
+body > div > div > div > aside > div > div > nav > ol > li:nth-child(4) {
 	visibility: hidden;
 }
 
@@ -295,6 +305,7 @@ body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDeskt
 }
 
 body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableLinks__H7Hab > nav > ol > li:nth-child(4) > a > div.zpkgiiHgDpbBThy6gavq {
+	visibility: visible;
 	position: fixed;
 	margin-top: -227px;
 	left: 35px;
@@ -351,7 +362,7 @@ section.PlayerBar_root__cXUnU {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	height: 90px;
+	height: 88px;
 	z-index: 9999;
 	border-radius: 0;
 	background: 0;
@@ -477,12 +488,34 @@ section.PlayerBar_root__cXUnU {
 
 /*SyncLyrics*/
 /*--------------------------------------------*/
+.swiper-wrapper * {
+	color: #fff;
+}
+
 [data-test-id="FULLSCREEN_PLAYER_MODAL"] {
 	border-width: 0;
 }
 
+[data-test-id="FULLSCREEN_PLAYER_MODAL"]:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: brightness(0.7);
+    z-index: -1;
+}
+
 .FullscreenPlayerDesktopContent_syncLyrics__6dTfH {
 	height: 85%;
+}
+
+[data-test-id="FULLSCREEN_PLAYER_CLOSE_BUTTON"] {
+	background: #0002;
+	margin-top: 30px;
+	margin-right: 6px;
 }
 /*--------------------------------------------*/
 
@@ -493,6 +526,10 @@ section.PlayerBar_root__cXUnU {
 	margin-right: 20px;
 	border-radius: 5px;
 	background: #fff1;
+    position: absolute;
+    right: 0;
+    top: 220px;
+    margin-bottom: 0;
 }
 /*--------------------------------------------*/
 
@@ -554,13 +591,6 @@ section.PlayerBar_root__cXUnU {
 }
 /*--------------------------------------------*/
 
-.VibeSettings_root__ufZlV {
-	position: fixed;
-	right: 266px;
-	bottom: -30px;
-	box-shadow: 0 0;
-}
-
 /*Тайтлбар*/
 /*--------------------------------------------*/
 .TitleBar_root__QjdOZ {
@@ -580,6 +610,14 @@ section.PlayerBar_root__cXUnU {
 
 /*Поиск*/
 /*--------------------------------------------*/
+.SearchPage_header__BOkdn {
+	visibility: hidden;
+}
+
+.SearchPage_header__BOkdn * {
+	visibility: visible;
+}
+
 .SearchPage_content__ycqK5 {
 	margin-top: -70px;
 }
@@ -603,6 +641,13 @@ body > div > div > div > div > main > div > div > div > svg {
 
 /*Vibe - Вайб*/
 /*--------------------------------------------*/
+.VibeSettings_root__ufZlV {
+	position: fixed;
+	right: 266px;
+	bottom: -30px;
+	box-shadow: 0 0;
+}
+
 [data-test-id="VIBE_BLOCK"] {
 	display: none;
 }

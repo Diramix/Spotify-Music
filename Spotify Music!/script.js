@@ -349,6 +349,9 @@ setInterval(() => {
         const smYandexDJ = document.createElement('div');
         smYandexDJ.classList.add('SM_Yandex_DJ');
 
+        const djButtons = document.createElement('div');
+        djButtons.classList.add('DJ_Buttons');
+
         const djCover = document.createElement('div');
         djCover.classList.add('DJ_Cover');
 
@@ -363,6 +366,7 @@ setInterval(() => {
         smYandexDJ.appendChild(djCover);
         smYandexDJ.appendChild(djTitle);
         smYandexDJ.appendChild(djDescription);
+        smYandexDJ.appendChild(djButtons);
 
         smYandexDJ.addEventListener('click', () => {
             if (playButton) {
