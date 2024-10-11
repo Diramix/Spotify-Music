@@ -34,7 +34,7 @@ body {
 	border-color: #fff1;
 	overflow-y: scroll;
 }
-/*
+/* exp
 .SM_Background {
 	position: sticky;
 	width: 100%;
@@ -206,7 +206,7 @@ div.Pin_info_collapsed__bF9ac {
 	background-size: cover;
 	border-radius: 5px;
 }
-/* В разработке
+/* exp
 .DJ_Buttons {
 	width: 50px;
 	height: 50px;
@@ -367,6 +367,11 @@ section.PlayerBar_root__cXUnU {
 	border-radius: 0;
 	background: 0;
 	border-width: 0;
+	pointer-events: none;
+}
+
+section.PlayerBar_root__cXUnU * {
+	pointer-events: auto;
 }
 
 .PlayerBarDesktop_cover__IYLwR {
@@ -526,11 +531,19 @@ section.PlayerBar_root__cXUnU {
 	margin-right: 20px;
 	border-radius: 5px;
 	background: #fff1;
-    position: absolute;
-    right: 0;
-    top: 220px;
-    margin-bottom: 0;
 }
+/* exp
+.SearchPlaylistInput_root__o14iM:before {
+	position: absolute;
+	height: 40px;
+	left: 36px;
+	width: 300px;
+	font-size: 25px;
+	color: #fff;
+	font-weight: 700;
+	content: "Треки";
+}
+*/
 /*--------------------------------------------*/
 
 /*AlbumCard*/
@@ -652,7 +665,7 @@ body > div > div > div > div > main > div > div > div > svg {
 	display: none;
 }
 
-/*
+/* exp
 @keyframes loading {
     0% {
         background-position: 100%;
