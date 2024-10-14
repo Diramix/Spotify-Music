@@ -757,6 +757,31 @@ body > div > div > div > div > main > div > div > div > svg {
 }
 /*--------------------------------------------*/
 
+/*Апдейт нотификейшон*/
+/*--------------------------------------------*/
+.NotificationsInitializer_notificationContainer__oe1ot {
+	top: 70px;
+}
+
+.NotificationUpdate_important___0WHj {
+	background: #000;
+	border-width: 0;
+	max-width: 277px;
+	min-width: 277px;
+	border-radius: 7px;
+}
+
+.NotificationUpdate_button__F3O16 {
+	background: #1ED760;
+	color: #000;
+}
+
+.NotificationUpdate_button__F3O16:hover {
+	background: #1ED790;
+	color: #000;
+}
+/*--------------------------------------------*/
+
 /*ONLY display: none;*/
 /*--------------------------------------------*/
 [data-test-id="VIBE_ANIMATION"],
