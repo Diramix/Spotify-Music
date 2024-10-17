@@ -747,6 +747,17 @@ body > div > div > div > div > main > div > div > div > svg {
 .ggP7WX2_erziDHFOo32s {
 	background: #000;
 }
+
+.NOqNiasunvfLvvi75zl9 {
+	z-index: 9999;
+}
+
+.s7_MO4NdsYs7nPQALD8W {
+	position: fixed;
+	background: 0;
+	backdrop-filter: blur(60px);
+	z-index: 9999;
+}
 /*--------------------------------------------*/
 
 /*Сплэш скрин и лого*/
@@ -779,6 +790,20 @@ body > div > div > div > div > main > div > div > div > svg {
 .NotificationUpdate_button__F3O16:hover {
 	background: #1ED790;
 	color: #000;
+}
+/*--------------------------------------------*/
+
+/*Track Lyrics*/
+/*--------------------------------------------*/
+.TrackLyricsModal_root__KsVRf {
+	background: #000;
+	border-width: 0;
+	border-radius: 5px;
+}
+
+.TrackLyricsModal_header__nWar3,
+.TrackLyricsModal_content__Cstzi {
+	color: #fff;
 }
 /*--------------------------------------------*/
 
