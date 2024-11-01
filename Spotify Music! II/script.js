@@ -125,7 +125,7 @@ setInterval(() => {
 
 setInterval(() => {
     const imgElements = document.querySelectorAll('[class*="PlayerBarDesktop_cover__IYLwR"]');
-    let imgBackground = "";
+    let imgBackground = "https://github.com/Diramix/Spotify-Music/blob/SM-2/web_assets/Spotify-Screen/no-cover-image.png?raw=true";
 
     imgElements.forEach(img => {
         if (img.src && img.src.includes('/1000x1000')) {
@@ -134,20 +134,16 @@ setInterval(() => {
         }
     });
 
-    if (imgBackground) {
-        const targetElement = document.querySelector('.SM_Cover');
-        if (targetElement) {
-            targetElement.style.background = `url(${imgBackground}) center center / cover no-repeat`;
-            console.log(targetElement);
-        }
+    const targetElementCover = document.querySelector('.SM_Cover');
+    if (targetElementCover) {
+        targetElementCover.style.background = `url(${imgBackground}) center center / cover no-repeat`;
+        console.log(targetElementCover);
     }
 
-    if (imgBackground) {
-        const targetElement = document.querySelector('.SM_Background');
-        if (targetElement) {
-            targetElement.style.background = `url(${imgBackground}) center center / cover no-repeat`;
-            console.log(targetElement);
-        }
+    const targetElementBackground = document.querySelector('.SM_Background');
+    if (targetElementBackground) {
+        targetElementBackground.style.background = `url(${imgBackground}) center center / cover no-repeat`;
+        console.log(targetElementBackground);
     }
 }, 1000);
 /*--------------------------------------------*/
@@ -214,7 +210,7 @@ setInterval(() => {
 
     if (spotifyScreen && contentMain) {
         if (spotifyScreen.style.display === 'block') {
-            contentMain.style.marginRight = '273px';
+            contentMain.style.marginRight = '283px';
         } else if (spotifyScreen.style.display === 'none') {
             contentMain.style.marginRight = '';
         }
@@ -232,8 +228,8 @@ setInterval(() => {
         navbar.style.width = '200px';
         content.style.left = '217px';
     } else {
-        navbar.style.width = '300px';
-        content.style.left = '317px';
+        navbar.style.width = '280px';
+        content.style.left = '297px';
     }
 }, 1000);
 /*--------------------------------------------*/
