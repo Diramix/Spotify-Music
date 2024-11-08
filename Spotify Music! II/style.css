@@ -269,14 +269,14 @@ body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitle
 	font-size: 13px;
 }
 
-body > div > div > div > aside > div > div > nav > ol > li:nth-child(1),
-body > div > div > div > aside > div > div > nav > ol > li:nth-child(2),
-body > div > div > div > aside > div > div > nav > ol > li:nth-child(3),
-body > div > div > div > aside > div > div > nav > ol > li:nth-child(4) {
+body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(1),
+body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(2),
+body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(3),
+body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(4) {
 	visibility: hidden;
 }
 
-body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableLinks__H7Hab > nav > ol > li:nth-child(1) > a > div.zpkgiiHgDpbBThy6gavq {
+body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(1) > a > div.zpkgiiHgDpbBThy6gavq {
 	visibility: visible;
 	position: fixed;
 	top: 15px;
@@ -284,7 +284,7 @@ body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDeskt
 	-webkit-app-region: no-drag;
 }
 
-body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableLinks__H7Hab > nav > ol > li:nth-child(2) > a > div.zpkgiiHgDpbBThy6gavq {
+body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(2) > a > div.zpkgiiHgDpbBThy6gavq {
 	visibility: visible;
 	position: fixed;
 	top: 15px;
@@ -292,7 +292,7 @@ body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDeskt
 	-webkit-app-region: no-drag;
 }
 
-body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableLinks__H7Hab > nav > ol > li:nth-child(3) > a > div.zpkgiiHgDpbBThy6gavq {
+body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(3) > a > div.zpkgiiHgDpbBThy6gavq {
 	visibility: visible;
 	position: fixed;
 	top: 15px;
@@ -304,25 +304,26 @@ body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDeskt
 	height: 35px;
 }
 
-body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableLinks__H7Hab > nav > ol > li:nth-child(4) > a > div.zpkgiiHgDpbBThy6gavq {
+body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(4) > a > div.zpkgiiHgDpbBThy6gavq {
 	visibility: visible;
 	position: fixed;
 	margin-top: -227px;
 	left: 35px;
 }
 
-body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableLinks__H7Hab > nav > ol > li:nth-child(4) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span {
+body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(4) > a > div.zpkgiiHgDpbBThy6gavq > span {
 	visibility: hidden;
 }
 
-body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableLinks__H7Hab > nav > ol > li:nth-child(4) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span:before {
+body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(4) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span:before {
 	visibility: visible;
+	position: static;
 	content: "Моя медиатека";
 	font-weight: 500;
 	font-size: 15px;
 	position: fixed;
-	margin-top: -111px;
-	margin-left: 130px;
+	margin-top: -112px;
+	left: 80px;
 }
 /*--------------------------------------------*/
 
@@ -716,8 +717,13 @@ body > div > div > div > div > main > div > div > div > svg {
 	bottom: calc(100% - 610px);
 }
 
-.NavbarDesktopUserWidget_authorizedUserProfile__2wAqI {
+.NavbarDesktopUserWidget_userProfileContainer__ha3Tm {
 	position: fixed;
+	pointer-events: none;
+}
+
+.NavbarDesktopUserWidget_userProfileContainer__ha3Tm * * {
+	pointer-events: auto;
 }
 /*--------------------------------------------*/
 
@@ -840,7 +846,30 @@ body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitle
 .FullscreenPlayerDesktopControls_root__tviu4,
 .Donations_root__xo2BC,
 .ConcertDate_weekday__fBZXo,
-.ConcertCard_button__GQxNL {
+.ConcertCard_button__GQxNL,
+.NavbarDesktop_pinsList___jXIM:before,
+.NavbarDesktop_pinsList___jXIM:after,
+.BarBelow_root__KFexT {
 	display: none;
+}
+/*--------------------------------------------*/
+
+/*CSJS*/
+/*Изменение размера навбара*/
+/*--------------------------------------------*/
+@media (max-width: 1079px) {
+    .NavbarDesktop_root__scYzp { width: 80px !important; }
+    .Content_main__8_wIa { left: 98px !important; }
+    body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(4) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span,
+    .DJ_Title,
+    .DJ_Description { display: none !important; }
+}
+
+@media (min-width: 1080px) {
+    .NavbarDesktop_root__scYzp { width: 280px !important; }
+    .Content_main__8_wIa { left: 297px !important; }
+    body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(4) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span,
+    .DJ_Title,
+    .DJ_Description { display: block !important; }
 }
 /*--------------------------------------------*/

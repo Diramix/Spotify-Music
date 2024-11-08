@@ -218,22 +218,6 @@ setInterval(() => {
 }, 1000);
 /*--------------------------------------------*/
 
-// Изменение размера навбара
-/*--------------------------------------------*/
-setInterval(() => {
-    const navbar = document.querySelector('.NavbarDesktop_root__scYzp');
-    const content = document.querySelector('.Content_main__8_wIa');
-
-    if (window.innerWidth < 1080) {
-        navbar.style.width = '200px';
-        content.style.left = '217px';
-    } else {
-        navbar.style.width = '280px';
-        content.style.left = '297px';
-    }
-}, 1000);
-/*--------------------------------------------*/
-
 // Спонсор
 /*--------------------------------------------*/
 setInterval(() => {
