@@ -591,10 +591,10 @@ section.PlayerBar_root__cXUnU * {
 /*Настройки качества звука*/
 /*--------------------------------------------*/
 [data-test-id="QUALITY_SETTINGS_CONTEXT_MENU"] {
-	position: absolute;
+	position: fixed;
 	z-index: 260;
 	right: 0;
-	bottom: 0;
+	bottom: 86px;
 	background: #000;
 	border-radius: 5px 0px 0px 0px;
 	border-width: 1px 0px 0px 1px;
