@@ -17,7 +17,7 @@
     [YMusic-DRPC](https://github.com/PulseSync-Official/YMusic-DRPC)
 2. Установите его по инструкции репазитория «PulseSync» или скачайте готовую сборку из [releases](https://github.com/PulseSync-LLC/YMusic-DRPC/releases).
 3. Теперь качаем [тему](https://github.com/Diramix/Spotify-Music/releases).
-4. После установки запускаем программу и нажимаем на кнопку «Директория аддонов», кидаете туда ПАПКУ С ТЕМОЙ
+4. После установки запускаем программу и нажимаем на кнопку «Директория со стилями», кидаете туда ПАПКУ С ТЕМОЙ
 
     **(В ПАПКЕ С ТЕМОЙ НЕ ДОЛЖНО БЫТЬ ФАЙЛОВ README.MD, LICENCE И Т. Д. В НЕЙ  ДОЛЖНЫ БЫТЬ ФАЙЛЫ С РАСШИРЕНИЕМ .CSS .JS .JSON!!!)**
 
