@@ -362,3 +362,24 @@ setInterval(() => {
     }
 }, 1000);
 /*--------------------------------------------*/
+
+// Скрипт который пееремещает download icon по спотифаевски
+/*--------------------------------------------*/
+setInterval(() => {
+    const containers = document.querySelectorAll('[data-test-id="TRACK_PLAYLIST"]');
+    containers.forEach(container => {
+        const downloadIcon = container.querySelector('.ControlsBar_item__I_p99');
+        const metaText = container.querySelector('.Meta_artists__VnR52');
+        if (downloadIcon) {
+            if (downloadIcon.innerHTML.trim() === '') {
+                downloadIcon.style.display = 'none';
+            } else {
+                downloadIcon.style.display = '';
+                if (metaText) {
+                    metaText.insertBefore(downloadIcon, metaText.firstChild);
+                }
+            }
+        }
+    });
+}, 100);
+/*--------------------------------------------*/

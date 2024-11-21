@@ -490,6 +490,16 @@ section.PlayerBar_root__cXUnU * {
 .Tab_title__hAYZk {
 	font-weight: 450;
 }
+
+@font-face {
+    font-family: 'YSDisplayBold';
+    src: url("https://github.com/Diramix/Spotify-Music/raw/refs/heads/SM-2/web_assets/Fonts/YSDisplay-Bold.woff") format("woff");
+}
+
+.CompositeHeader_static__pZdrc * {
+    font-family: 'YSDisplayBold', sans-serif;
+    font-size: 14px;
+}
 /*--------------------------------------------*/
 
 /*SyncLyrics*/
@@ -817,6 +827,38 @@ body > div > div > div > div > main > div > div > div > svg {
 }
 /*--------------------------------------------*/
 
+/*download*/
+/*--------------------------------------------*/
+.ControlsBar_item__I_p99:nth-child(1) {
+	width: 26px;
+	height: 16px;
+	margin-left: -5px;
+}
+
+[aria-label="Трек скачан"] {
+	background-image: url("https://github.com/Diramix/Spotify-Music/blob/SM-2/web_assets/download.png?raw=true");
+	background-size: cover;
+	width: 16px;
+	height: 16px;
+}
+
+.Meta_text__Y5uYH {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+[aria-label="Трек скачан"] {
+    order: -1;
+}
+
+[data-test-id="SEPARATED_ARTIST_TITLE"] {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*--------------------------------------------*/
+
 /*ONLY display: none;*/
 /*--------------------------------------------*/
 [data-test-id="VIBE_ANIMATION"],
@@ -849,7 +891,10 @@ body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitle
 .ConcertCard_button__GQxNL,
 .NavbarDesktop_pinsList___jXIM:before,
 .NavbarDesktop_pinsList___jXIM:after,
-.BarBelow_root__KFexT {
+.BarBelow_root__KFexT,
+[aria-label="Трек скачан"] *,
+.PlayQueue_root__ponhw:after,
+.PlayQueue_root__ponhw:before {
 	display: none;
 }
 /*--------------------------------------------*/
