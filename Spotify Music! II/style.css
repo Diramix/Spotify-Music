@@ -533,6 +533,19 @@ section.PlayerBar_root__cXUnU * {
 	margin-top: 30px;
 	margin-right: 6px;
 }
+
+.noto-sans-uniquifier {
+	font-family: "Noto Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 700;
+	font-style: normal;
+	font-variation-settings: "wdth" 100;
+}
+
+.SyncLyricsScroller_line__Vh6WN * {
+	font-family: "Noto Sans", sans-serif;
+	font-weight: 700;
+}
 /*--------------------------------------------*/
 
 /*Playlist Page*/
