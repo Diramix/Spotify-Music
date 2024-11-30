@@ -1,3 +1,8 @@
+// Быстрые настройки
+/*--------------------------------------------*/
+let neuroSearch = false; // true - Поиск информации о треках и исполнителе через ChatGPT. false - Поиск информации об исполнителе через википедию.
+/*--------------------------------------------*/
+
 // ThemeTitleText
 /*--------------------------------------------*/
 const newElement = document.createElement('div');
@@ -33,23 +38,41 @@ setInterval(() => {
         spotifyScreen.classList.add('Spotify_Screen');
         document.body.appendChild(spotifyScreen);
 
-        const wikiContainer = document.createElement('div');
-        wikiContainer.classList.add('Wiki_Container');
-        spotifyScreen.appendChild(wikiContainer);
+        const allInfoContainer = document.createElement('div');
+        allInfoContainer.classList.add('All_Info__Container');
+        spotifyScreen.append(allInfoContainer);
+
+        const artisInfoContainer = document.createElement('div');
+        artisInfoContainer.classList.add('Artist_Info_Container');
+        allInfoContainer.appendChild(artisInfoContainer);
 
         const infoTitle = document.createElement('div');
         infoTitle.classList.add('Info_Title');
-        infoTitle.textContent = 'Сведения';
-        wikiContainer.appendChild(infoTitle);
+        infoTitle.textContent = 'Сведения об исполнителе';
+        artisInfoContainer.appendChild(infoTitle);
 
         const searchInfo = document.createElement('div');
         searchInfo.classList.add('Search_Info');
-        wikiContainer.appendChild(searchInfo);
+        artisInfoContainer.appendChild(searchInfo);
+
+        // Neuro
+        const gptInfoContainer = document.createElement('div');
+        gptInfoContainer.classList.add('GPT_Info_Container');
+        allInfoContainer.appendChild(gptInfoContainer);
+
+        const gptInfoTitle = document.createElement('div');
+        gptInfoTitle.classList.add('GPT_Info_Title');
+        gptInfoTitle.textContent = 'Сведения о треке';
+        gptInfoContainer.appendChild(gptInfoTitle);
+
+        const gptSearchInfo = document.createElement('div');
+        gptSearchInfo.classList.add('GPT_Search_Info');
+        gptInfoContainer.appendChild(gptSearchInfo);
 
         const achtungAlert = document.createElement('div');
         achtungAlert.classList.add('Achtung_Alert');
         achtungAlert.textContent = 'В сведениях иногда бывают неправильные результаты. Проверяйте информацию подробнее, если изначально вам не всё равно!';
-        wikiContainer.appendChild(achtungAlert);
+        allInfoContainer.appendChild(achtungAlert);
     }
 
     spotifyScreen.style.display = playerCover ? 'block' : 'none';
@@ -152,12 +175,17 @@ setInterval(() => {
 /*--------------------------------------------*/
 const targetElementSelector = 'body > div > div > div > section > div > div > div > div > div > div > a:nth-child(1) > span';
 const fallbackElementSelector = 'body > div > div > div > section > div > div > div > div > div > div.SeparatedArtists_root_variant_breakAll__34YbW.SeparatedArtists_root_clamp__SyvjM.Meta_text__Y5uYH.Meta_artists__VnR52 > span';
+const trackNameSelector = '.SM_Track_Name';
 const Search_InfoSelector = '.Search_Info';
+const GPT_Search_InfoSelector = '.GPT_Search_Info';
 const AchtungAlertSelector = '.Achtung_Alert';
+const GPT_InfoContainerSelector = '.GPT_Info_Container';
 
+let lastArtist = '';
+let lastTrack = '';
 let lastText = '';
 
-const fetchDataAndUpdate = async (searchText) => {
+const fetchDataAndUpdateWiki = async (searchText) => {
     const Search_InfoElement = document.querySelector(Search_InfoSelector);
     const AchtungAlertElement = document.querySelector(AchtungAlertSelector);
 
@@ -187,19 +215,111 @@ const fetchDataAndUpdate = async (searchText) => {
     }
 };
 
-const checkForChanges = () => {
-    const targetElement = document.querySelector(targetElementSelector) || document.querySelector(fallbackElementSelector);
-    if (targetElement) {
-        const currentText = targetElement.innerText.trim();
+const fetchDataAndUpdateNeuro = async (artistName, trackName) => {
+    const Search_InfoElement = document.querySelector(Search_InfoSelector);
+    const GPT_Search_InfoElement = document.querySelector(GPT_Search_InfoSelector);
+    const AchtungAlertElement = document.querySelector(AchtungAlertSelector);
 
-        if (currentText && currentText !== lastText) {
-            lastText = currentText; 
-            fetchDataAndUpdate(currentText);
+    try {
+        const prompt = `
+            Расскажи про артиста "${artistName}".
+            Затем расскажи про трек "${trackName}" этого артиста.
+            Раздели ответ следующим образом:
+            "=== Артист ===
+            [Артист] - [Информация об артисте]
+            === Трек ===
+            [Название трека] - [Информация о треке]"
+            Не добавляй приветствий и дополнительных слов, кроме указанного разделения.
+        `;
+
+        const response = await fetch('http://api.onlysq.ru/ai/v1', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify([
+                {
+                    role: 'user',
+                    content: prompt.trim(),
+                },
+            ]),
+        });
+
+        if (!response.ok) throw new Error('Network response was not ok');
+
+        const data = await response.json();
+        const gptAnswer = data.answer || 'Нет информации';
+
+        // Разделение ответа по ключевым разделителям
+        const [artistInfo, trackInfo] = gptAnswer.split(/=== Трек ===/i);
+
+        if (Search_InfoElement) {
+            Search_InfoElement.innerText = artistInfo?.replace(/=== Артист ===/i, '').trim() || 'Нет информации об артисте';
+        }
+        if (GPT_Search_InfoElement) {
+            GPT_Search_InfoElement.innerText = trackInfo?.trim() || 'Нет информации о треке';
+        }
+
+        AchtungAlertElement.style.display = 'block';
+    } catch (error) {
+        console.error('Ошибка при получении данных:', error);
+        if (Search_InfoElement) {
+            Search_InfoElement.innerText = 'Ошибка при получении информации об артисте';
+        }
+        if (GPT_Search_InfoElement) {
+            GPT_Search_InfoElement.innerText = 'Ошибка при получении информации о треке';
+        }
+        if (AchtungAlertElement) {
+            AchtungAlertElement.style.display = 'none';
         }
     }
 };
 
-setInterval(checkForChanges, 1000);
+const checkForChanges = () => {
+    const artistElement = document.querySelector(targetElementSelector) || document.querySelector(fallbackElementSelector);
+    const trackElement = document.querySelector(trackNameSelector);
+
+    const currentArtist = artistElement ? artistElement.innerText.trim() : '';
+    const currentTrack = trackElement ? trackElement.innerText.trim() : '';
+
+    if (neuroSearch) {
+        if (currentArtist !== lastArtist || currentTrack !== lastTrack) {
+            lastArtist = currentArtist;
+            lastTrack = currentTrack;
+
+            if (currentArtist || currentTrack) {
+                fetchDataAndUpdateNeuro(currentArtist || 'Неизвестный артист', currentTrack || 'Неизвестный трек');
+            }
+        }
+    } else {
+        if (currentArtist !== lastText) {
+            lastText = currentArtist;
+
+            if (currentArtist) {
+                fetchDataAndUpdateWiki(currentArtist);
+            }
+        }
+        // Скрыть элемент, если neuroSearch == false
+        const GPT_InfoContainerElement = document.querySelector(GPT_InfoContainerSelector);
+        if (GPT_InfoContainerElement) {
+            GPT_InfoContainerElement.style.display = 'none';
+        }
+    }
+};
+
+// Показать элемент, если neuroSearch == true
+const toggleGPTInfoContainer = () => {
+    const GPT_InfoContainerElement = document.querySelector(GPT_InfoContainerSelector);
+    if (GPT_InfoContainerElement) {
+        GPT_InfoContainerElement.style.display = neuroSearch ? 'block' : 'none';
+    }
+};
+
+setInterval(() => {
+    checkForChanges();
+    toggleGPTInfoContainer();
+}, 1000);
+
 /*--------------------------------------------*/
 
 // Cкрытие Spotify Screen
@@ -363,7 +483,7 @@ setInterval(() => {
 }, 1000);
 /*--------------------------------------------*/
 
-// Скрипт который пееремещает download icon по спотифаевски
+// Скрипт который перемещает download icon по спотифаевски
 /*--------------------------------------------*/
 setInterval(() => {
     const containers = document.querySelectorAll('[data-test-id="TRACK_PLAYLIST"]');
@@ -401,4 +521,43 @@ const link3 = document.createElement('link');
 link3.href = 'https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap';
 link3.rel = 'stylesheet';
 document.head.appendChild(link3);
+/*--------------------------------------------*/
+
+// GPT Update Notification
+/*--------------------------------------------*/
+function createNotification() {
+  if (localStorage.getItem('notificationShown') === 'true') {
+    return;
+  }
+
+  const background = document.createElement('div');
+  background.classList.add('notification_background');
+
+  const notification = document.createElement('div');
+  notification.classList.add('notification');
+  background.appendChild(notification);
+
+  const title = document.createElement('div');
+  title.classList.add('notification_title');
+  title.textContent = 'Интеграция с ChatGPT!';
+  notification.appendChild(title);
+
+  const text = document.createElement('div');
+  text.classList.add('notification_text');
+  text.innerText = 'С версии Spotify Music! 2.1.0 вы можете использовать нейропоиск для получения информации об исполнителе и треке.\nЭту функцию можно активировать в файле "script.js" в разделе "Быстрые настройки" в самом верху скрипта, который находится в папке с темой.\n\nОтдельная благодарность chepuxcat за идею и API <3';
+  notification.appendChild(text);
+
+  const okButton = document.createElement('button');
+  okButton.classList.add('notification_ok_button');
+  okButton.textContent = 'OK';
+  okButton.onclick = function() {
+    background.remove();
+    localStorage.setItem('notificationShown', 'true');
+  };
+  notification.appendChild(okButton);
+
+  document.body.appendChild(background);
+}
+
+createNotification();
 /*--------------------------------------------*/
