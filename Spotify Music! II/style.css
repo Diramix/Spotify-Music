@@ -471,6 +471,7 @@ section.PlayerBar_root__cXUnU * {
 	border-radius: 5px;
 	background: #fff2;
 	border-width: 0;
+	padding: 0;
 }
 
 [data-test-id="NEW_RELEASE_CARD"]:hover {
@@ -480,18 +481,23 @@ section.PlayerBar_root__cXUnU * {
 	border-width: 0;
 }
 
-.NewReleaseCard_image__7nTy8 {
-	height: 45px;
+.NewReleaseCard_image__oxm2S,
+.NewReleaseCard_cover__X1chP,
+.NewReleaseCard_coverLink__roCeA {
+	height:50px;
+	border-radius: 0;
+	box-shadow: 0 0;
+}
+
+.NewReleaseCard_container__XvwZC {
+	margin-right: 5px;
 }
 /*--------------------------------------------*/
 
 /*Табы*/
 /*--------------------------------------------*/
 .Skeleton_header__1uiIw {
-	margin-top: 20px;
-	visibility: visible
-	top: 90px;
-	margin-top: 50px;
+	margin-top: 10px;
 }
 
 .Skeleton_tab__zvQx2 {
@@ -935,7 +941,8 @@ body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitle
 .BarBelow_root__KFexT,
 [aria-label="Трек скачан"] *,
 .PlayQueue_root__ponhw:after,
-.PlayQueue_root__ponhw:before {
+.PlayQueue_root__ponhw:before,
+.NewReleaseCard_type__cW58D {
 	display: none;
 }
 /*--------------------------------------------*/

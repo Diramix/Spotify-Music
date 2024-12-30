@@ -1,8 +1,3 @@
-// Быстрые настройки
-/*--------------------------------------------*/
-let neuroSearch = false; // true - Поиск информации о треках и исполнителе через ChatGPT. false - Поиск информации об исполнителе через википедию.
-/*--------------------------------------------*/
-
 // ThemeTitleText
 /*--------------------------------------------*/
 const newElement = document.createElement('div');
@@ -151,8 +146,8 @@ setInterval(() => {
     let imgBackground = "https://github.com/Diramix/Spotify-Music/blob/SM-2/web_assets/Spotify-Screen/no-cover-image.png?raw=true";
 
     imgElements.forEach(img => {
-        if (img.src && img.src.includes('/1000x1000')) {
-            imgBackground = img.src.replace('/1000x1000', '/1000x1000');
+        if (img.src && img.src.includes('/100x100')) {
+            imgBackground = img.src.replace('/100x100', '/1000x1000');
             console.log(imgBackground);
         }
     });
@@ -560,4 +555,67 @@ function createNotification() {
 }
 
 createNotification();
+/*--------------------------------------------*/
+
+/*Управление handleEvents.json*/
+/*--------------------------------------------*/
+let settings = {};
+
+let neuroSearch;
+
+function log(text) {
+    console.log('[Customizable LOG]: ', text)
+}
+
+async function getSettings() {
+    try {
+        const response = await fetch("http://127.0.0.1:2007/get_handle");
+        if (!response.ok) throw new Error(`Ошибка сети: ${response.status}`);
+        const data = await response.json();
+        if (!data?.data?.sections) {
+            console.warn("Структура данных не соответствует ожидаемой.");
+            return {};
+        }
+        return Object.fromEntries(data.data.sections.map(({ title, items }) => [
+            title,
+            Object.fromEntries(items.map(item => [
+                item.id,
+                item.bool ?? item.input ?? Object.fromEntries(item.buttons?.map(b => [b.name, b.text]) || [])
+            ]))
+        ]));
+    } catch (error) {
+        console.error("Ошибка при получении данных:", error);
+        return {};
+    }
+}
+
+async function setSettings(newSettings) {
+    // Проверка и обновление значения neuroSearch
+    if (Object.keys(settings).length === 0 || settings['Действия'].gptSearch !== newSettings['Действия'].gptSearch) {
+        if (newSettings['Действия'].gptSearch) {
+            if (!neuroSearch) {
+                neuroSearch = true;
+            }
+        } else if (neuroSearch) {
+            neuroSearch = false;
+        }
+    }
+}
+
+async function update() {
+    const newSettings = await getSettings();
+    await setSettings(newSettings);
+
+    settings = newSettings
+}
+
+function init() {
+    setInterval(async () => {
+        await update();
+    }, 3 * 1000);
+    
+    update();
+}
+
+setTimeout(init, 2000)
 /*--------------------------------------------*/

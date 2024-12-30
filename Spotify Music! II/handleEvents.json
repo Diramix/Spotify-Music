@@ -1,0 +1,16 @@
+{
+  "sections": [
+    {
+      "title": "Действия",
+      "items": [
+        {
+          "id": "gptSearch",
+          "name": "Нейро-поиск",
+          "description": "Включает поиск информации о треке и исполнителе через ChatGPT.",
+          "type": "button",
+          "bool": false
+        }
+      ]
+    }
+  ]
+}
