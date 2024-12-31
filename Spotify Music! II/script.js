@@ -34,7 +34,7 @@ setInterval(() => {
         document.body.appendChild(spotifyScreen);
 
         const allInfoContainer = document.createElement('div');
-        allInfoContainer.classList.add('All_Info__Container');
+        allInfoContainer.classList.add('All_Info_Container');
         spotifyScreen.append(allInfoContainer);
 
         const artisInfoContainer = document.createElement('div');
@@ -143,7 +143,7 @@ setInterval(() => {
 
 setInterval(() => {
     const imgElements = document.querySelectorAll('[class*="PlayerBarDesktop_cover__IYLwR"]');
-    let imgBackground = "https://github.com/Diramix/Spotify-Music/blob/SM-2/web_assets/Spotify-Screen/no-cover-image.png?raw=true";
+    let imgBackground = "http://127.0.0.1:2007/Assets/no-cover-image.png";
 
     imgElements.forEach(img => {
         if (img.src && img.src.includes('/100x100')) {
@@ -593,11 +593,20 @@ async function setSettings(newSettings) {
     // Проверка и обновление значения neuroSearch
     if (Object.keys(settings).length === 0 || settings['Действия'].gptSearch !== newSettings['Действия'].gptSearch) {
         if (newSettings['Действия'].gptSearch) {
-            if (!neuroSearch) {
-                neuroSearch = true;
-            }
-        } else if (neuroSearch) {
+            neuroSearch = true;
+        } else {
             neuroSearch = false;
+        }
+    }
+
+    // Включение/отключение All_Info_Container
+    const allInfoContainer = document.querySelector('.All_Info_Container');
+
+    if (Object.keys(settings).length === 0 || settings['Действия'].allInfoContainerToggle !== newSettings['Действия'].allInfoContainerToggle) {
+        if (newSettings['Действия'].allInfoContainerToggle) {
+            allInfoContainer.style.display = 'block';
+        } else {
+            allInfoContainer.style.display = 'none';
         }
     }
 }

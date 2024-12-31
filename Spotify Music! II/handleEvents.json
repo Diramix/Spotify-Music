@@ -4,6 +4,13 @@
       "title": "Действия",
       "items": [
         {
+          "id": "allInfoContainerToggle",
+          "name": "Информация о треке и исполнителе",
+          "description": "Включает/выключает отображение информации о треке и исполнителе.",
+          "type": "button",
+          "bool": true
+        },
+        {
           "id": "gptSearch",
           "name": "Нейро-поиск",
           "description": "Включает поиск информации о треке и исполнителе через ChatGPT.",

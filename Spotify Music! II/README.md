@@ -5,4 +5,4 @@
 ## Ссылки
 **Boosty:** https://boosty.to/diramix
 **Discord Server:** https://discord.gg/ky6bcdy7KA
-**OnlySQ TG:** https://t.me/OnlySq
+**OnlySq TG:** https://t.me/OnlySq

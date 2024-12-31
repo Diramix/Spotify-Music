@@ -73,7 +73,7 @@ body {
 	position: absolute;
 	right: 20px;
 	top: 27px;
-	content: url("https://github.com/Diramix/Spotify-Music/blob/SM-2/web_assets/Spotify-Screen/SM-Decorate-Buttons.png?raw=true");
+	content: url("http://127.0.0.1:2007/assets/SM-Decorate-Buttons.png");
 }
 
 .SM_Cover {
@@ -89,7 +89,7 @@ body {
 .SM_Decorate_AddToPlaylist_Button {
 	position: absolute;
 	right: 15px;
-	content: url("https://github.com/Diramix/Spotify-Music/blob/SM-2/web_assets/Spotify-Screen/SM-Decorate-AddToPlaylist-Button.png?raw=true");
+	content: url("http://127.0.0.1:2007/assets/SM-Decorate-AddToPlaylist-Button.png");
 	margin-top: 5px;
 }
 
@@ -117,7 +117,7 @@ body {
     overflow: hidden;
 }
 
-.All_Info__Container {
+.All_Info_Container {
 	position: absolute;
 	top: 410px;
 	left: 14px;
@@ -229,7 +229,7 @@ div.Pin_info_collapsed__bF9ac {
 	margin-top: 9px;
 	width: 48px;
 	height: 48px;
-	background-image: url("https://github.com/Diramix/Spotify-Music/blob/SM-2/web_assets/PinsList/SM-Yandex-DJ.png?raw=true");
+	background-image: url("http://127.0.0.1:2007/assets/SM-Yandex-DJ.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	border-radius: 5px;
@@ -239,7 +239,7 @@ div.Pin_info_collapsed__bF9ac {
 	width: 50px;
 	height: 50px;
 	background: #f00;
-	background-image: url("https://github.com/Diramix/Spotify-Music/blob/SM-2/web_assets/PinsList/DJ-Buttons.png?raw=true");
+	background-image: url("http://127.0.0.1:2007/assets/DJ-Buttons.png");
 	background-repeat: no-repeat;
 }
 */
@@ -527,7 +527,7 @@ section.PlayerBar_root__cXUnU * {
 
 @font-face {
     font-family: 'YSDisplayBold';
-    src: url("https://github.com/Diramix/Spotify-Music/raw/refs/heads/SM-2/web_assets/Fonts/YSDisplay-Bold.woff") format("woff");
+    src: url("http://127.0.0.1:2007/assets/YSDisplay-Bold.woff") format("woff");
 }
 
 .CompositeHeader_static__pZdrc * {
@@ -883,7 +883,7 @@ body > div > div > div > div > main > div > div > div > svg {
 }
 
 [aria-label="Трек скачан"] {
-	background-image: url("https://github.com/Diramix/Spotify-Music/blob/SM-2/web_assets/download.png?raw=true");
+	background-image: url("http://127.0.0.1:2007/assets/download.png");
 	background-size: cover;
 	width: 16px;
 	height: 16px;
