@@ -8,14 +8,60 @@
           "name": "Информация о треке и исполнителе",
           "description": "Включает/выключает отображение информации о треке и исполнителе.",
           "type": "button",
-          "bool": true
+          "bool": true,
+          "defaultParameter": true
         },
         {
           "id": "gptSearch",
           "name": "Нейро-поиск",
           "description": "Включает поиск информации о треке и исполнителе через ChatGPT.",
           "type": "button",
-          "bool": false
+          "bool": false,
+          "defaultParameter": false
+        }
+      ]
+    },
+    {
+      "title": "Trailer",
+      "items": [
+        {
+          "id": "toggleTrailerButtons",
+          "name": "Trailer Buttons",
+          "description": "Включает/выключает некоторые кнопки трейлера.",
+          "type": "button",
+          "bool": false,
+          "defaultParameter": false
+        }
+      ]
+    },
+    {
+      "title": "Colorful",
+      "items": [
+        {
+          "id": "toggleColorfulII",
+          "name": "Colorful II Integration",
+          "description": "Активирует последнюю версию темы Colorful II для Spotify Music! II.",
+          "type": "button",
+          "bool": false,
+          "defaultParameter": false
+        }
+      ]
+    },
+    {
+      "title": "Особое",
+      "items": [
+        {
+          "id": "setInterval",
+          "name": "Скорость обновления настроек темы (в миллисекундах)",
+          "description": "Выставляет скорость обновления настроек темы. (Задержка нажатия на кнопку в PulseSync и срабатывание в Яндекс Музыке)",
+          "type": "text",
+          "buttons": [
+            {
+              "name": "text",
+              "text": "1000",
+              "defaultParameter": "1000"
+            }
+          ]
         }
       ]
     }

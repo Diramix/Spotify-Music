@@ -77,7 +77,6 @@ body {
 }
 
 .SM_Cover {
-	position: ;
 	width: 250px;
 	height: 250px;
 	border-radius: 10px;
@@ -903,6 +902,28 @@ body > div > div > div > div > main > div > div > div > svg {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+/*--------------------------------------------*/
+
+/*Треки*/
+/*--------------------------------------------*/
+.ControlsBar_dislikeIcon__ENXh_,
+[aria-label="Этот трек можете слушать только вы"] {
+	display: none;
+}
+
+[aria-label="Этот трек можете слушать только вы"] {
+	display: none;
+}
+
+.ControlsBar_likeIcon__mrNiz {
+	opacity: 0;
+}
+
+.Track_root__dbDjD:hover {
+	.ControlsBar_likeIcon__mrNiz {
+		opacity: 1;
+	}
 }
 /*--------------------------------------------*/
 
