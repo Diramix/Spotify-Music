@@ -605,6 +605,12 @@ async function setSettings(newSettings) {
             }
         }
     });
+
+    // Auto Play
+    if (newSettings['Developer'].devAutoPlayOnStart) {
+        document.querySelector(`section.PlayerBar_root__cXUnU * [data-test-id="PLAY_BUTTON"]`)
+        ?.click();
+    }
     
     // Update theme settings delay
     if (Object.keys(settings).length === 0 || settings['Особое'].setInterval.text !== newSettings['Особое'].setInterval.text) {
