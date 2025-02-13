@@ -786,14 +786,16 @@ body > div > div > div > div > main > div > div > div > svg {
 /*Неурокнопки*/
 /*--------------------------------------------*/
 .VibeButton_button__tXFAm,
-.NeuromusicButton_button__kT4GN {
+.NeuromusicButton_button__kT4GN,
+.NewReleaseCard_root__IY5m_ {
 	border-radius: 5px;
 	background: #fff1;
 	border-width: 0;
 }
 
 .VibeButton_button__tXFAm:hover,
-.NeuromusicButton_button__kT4GN:hover {
+.NeuromusicButton_button__kT4GN:hover,
+.NewReleaseCard_root__IY5m_:hover {
 	border-radius: 5px;
 	background: #fff2;
 	border-width: 0;
@@ -942,8 +944,6 @@ body > div > div > div > div > main > div > div > div > svg {
 .Tab_subtitle__fLp9S,
 body > div > p,
 .NewReleaseCard_trailerButton__wyoRL,
-[data-intersection-property-id="concerts_personal"],
-[data-intersection-property-id="ConcertsTop"],
 body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(1) > a > div.ZrkG6gNYcr4h3hfkhyT1.xENlRAFvRskKnt8LUObC > span,
 body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(1) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span,
 body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(2) > a > div.ZrkG6gNYcr4h3hfkhyT1.xENlRAFvRskKnt8LUObC > span,

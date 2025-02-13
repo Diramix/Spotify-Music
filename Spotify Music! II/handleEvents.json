@@ -22,19 +22,6 @@
       ]
     },
     {
-      "title": "Trailer",
-      "items": [
-        {
-          "id": "toggleTrailerButtons",
-          "name": "Trailer Buttons",
-          "description": "Включает/выключает некоторые кнопки трейлера.",
-          "type": "button",
-          "bool": false,
-          "defaultParameter": false
-        }
-      ]
-    },
-    {
       "title": "Colorful",
       "items": [
         {
@@ -62,6 +49,46 @@
               "defaultParameter": "1000"
             }
           ]
+        }
+      ]
+    },
+    {
+      "title": "Open-Blocker",
+      "items": [
+        {
+          "id": "OBdonations",
+          "name": "Донаты",
+          "type": "button",
+          "bool": true,
+          "defaultParameter": true
+        },
+        {
+          "id": "OBconcerts",
+          "name": "Концерты",
+          "type": "button",
+          "bool": false,
+          "defaultParameter": false
+        },
+        {
+          "id": "OBtrailers",
+          "name": "Трейлеры",
+          "type": "button",
+          "bool": false,
+          "defaultParameter": false
+        },
+        {
+          "id": "OBrelevantnow",
+          "name": "Актуально сейчас",
+          "type": "button",
+          "bool": true,
+          "defaultParameter": true
+        },
+        {
+          "id": "OBartistrecommends",
+          "name": "Артист рекомендует",
+          "type": "button",
+          "bool": true,
+          "defaultParameter": true
         }
       ]
     }

@@ -547,20 +547,6 @@ async function setSettings(newSettings) {
         }
     }
 
-    // Disable Trailer Buttons
-    let isDisableTrailer = document.getElementById('disable-trailer-style');
-    if (!isDisableTrailer) {
-        isDisableTrailer = document.createElement('style');
-        isDisableTrailer.id = 'disable-trailer-style';
-        document.head.appendChild(isDisableTrailer);
-    }
-
-    isDisableTrailer.textContent = `
-        [data-test-id="TRAILER_BUTTON"] {
-            display: ${newSettings['Trailer'].toggleTrailerButtons ? 'block' : 'none'} !important;
-        }
-    `;
-
     // Colorful II Downloader
     if (Object.keys(settings).length === 0 || settings['Colorful'].toggleColorfulII !== newSettings['Colorful'].toggleColorfulII) {
         const cssId = "custom-css"; 
@@ -583,8 +569,43 @@ async function setSettings(newSettings) {
                 existingLink.remove();
             }
         }
-    }    
+    }
 
+    // Open Blocker
+    const modules = [
+        "donations",
+        "concerts",
+        "trailers",
+        "relevantnow",
+        "artistrecommends"
+    ];
+    
+    modules.forEach(module => {
+        const settingKey = `OB${module.charAt(0) + module.slice(1)}`;
+        const cssId = `openblocker-${module}`;
+        const existingLink = document.getElementById(cssId);
+        
+        if (Object.keys(settings).length === 0 || settings['Open-Blocker'][settingKey] !== newSettings['Open-Blocker'][settingKey]) {
+            if (newSettings['Open-Blocker'][settingKey]) {
+                if (existingLink) {
+                    existingLink.remove();
+                }
+            } else {
+                if (!existingLink) {
+                    fetch(`https://raw.githubusercontent.com/Open-Blocker-FYM/Open-Blocker/refs/heads/main/blocker-css/${module}.css`)
+                        .then(response => response.text())
+                        .then(css => {
+                            const style = document.createElement("style");
+                            style.id = cssId;
+                            style.textContent = css;
+                            document.head.appendChild(style);
+                        })
+                        .catch(error => console.error(`Ошибка загрузки CSS: ${module}`, error));
+                }
+            }
+        }
+    });
+    
     // Update theme settings delay
     if (Object.keys(settings).length === 0 || settings['Особое'].setInterval.text !== newSettings['Особое'].setInterval.text) {
         const newDelay = parseInt(newSettings['Особое'].setInterval.text, 10) || 1000;
