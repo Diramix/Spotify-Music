@@ -1,17 +1,18 @@
-root {
+:root {
 	--spotify-black: #000;
 	--spotify-main: #121212;
 	--spotify: #1ED760;
+	--spotify-light: #1ED790;
 }
 
 .ym-font-music,
 .ym-dark-theme,
 .ym-light-theme {
 	--ym-background-color-primary-enabled-basic: var(--spotify-black);
-	--ym-controls-color-primary-default-enabled: #1ED760;
-	--ym-controls-color-primary-outline-selected_stroke: #1ED760;
-	--ym-controls-color-primary-default-hovered: #1ED790;
-	--ym-controls-color-primary-text-hovered: #1ED790;
+	--ym-controls-color-primary-default-enabled: var(--spotify);
+	--ym-controls-color-primary-outline-selected_stroke: var(--spotify);
+	--ym-controls-color-primary-default-hovered: var(--spotify-light);
+	--ym-controls-color-primary-text-hovered: var(--spotify-light);
 }
 
 body {
@@ -26,7 +27,7 @@ body {
 	width: 280px;
 	right: 7px;
 	bottom: 86px;
-	background: #121212;
+	background: var(--spotify-main);
 	z-index: 1;
 	border-radius: 10px;
 	border-style: solid;
@@ -51,8 +52,8 @@ body {
 	width: 100%;
 	height: 64px;
 	top: 0;
-	box-shadow: 0 5px 20px #121212;
-	background: #121212;
+	box-shadow: 0 5px 20px var(--spotify-main);
+	background: var(--spotify-main);
 	z-index: 10;
 }
 
@@ -188,7 +189,7 @@ body {
 	height: calc(100% - 147px);
 	margin-top: 45px;
 	left: 10px;
-	background: #121212;
+	background: var(--spotify-main);
 	border-radius: 10px;
 	border-style: solid;
 	border-color: #fff1;
@@ -620,7 +621,7 @@ section.PlayerBar_root__cXUnU * {
 	right: 0;
 	bottom: 0;
 	background: #000;
-	color: #1ED760;
+	color: var(--spotify);
 	visibility: visible;
 }
 /*--------------------------------------------*/
@@ -851,12 +852,12 @@ body > div > div > div > div > main > div > div > div > svg {
 }
 
 .NotificationUpdate_button__F3O16 {
-	background: #1ED760;
+	background: var(--spotify);
 	color: #000;
 }
 
 .NotificationUpdate_button__F3O16:hover {
-	background: #1ED790;
+	background: var(--spotify-light);
 	color: #000;
 }
 /*--------------------------------------------*/
@@ -963,7 +964,9 @@ body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitle
 [aria-label="Трек скачан"] *,
 .PlayQueue_root__ponhw:after,
 .PlayQueue_root__ponhw:before,
-.NewReleaseCard_type__cW58D {
+.NewReleaseCard_type__cW58D,
+[data-test-id="ALBUM_PROMO"],
+[data-test-id="SIMPLE_ALBUM_PROMO"] {
 	display: none;
 }
 /*--------------------------------------------*/
@@ -1004,7 +1007,7 @@ body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitle
 	position: fixed;
 	width: 500px;
 	height: 236px;
-	background: #121212;
+	background: var(--spotify-main);
 	right: 1;
 	left: calc(50% - 250px);
 	top: calc(50% - 118px);
@@ -1028,7 +1031,7 @@ body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitle
 
 .notification_ok_button {
 	position: absolute;
-    background: #1ED760;
+    background: var(--spotify);
     color: #000;
     border: none;
     padding: 0;
