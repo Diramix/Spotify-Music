@@ -93,7 +93,7 @@
           "name": "Автоплей",
           "description": "Запускает трек сразу после запуска Яндекс Музыки и при нажатии ctrl + r.",
           "type": "button",
-          "bool": true,
+          "bool": false,
           "defaultParameter": false
         }
       ]
