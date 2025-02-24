@@ -2,6 +2,7 @@
 /*--------------------------------------------*/
 setInterval(() => {
     yandexThemeUpdate();
+    // vibeblockChangeBackgroundImage();
     addSpotifyScreen();
     spotifyScreenUpdateCoverImage();
     checkForChanges();
@@ -23,6 +24,52 @@ function yandexThemeUpdate() {
       body.classList.replace('ym-light-theme', 'ym-dark-theme');
     }
   };
+/*--------------------------------------------*/
+
+// Change fullscreen player background image script
+/*--------------------------------------------
+function vibeblockChangeBackgroundImage() {
+    const imgElements = document.querySelectorAll('[class*="PlayerBarDesktop_cover__IYLwR"]');
+    let imgBackground = "";
+
+    imgElements.forEach(img => {
+        if (img.src && img.src.includes('/100x100')) {
+            imgBackground = img.src.replace('/100x100', '/1000x1000');
+        }
+    });
+
+    if (imgBackground) {
+        const newBackgroundWithGradient = `linear-gradient(180deg, #00000000 0%, #121212 100%), url(${imgBackground}) center center / cover no-repeat`;
+        const normalNewBackground = `url(${imgBackground}) center center / cover no-repeat`;
+
+        const img = new Image();
+        img.src = imgBackground;
+
+        img.onload = () => {
+            const elementsWithGradient = [
+                '[data-test-id="VIBE_BLOCK"]'
+            ];
+
+            const elementsWithoutGradient = [
+                ''
+            ];
+
+            elementsWithGradient.forEach(selector => {
+                const element = document.querySelector(selector);
+                if (element) {
+                    element.style.background = newBackgroundWithGradient;
+                }
+            });
+
+            elementsWithoutGradient.forEach(selector => {
+                const element = document.querySelector(selector);
+                if (element) {
+                    element.style.background = normalNewBackground;
+                }
+            });
+        };
+    }
+};
 /*--------------------------------------------*/
 
 // Spotify Screen
@@ -536,16 +583,27 @@ async function setSettings(newSettings) {
         }
     }
 
-    // Включение/отключение All_Info_Container
-    const allInfoContainer = document.querySelector('.All_Info_Container');
-
-    if (Object.keys(settings).length === 0 || settings['Действия'].allInfoContainerToggle !== newSettings['Действия'].allInfoContainerToggle) {
-        if (newSettings['Действия'].allInfoContainerToggle) {
-            allInfoContainer.style.display = 'block';
-        } else {
-            allInfoContainer.style.display = 'none';
-        }
+    let combinedStyle = document.getElementById('combined-style');
+    if (!combinedStyle) {
+        combinedStyle = document.createElement('style');
+        combinedStyle.id = 'combined-style';
+        document.head.appendChild(combinedStyle);
     }
+    
+    combinedStyle.textContent = `
+        /*Включение/отключение All_Info_Container*/
+        .All_Info_Container {
+            display: ${newSettings['Действия'].allInfoContainerToggle ? 'block' : 'none'} !important;
+        }
+
+        /*Включает/выключает Vibe Animation на Main Page*/
+        .SM_Yandex_DJ {
+            display: ${newSettings['SpotifyDJX'].toggleSpotifyDJX ? 'block' : 'none'} !important;
+        }
+        [data-test-id="VIBE_BLOCK"] {
+            display: ${newSettings['SpotifyDJX'].toggleSpotifyDJX ? 'none' : 'flex'} !important;
+        }
+    `;   
 
     // Colorful II Downloader
     if (Object.keys(settings).length === 0 || settings['Colorful'].toggleColorfulII !== newSettings['Colorful'].toggleColorfulII) {

@@ -35,20 +35,15 @@
       ]
     },
     {
-      "title": "Особое",
+      "title": "SpotifyDJX",
       "items": [
         {
-          "id": "setInterval",
-          "name": "Скорость обновления настроек темы (в миллисекундах)",
-          "description": "Выставляет скорость обновления настроек темы. (Задержка нажатия на кнопку в PulseSync и срабатывание в Яндекс Музыке)",
-          "type": "text",
-          "buttons": [
-            {
-              "name": "text",
-              "text": "1000",
-              "defaultParameter": "1000"
-            }
-          ]
+          "id": "toggleSpotifyDJX",
+          "name": "Spotify DJ X",
+          "description": "Включает/выключает Vibe Block на Main Page",
+          "type": "button",
+          "bool": true,
+          "defaultParameter": true
         }
       ]
     },
@@ -82,6 +77,24 @@
           "type": "button",
           "bool": true,
           "defaultParameter": true
+        }
+      ]
+    },
+    {
+      "title": "Особое",
+      "items": [
+        {
+          "id": "setInterval",
+          "name": "Скорость обновления настроек темы (в миллисекундах)",
+          "description": "Выставляет скорость обновления настроек темы. (Задержка нажатия на кнопку в PulseSync и срабатывание в Яндекс Музыке)",
+          "type": "text",
+          "buttons": [
+            {
+              "name": "text",
+              "text": "1000",
+              "defaultParameter": "1000"
+            }
+          ]
         }
       ]
     },

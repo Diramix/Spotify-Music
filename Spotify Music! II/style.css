@@ -719,10 +719,6 @@ body > div > div > div > div > main > div > div > div > svg {
 	box-shadow: 0 0;
 }
 
-[data-test-id="VIBE_BLOCK"] {
-	display: none;
-}
-
 /* exp
 @keyframes loading {
     0% {
