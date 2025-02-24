@@ -719,6 +719,12 @@ body > div > div > div > div > main > div > div > div > svg {
 	box-shadow: 0 0;
 }
 
+.MainPage_vibe__XEBbh {
+    max-height: 300px;
+    min-height: 300px;
+    top: -30px;
+}
+
 /* exp
 @keyframes loading {
     0% {
