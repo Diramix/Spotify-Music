@@ -553,7 +553,7 @@ function log(text) {
 
 async function getSettings() {
     try {
-        const response = await fetch("http://127.0.0.1:2007/get_handle");
+        const response = await fetch("http://127.0.0.1:2007/get_handle?name=Spotify Music! II");
         if (!response.ok) throw new Error(`Ошибка сети: ${response.status}`);
         const data = await response.json();
         if (!data?.data?.sections) {

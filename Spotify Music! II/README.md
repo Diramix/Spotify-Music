@@ -1,4 +1,4 @@
-![2024-08-30_223011](https://github.com/user-attachments/assets/a08776a0-e610-4044-8bc0-d4f78577b187)
+![2024-08-30_223011](https://github.com/user-attachments/assets/f718b7e5-b715-4e6e-a9de-830b4a3d2ab3)
    
 # Spotify Music! II
 
