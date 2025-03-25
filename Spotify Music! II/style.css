@@ -971,7 +971,11 @@ body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitle
 .PlayQueue_root__ponhw:before,
 .NewReleaseCard_type__cW58D,
 [data-test-id="ALBUM_PROMO"],
-[data-test-id="SIMPLE_ALBUM_PROMO"] {
+[data-test-id="SIMPLE_ALBUM_PROMO"],
+[data-test-id="TRAILER_BUTTON"],
+[data-test-id="CONTEXT_MENU_TRAILER_BUTTON"],
+[data-test-id="CONCERTS_TOP"],
+[data-test-id="CONCERTS_PERSONAL"] {
 	display: none;
 }
 /*--------------------------------------------*/

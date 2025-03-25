@@ -5,7 +5,7 @@
   "author": ["diram1x"],
   "type": "theme",
   "description": "Spotify Premium",
-  "version": "2.1.10",
+  "version": "2.1.11",
   "css": "style.css",
   "script": "script.js",
   "tags": ["Spotify"]
