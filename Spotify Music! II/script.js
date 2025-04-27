@@ -19,11 +19,11 @@ setInterval(() => {
 function yandexThemeUpdate() {
     const body = document.body;
     if (!body.classList.contains('ym-dark-theme') && !body.classList.contains('ym-light-theme')) {
-      body.classList.add('ym-dark-theme');
+        body.classList.add('ym-dark-theme');
     } else if (body.classList.contains('ym-light-theme')) {
-      body.classList.replace('ym-light-theme', 'ym-dark-theme');
+        body.classList.replace('ym-light-theme', 'ym-dark-theme');
     }
-  };
+};
 /*--------------------------------------------*/
 
 // Change fullscreen player background image script
@@ -87,7 +87,7 @@ function addSpotifyScreen() {
         spotifyScreen = document.createElement('div');
         spotifyScreen.classList.add('Spotify_Screen');
         document.body.appendChild(spotifyScreen);
-        
+
         spotifyScreen.innerHTML = `
             <div class="All_Info_Container">
                 <div class="Artist_Info_Container">
@@ -165,9 +165,9 @@ const fetchDataAndUpdateWiki = async (searchText) => {
 
     try {
         const response = await fetch(`https://ru.wikipedia.org/w/api.php?action=query&format=json&origin=*&titles=${encodeURIComponent(searchText)}&prop=extracts&exintro&explaintext`);
-        
+
         if (!response.ok) throw new Error('Network response was not ok');
-        
+
         const data = await response.json();
         const page = Object.values(data.query.pages)[0];
 
@@ -190,62 +190,43 @@ const fetchDataAndUpdateWiki = async (searchText) => {
 };
 
 const fetchDataAndUpdateNeuro = async (artistName, trackName) => {
-    const Search_InfoElement = document.querySelector(Search_InfoSelector);
-    const GPT_Search_InfoElement = document.querySelector(GPT_Search_InfoSelector);
-    const AchtungAlertElement = document.querySelector(AchtungAlertSelector);
+    const artistEl = document.querySelector(Search_InfoSelector);
+    const trackEl = document.querySelector(GPT_Search_InfoSelector);
+    const alertEl = document.querySelector(AchtungAlertSelector);
 
     try {
         const prompt = `
             Расскажи про артиста "${artistName}".
             Затем расскажи про трек "${trackName}" этого артиста.
-            Раздели ответ следующим образом:
+            Раздели ответ так:
             "=== Артист ===
             [Артист] - [Информация об артисте]
             === Трек ===
-            [Название трека] - [Информация о треке]"
-            Не добавляй приветствий и дополнительных слов, кроме указанного разделения.
+            [Название трека] - [Информация о треке]".
+            Не добавляй приветствий, markdown и дополнительных слов, кроме указанного разделения.
         `;
 
-        const response = await fetch('http://api.onlysq.ru/ai/v1', {
+        const res = await fetch('http://api.onlysq.ru/ai/v2', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify([
-                {
-                    role: 'user',
-                    content: prompt.trim(),
-                },
-            ]),
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                model: 'gpt-4o-mini',
+                request: { messages: [{ role: 'user', content: prompt.trim() }] }
+            }),
         });
 
-        if (!response.ok) throw new Error('Network response was not ok');
+        if (!res.ok) throw new Error();
 
-        const data = await response.json();
-        const gptAnswer = data.answer || 'Нет информации';
+        const data = await res.json();
+        const [artistInfo = '', trackInfo = ''] = (data.choices?.[0]?.message?.content || '').split(/=== Трек ===/i);
 
-        // Разделение ответа по ключевым разделителям
-        const [artistInfo, trackInfo] = gptAnswer.split(/=== Трек ===/i);
-
-        if (Search_InfoElement) {
-            Search_InfoElement.innerText = artistInfo?.replace(/=== Артист ===/i, '').trim() || 'Нет информации об артисте';
-        }
-        if (GPT_Search_InfoElement) {
-            GPT_Search_InfoElement.innerText = trackInfo?.trim() || 'Нет информации о треке';
-        }
-
-        AchtungAlertElement.style.display = 'block';
-    } catch (error) {
-        console.error('Ошибка при получении данных:', error);
-        if (Search_InfoElement) {
-            Search_InfoElement.innerText = 'Ошибка при получении информации об артисте';
-        }
-        if (GPT_Search_InfoElement) {
-            GPT_Search_InfoElement.innerText = 'Ошибка при получении информации о треке';
-        }
-        if (AchtungAlertElement) {
-            AchtungAlertElement.style.display = 'none';
-        }
+        if (artistEl) artistEl.innerText = artistInfo.replace(/=== Артист ===/i, '').trim() || 'Нет информации об артисте';
+        if (trackEl) trackEl.innerText = trackInfo.trim() || 'Нет информации о треке';
+        if (alertEl) alertEl.style.display = 'block';
+    } catch {
+        if (artistEl) artistEl.innerText = 'Ошибка при получении информации об артисте';
+        if (trackEl) trackEl.innerText = 'Ошибка при получении информации о треке';
+        if (alertEl) alertEl.style.display = 'none';
     }
 };
 
@@ -418,7 +399,7 @@ function disableDoubleClick() {
     const elements = document.querySelectorAll('.PlayerBar_root__cXUnU');
 
     elements.forEach(element => {
-        element.addEventListener('dblclick', function(event) {
+        element.addEventListener('dblclick', function (event) {
             event.preventDefault();
             event.stopPropagation();
         }, true);
@@ -435,7 +416,7 @@ function addSpotifyDJX() {
     if (PinsList && playButton && !PinsList.querySelector('.SM_Yandex_DJ')) {
         const smYandexDJ = document.createElement('div');
         smYandexDJ.classList.add('SM_Yandex_DJ');
-        
+
         smYandexDJ.innerHTML = `
             <div class="DJ_Cover"></div>
             <div class="DJ_Title">DJ</div>
@@ -529,7 +510,7 @@ function createNotification() {
         </div>
     `;
 
-    background.querySelector('.notification_ok_button').onclick = function() {
+    background.querySelector('.notification_ok_button').onclick = function () {
         background.remove();
         localStorage.setItem('notificationShown', 'true');
     };
@@ -589,7 +570,7 @@ async function setSettings(newSettings) {
         combinedStyle.id = 'combined-style';
         document.head.appendChild(combinedStyle);
     }
-    
+
     combinedStyle.textContent = `
         /*Включение/отключение All_Info_Container*/
         .All_Info_Container {
@@ -611,13 +592,13 @@ async function setSettings(newSettings) {
         [data-test-id="VIBE_BLOCK"] {
             display: ${newSettings['SpotifyDJX'].toggleSpotifyDJX ? 'none' : 'flex'} !important;
         }
-    `;   
+    `;
 
     // Colorful II Downloader
     if (Object.keys(settings).length === 0 || settings['Colorful'].toggleColorfulII !== newSettings['Colorful'].toggleColorfulII) {
-        const cssId = "custom-css"; 
+        const cssId = "custom-css";
         const existingLink = document.getElementById(cssId);
-    
+
         if (newSettings['Colorful'].toggleColorfulII) {
             if (!existingLink) {
                 fetch("https://raw.githubusercontent.com/Diramix/Colorful/Colorful-II/Colorful%20II/style.css")
@@ -640,10 +621,10 @@ async function setSettings(newSettings) {
     // Auto Play
     if (newSettings['Developer'].devAutoPlayOnStart && !window.hasRun) {
         document.querySelector(`section.PlayerBar_root__cXUnU * [data-test-id="PLAY_BUTTON"]`)
-        ?.click();
+            ?.click();
         window.hasRun = true;
     }
-    
+
     // Update theme settings delay
     if (Object.keys(settings).length === 0 || settings['Особое'].setInterval.text !== newSettings['Особое'].setInterval.text) {
         const newDelay = parseInt(newSettings['Особое'].setInterval.text, 10) || 1000;

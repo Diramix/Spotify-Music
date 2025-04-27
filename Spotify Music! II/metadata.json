@@ -2,11 +2,15 @@
   "name": "Spotify Music! II",
   "image": "image.png",
   "banner": "banner.png",
-  "author": ["diram1x"],
+  "author": [
+    "diram1x"
+  ],
   "type": "theme",
   "description": "Spotify Premium",
-  "version": "2.1.11",
+  "version": "2.1.12",
   "css": "style.css",
   "script": "script.js",
-  "tags": ["Spotify"]
+  "tags": [
+    "Spotify"
+  ]
 }
