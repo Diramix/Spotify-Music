@@ -20,6 +20,14 @@
                     "defaultParameter": false
                 },
                 {
+                    "id": "useStream",
+                    "name": "Стримминг ответа GPT",
+                    "description": "Текст GPT будет показываться сразу в реальном времени.",
+                    "type": "button",
+                    "bool": false,
+                    "defaultParameter": false
+                },
+                {
                     "id": "achtungBypass",
                     "name": "Accept Achtung Alert",
                     "description": "Скрывает предупреждение в Spotify Screen. Warning: Включая эту опцию, вы соглашаетесь с тем, что в сведениях возможны ошибки. Разработчик темы не несёт ответственности за ваши действия, основанные на сведениях.",

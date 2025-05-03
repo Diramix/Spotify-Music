@@ -35,6 +35,7 @@ body {
 	border-color: #fff1;
 	overflow-y: scroll;
 }
+
 /* exp
 .SM_Background {
 	position: sticky;
@@ -64,10 +65,10 @@ body {
 	font-size: 17px;
 	font-weight: 500;
 	top: -4px;
-    max-width: 195px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+	max-width: 195px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .SM_Decorate_Buttons {
@@ -94,27 +95,27 @@ body {
 }
 
 .SM_Track_Name {
-    color: #fff;
-    font-size: 20px;
-    font-weight: 500;
-    margin-left: 15px;
-    margin-top: -12px;
-    max-width: 210px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 500;
+	margin-left: 15px;
+	margin-top: -12px;
+	max-width: 210px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .SM_Artist {
-    color: #fff7;
-    font-size: 15px;
-    font-weight: 400;
-    margin-left: 15px;
-    max-width: 210px;
-    margin-top: 1px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+	color: #fff7;
+	font-size: 15px;
+	font-weight: 400;
+	margin-left: 15px;
+	max-width: 210px;
+	margin-top: 1px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .All_Info_Container {
@@ -179,6 +180,7 @@ body {
 	margin-top: 5px;
 	padding: 0px 6px 0px 6px;
 }
+
 /*--------------------------------------------*/
 
 /*Navbar*/
@@ -198,17 +200,17 @@ body {
 }
 
 nav.NavbarDesktop_navigation__dLUGW {
-    max-width: none;
+	max-width: none;
 }
 
 span.NavbarDesktop_title_collapsed__IH9Bc {
-    opacity: 1 !important;
-    -webkit-animation: none !important;
-    animation: none !important;
+	opacity: 1 !important;
+	-webkit-animation: none !important;
+	animation: none !important;
 }
 
 div.Pin_info_collapsed__bF9ac {
-    opacity: 1 !important;
+	opacity: 1 !important;
 }
 
 .SM_Yandex_DJ {
@@ -234,6 +236,7 @@ div.Pin_info_collapsed__bF9ac {
 	background-size: cover;
 	border-radius: 5px;
 }
+
 /* exp
 .DJ_Buttons {
 	width: 50px;
@@ -258,12 +261,12 @@ div.Pin_info_collapsed__bF9ac {
 	font-size: 13px;
 	height: 20px;
 	width: 55%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
-body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li > a > div.ZrkG6gNYcr4h3hfkhyT1 > span {
+body>div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq>aside>div>nav>ol>li>a>div.ZrkG6gNYcr4h3hfkhyT1>span {
 	font-size: 14px;
 	margin-top: 2px;
 }
@@ -297,14 +300,14 @@ body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitle
 	font-size: 13px;
 }
 
-body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(1),
-body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(2),
-body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(3),
-body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(4) {
+body>div.WithTopBanner_root__P__x3>div>div>aside>div>div.NavbarDesktop_scrollableContainer__HLc9D>div>nav>ol>li:nth-child(1),
+body>div.WithTopBanner_root__P__x3>div>div>aside>div>div.NavbarDesktop_scrollableContainer__HLc9D>div>nav>ol>li:nth-child(2),
+body>div.WithTopBanner_root__P__x3>div>div>aside>div>div.NavbarDesktop_scrollableContainer__HLc9D>div>nav>ol>li:nth-child(3),
+body>div.WithTopBanner_root__P__x3>div>div>aside>div>div.NavbarDesktop_scrollableContainer__HLc9D>div>nav>ol>li:nth-child(4) {
 	visibility: hidden;
 }
 
-body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(1) > a > div.zpkgiiHgDpbBThy6gavq {
+body>div.WithTopBanner_root__P__x3>div>div>aside>div>div.NavbarDesktop_scrollableContainer__HLc9D>div>nav>ol>li:nth-child(1)>a>div.zpkgiiHgDpbBThy6gavq {
 	visibility: visible;
 	position: fixed;
 	top: 15px;
@@ -312,7 +315,7 @@ body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDeskt
 	-webkit-app-region: no-drag;
 }
 
-body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(2) > a > div.zpkgiiHgDpbBThy6gavq {
+body>div.WithTopBanner_root__P__x3>div>div>aside>div>div.NavbarDesktop_scrollableContainer__HLc9D>div>nav>ol>li:nth-child(2)>a>div.zpkgiiHgDpbBThy6gavq {
 	visibility: visible;
 	position: fixed;
 	top: 15px;
@@ -320,7 +323,7 @@ body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDeskt
 	-webkit-app-region: no-drag;
 }
 
-body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(3) > a > div.zpkgiiHgDpbBThy6gavq {
+body>div.WithTopBanner_root__P__x3>div>div>aside>div>div.NavbarDesktop_scrollableContainer__HLc9D>div>nav>ol>li:nth-child(3)>a>div.zpkgiiHgDpbBThy6gavq {
 	visibility: visible;
 	position: fixed;
 	top: 15px;
@@ -332,18 +335,18 @@ body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDeskt
 	height: 35px;
 }
 
-body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(4) > a > div.zpkgiiHgDpbBThy6gavq {
+body>div.WithTopBanner_root__P__x3>div>div>aside>div>div.NavbarDesktop_scrollableContainer__HLc9D>div>nav>ol>li:nth-child(4)>a>div.zpkgiiHgDpbBThy6gavq {
 	visibility: visible;
 	position: fixed;
 	margin-top: -227px;
 	left: 35px;
 }
 
-body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(4) > a > div.zpkgiiHgDpbBThy6gavq > span {
+body>div.WithTopBanner_root__P__x3>div>div>aside>div>div.NavbarDesktop_scrollableContainer__HLc9D>div>nav>ol>li:nth-child(4)>a>div.zpkgiiHgDpbBThy6gavq>span {
 	visibility: hidden;
 }
 
-body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(4) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span:before {
+body>div.WithTopBanner_root__P__x3>div>div>aside>div>div.NavbarDesktop_scrollableContainer__HLc9D>div>nav>ol>li:nth-child(4)>a>div.ZrkG6gNYcr4h3hfkhyT1>span:before {
 	visibility: visible;
 	position: static;
 	content: "Моя медиатека";
@@ -353,6 +356,7 @@ body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDeskt
 	margin-top: -112px;
 	left: 80px;
 }
+
 /*--------------------------------------------*/
 
 /*БАЗА*/
@@ -375,13 +379,14 @@ body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDeskt
 }
 
 [data-test-id="MAIN_PAGE"] {
-    overflow: scroll;
-    scrollbar-width: none;
+	overflow: scroll;
+	scrollbar-width: none;
 }
 
 [data-test-id="MAIN_PAGE"]::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
+
 /*--------------------------------------------*/
 
 /*Плеер*/
@@ -412,6 +417,7 @@ section.PlayerBar_root__cXUnU * {
 .PlayerBarDesktop_info__56v53 {
 	margin-left: 5px;
 }
+
 /*--------------------------------------------*/
 
 /*Релиз нотес*/
@@ -420,48 +426,50 @@ section.PlayerBar_root__cXUnU * {
 	z-index: 10001;
 }
 
-#\:r0\: > header > h3 {
+#\:r0\:>header>h3 {
 	position: fixed;
-    visibility: hidden;
-    right: 139px;
-    top: 13px;
-    z-index: 10;
+	visibility: hidden;
+	right: 139px;
+	top: 13px;
+	z-index: 10;
 }
 
-#\:r0\: > header > h3:before {
-    width: 100px;
-    visibility: visible;
-    position: absolute;
-    font-family: "Metropolis Semi Bold", sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    right: 175px;
-    content: "Spotify";
-    color: #1FDE64;
+#\:r0\:>header>h3:before {
+	width: 100px;
+	visibility: visible;
+	position: absolute;
+	font-family: "Metropolis Semi Bold", sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	right: 175px;
+	content: "Spotify";
+	color: #1FDE64;
 }
 
-#\:r0\: > header > h3:after {
-    width: 100px;
-    visibility: visible;
-    position: absolute;
-    font-family: "Yandex Sans Display Bold", sans-serif;
-    font-size: 20px;
-    font-weight: 600;
-    right: 107px;
-    content: "Music! II";
-    color: #ffff00;
+#\:r0\:>header>h3:after {
+	width: 100px;
+	visibility: visible;
+	position: absolute;
+	font-family: "Yandex Sans Display Bold", sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+	right: 107px;
+	content: "Music! II";
+	color: #ffff00;
 }
+
 /*--------------------------------------------*/
 
 /*Лайки и история*/
 /*--------------------------------------------*/
 .LikesAndHistory_root__KCuz_ {
-    position: absolute;
-    bottom: -100px;
-    height: 101px;
-    z-index: 2;
-    max-width: 100%;
+	position: absolute;
+	bottom: -100px;
+	height: 101px;
+	z-index: 2;
+	max-width: 100%;
 }
+
 /*--------------------------------------------*/
 
 /*NEW RELEASE CARD*/
@@ -484,7 +492,7 @@ section.PlayerBar_root__cXUnU * {
 .NewReleaseCard_image__oxm2S,
 .NewReleaseCard_cover__X1chP,
 .NewReleaseCard_coverLink__roCeA {
-	height:50px;
+	height: 50px;
 	border-radius: 0;
 	box-shadow: 0 0;
 }
@@ -492,6 +500,7 @@ section.PlayerBar_root__cXUnU * {
 .NewReleaseCard_container__XvwZC {
 	margin-right: 5px;
 }
+
 /*--------------------------------------------*/
 
 /*Табы*/
@@ -526,14 +535,15 @@ section.PlayerBar_root__cXUnU * {
 }
 
 @font-face {
-    font-family: 'YSDisplayBold';
-    src: url("http://127.0.0.1:2007/assets/YSDisplay-Bold.woff") format("woff");
+	font-family: 'YSDisplayBold';
+	src: url("http://127.0.0.1:2007/assets/YSDisplay-Bold.woff") format("woff");
 }
 
 .CompositeHeader_static__pZdrc * {
-    font-family: 'YSDisplayBold', sans-serif;
-    font-size: 14px;
+	font-family: 'YSDisplayBold', sans-serif;
+	font-size: 14px;
 }
+
 /*--------------------------------------------*/
 
 /*SyncLyrics*/
@@ -547,15 +557,15 @@ section.PlayerBar_root__cXUnU * {
 }
 
 [data-test-id="FULLSCREEN_PLAYER_MODAL"]:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: inherit;
-    filter: brightness(0.7);
-    z-index: -1;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: inherit;
+	filter: brightness(0.7);
+	z-index: -1;
 }
 
 .FullscreenPlayerDesktopContent_syncLyrics__6dTfH {
@@ -580,6 +590,7 @@ section.PlayerBar_root__cXUnU * {
 	font-family: "Noto Sans", sans-serif;
 	font-weight: 700;
 }
+
 /*--------------------------------------------*/
 
 /*Playlist Page*/
@@ -590,6 +601,7 @@ section.PlayerBar_root__cXUnU * {
 	border-radius: 5px;
 	background: #fff1;
 }
+
 /* exp
 .SearchPlaylistInput_root__o14iM:before {
 	position: absolute;
@@ -624,6 +636,7 @@ section.PlayerBar_root__cXUnU * {
 	color: var(--spotify);
 	visibility: visible;
 }
+
 /*--------------------------------------------*/
 
 /*Обводка слайдеров в Яндекс Музыке*/
@@ -635,14 +648,16 @@ section.PlayerBar_root__cXUnU * {
 .ChangeTimecode_slider__P4qmT {
 	--slider-thumb-box-shadow-color: #0000;
 }
+
 /*--------------------------------------------*/
 
 /*Кнопка BETA*/
 /*--------------------------------------------*/
 .MainPage_beta__y32vb {
 	display: none;
-    background: 0;
+	background: 0;
 }
+
 /*--------------------------------------------*/
 
 /*Настройки качества звука*/
@@ -660,6 +675,7 @@ section.PlayerBar_root__cXUnU * {
 .EqualizerPresets_container__ABVY8 {
 	background: #000;
 }
+
 /*--------------------------------------------*/
 
 /*Тайтлбар*/
@@ -677,6 +693,7 @@ section.PlayerBar_root__cXUnU * {
 	height: 60px;
 	pointer-events: auto;
 }
+
 /*--------------------------------------------*/
 
 /*Поиск*/
@@ -705,9 +722,10 @@ section.PlayerBar_root__cXUnU * {
 	border-width: 0;
 }
 
-body > div > div > div > div > main > div > div > div > svg {
+body>div>div>div>div>main>div>div>div>svg {
 	scale: 1.5;
 }
+
 /*--------------------------------------------*/
 
 /*Vibe - Вайб*/
@@ -720,9 +738,9 @@ body > div > div > div > div > main > div > div > div > svg {
 }
 
 .MainPage_vibe__XEBbh {
-    max-height: 300px;
-    min-height: 300px;
-    top: -30px;
+	max-height: 300px;
+	min-height: 300px;
+	top: -30px;
 }
 
 /* exp
@@ -785,6 +803,7 @@ body > div > div > div > div > main > div > div > div > svg {
 .NavbarDesktopUserWidget_userProfileContainer__ha3Tm * * {
 	pointer-events: auto;
 }
+
 /*--------------------------------------------*/
 
 /*Неурокнопки*/
@@ -804,6 +823,7 @@ body > div > div > div > div > main > div > div > div > svg {
 	background: #fff2;
 	border-width: 0;
 }
+
 /*--------------------------------------------*/
 
 /*Концерты*/
@@ -812,6 +832,7 @@ body > div > div > div > div > main > div > div > div > svg {
 	width: 64px;
 	height: 64px;
 }
+
 /*--------------------------------------------*/
 
 /*Контекстное меню*/
@@ -830,6 +851,7 @@ body > div > div > div > div > main > div > div > div > svg {
 	backdrop-filter: blur(60px);
 	z-index: 9999;
 }
+
 /*--------------------------------------------*/
 
 /*Сплэш скрин и лого*/
@@ -838,6 +860,7 @@ body > div > div > div > div > main > div > div > div > svg {
 .SplashScreen_video__wFSy5 {
 	filter: hue-rotate(65deg);
 }
+
 /*--------------------------------------------*/
 
 /*Апдейт нотификейшон*/
@@ -863,6 +886,7 @@ body > div > div > div > div > main > div > div > div > svg {
 	background: var(--spotify-light);
 	color: #000;
 }
+
 /*--------------------------------------------*/
 
 /*Track Lyrics*/
@@ -877,6 +901,7 @@ body > div > div > div > div > main > div > div > div > svg {
 .TrackLyricsModal_content__Cstzi {
 	color: #fff;
 }
+
 /*--------------------------------------------*/
 
 /*download*/
@@ -895,20 +920,21 @@ body > div > div > div > div > main > div > div > div > svg {
 }
 
 .Meta_text__Y5uYH {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
 }
 
 [aria-label="Трек скачан"] {
-    order: -1;
+	order: -1;
 }
 
 [data-test-id="SEPARATED_ARTIST_TITLE"] {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
+
 /*--------------------------------------------*/
 
 /*Треки*/
@@ -931,6 +957,7 @@ body > div > div > div > div > main > div > div > div > svg {
 		opacity: 1;
 	}
 }
+
 /*--------------------------------------------*/
 
 /*ONLY display: none;*/
@@ -946,14 +973,14 @@ body > div > div > div > div > main > div > div > div > svg {
 .l66GiFKS1Ux_BNd603Cu,
 .Tab_image__Hen3_,
 .Tab_subtitle__fLp9S,
-body > div > p,
+body>div>p,
 .NewReleaseCard_trailerButton__wyoRL,
-body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(1) > a > div.ZrkG6gNYcr4h3hfkhyT1.xENlRAFvRskKnt8LUObC > span,
-body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(1) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span,
-body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(2) > a > div.ZrkG6gNYcr4h3hfkhyT1.xENlRAFvRskKnt8LUObC > span,
-body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(2) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span,
-body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(3) > a > div.ZrkG6gNYcr4h3hfkhyT1.xENlRAFvRskKnt8LUObC > span,
-body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq > aside > div > nav > ol > li:nth-child(3) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span,
+body>div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq>aside>div>nav>ol>li:nth-child(1)>a>div.ZrkG6gNYcr4h3hfkhyT1.xENlRAFvRskKnt8LUObC>span,
+body>div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq>aside>div>nav>ol>li:nth-child(1)>a>div.ZrkG6gNYcr4h3hfkhyT1>span,
+body>div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq>aside>div>nav>ol>li:nth-child(2)>a>div.ZrkG6gNYcr4h3hfkhyT1.xENlRAFvRskKnt8LUObC>span,
+body>div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq>aside>div>nav>ol>li:nth-child(2)>a>div.ZrkG6gNYcr4h3hfkhyT1>span,
+body>div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq>aside>div>nav>ol>li:nth-child(3)>a>div.ZrkG6gNYcr4h3hfkhyT1.xENlRAFvRskKnt8LUObC>span,
+body>div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitleBar__ygJtq>aside>div>nav>ol>li:nth-child(3)>a>div.ZrkG6gNYcr4h3hfkhyT1>span,
 .FullscreenPlayerDesktopContent_syncLyricsContent__H_enX:after,
 .FullscreenPlayerDesktopContent_syncLyricsContent__H_enX:before,
 .FullscreenPlayerDesktopContent_sliderContainer__FtBZ7,
@@ -978,26 +1005,44 @@ body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitle
 [data-test-id="CONCERTS_PERSONAL"] {
 	display: none;
 }
+
 /*--------------------------------------------*/
 
 /*CSJS*/
 /*Изменение размера навбара*/
 /*--------------------------------------------*/
 @media (max-width: 1079px) {
-    .NavbarDesktop_root__scYzp { width: 80px !important; }
-    .Content_main__8_wIa { left: 98px !important; }
-    body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(4) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span,
-    .DJ_Title,
-    .DJ_Description { display: none !important; }
+	.NavbarDesktop_root__scYzp {
+		width: 80px !important;
+	}
+
+	.Content_main__8_wIa {
+		left: 98px !important;
+	}
+
+	body>div.WithTopBanner_root__P__x3>div>div>aside>div>div.NavbarDesktop_scrollableContainer__HLc9D>div>nav>ol>li:nth-child(4)>a>div.ZrkG6gNYcr4h3hfkhyT1>span,
+	.DJ_Title,
+	.DJ_Description {
+		display: none !important;
+	}
 }
 
 @media (min-width: 1080px) {
-    .NavbarDesktop_root__scYzp { width: 280px !important; }
-    .Content_main__8_wIa { left: 297px !important; }
-    body > div.WithTopBanner_root__P__x3 > div > div > aside > div > div.NavbarDesktop_scrollableContainer__HLc9D > div > nav > ol > li:nth-child(4) > a > div.ZrkG6gNYcr4h3hfkhyT1 > span,
-    .DJ_Title,
-    .DJ_Description { display: block !important; }
+	.NavbarDesktop_root__scYzp {
+		width: 280px !important;
+	}
+
+	.Content_main__8_wIa {
+		left: 297px !important;
+	}
+
+	body>div.WithTopBanner_root__P__x3>div>div>aside>div>div.NavbarDesktop_scrollableContainer__HLc9D>div>nav>ol>li:nth-child(4)>a>div.ZrkG6gNYcr4h3hfkhyT1>span,
+	.DJ_Title,
+	.DJ_Description {
+		display: block !important;
+	}
 }
+
 /*--------------------------------------------*/
 
 /*GPT Update Notification*/
@@ -1040,20 +1085,21 @@ body > div.DefaultLayout_root__7J0wo.DefaultLayout_root_applicationPreserveTitle
 
 .notification_ok_button {
 	position: absolute;
-    background: var(--spotify);
-    color: #000;
-    border: none;
-    padding: 0;
-    box-shadow: none;
-    width: 80px;
-    height: 35px;
-    border-radius: 100px;
-    right: 15px;
-    bottom: 15px;
+	background: var(--spotify);
+	color: #000;
+	border: none;
+	padding: 0;
+	box-shadow: none;
+	width: 80px;
+	height: 35px;
+	border-radius: 100px;
+	right: 15px;
+	bottom: 15px;
 }
 
 .notification_ok_button:hover {
 	filter: brightness(0.8);
 	cursor: pointer;
 }
+
 /*--------------------------------------------*/

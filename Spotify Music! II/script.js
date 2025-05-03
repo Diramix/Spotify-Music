@@ -92,11 +92,11 @@ function addSpotifyScreen() {
             <div class="All_Info_Container">
                 <div class="Artist_Info_Container">
                     <div class="Info_Title">Сведения об исполнителе</div>
-                    <div class="Search_Info"></div>
+                    <div class="gpt_smooth Search_Info"></div>
                 </div>
                 <div class="GPT_Info_Container">
                     <div class="GPT_Info_Title">Сведения о треке</div>
-                    <div class="GPT_Search_Info"></div>
+                    <div class="gpt_smooth GPT_Search_Info"></div>
                 </div>
                 <div class="Achtung_Alert">В сведениях иногда бывают неправильные результаты. Проверяйте информацию подробнее, если изначально вам не всё равно!</div>
             </div>
@@ -189,40 +189,97 @@ const fetchDataAndUpdateWiki = async (searchText) => {
     }
 };
 
+let useStream = true;
+
+const streamContent = async (prompt, targetEl) => {
+    const res = await fetch('http://api.onlysq.ru/ai/v2', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            model: 'gpt-4o-mini',
+            request: {
+                messages: [{ role: 'user', content: prompt }],
+                stream: true
+            }
+        })
+    });
+
+    if (!res.ok || !res.body) throw new Error();
+
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder('utf-8');
+    let fullText = '';
+
+    while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        const chunkText = decoder.decode(value, { stream: true });
+        const lines = chunkText.split('\n');
+
+        for (let line of lines) {
+            line = line.trim();
+            if (!line) continue;
+            if (line.startsWith('data: ')) line = line.slice(6);
+            if (line === '[DONE]') break;
+
+            try {
+                const chunk = JSON.parse(line);
+                const content = chunk.choices?.[0]?.delta?.content;
+                if (content) {
+                    fullText += content;
+                    if (targetEl) targetEl.innerText = fullText.trim();
+                }
+            } catch (_) { }
+        }
+    }
+};
+
 const fetchDataAndUpdateNeuro = async (artistName, trackName) => {
     const artistEl = document.querySelector(Search_InfoSelector);
     const trackEl = document.querySelector(GPT_Search_InfoSelector);
     const alertEl = document.querySelector(AchtungAlertSelector);
 
+    if (artistEl) artistEl.innerText = 'Loading...';
+    if (trackEl) trackEl.innerText = 'Loading...';
+    if (alertEl) alertEl.style.display = 'block';
+
     try {
-        const prompt = `
-            Расскажи про артиста "${artistName}".
-            Затем расскажи про трек "${trackName}" этого артиста.
-            Раздели ответ так:
-            "=== Артист ===
-            [Артист] - [Информация об артисте]
-            === Трек ===
-            [Название трека] - [Информация о треке]".
-            Не добавляй приветствий, markdown и дополнительных слов, кроме указанного разделения.
-        `;
+        if (useStream) {
+            await Promise.all([
+                streamContent(`Расскажи кратко про артиста "${artistName}", без приветствий, без использования markdown и дополнительных слов.`, artistEl),
+                streamContent(`Расскажи кратко про трек "${trackName}" артиста "${artistName}", без приветствий, без использования markdown и дополнительных слов.`, trackEl)
+            ]);
+        } else {
+            const prompt = `
+                Расскажи про артиста "${artistName}".
+                Затем расскажи про трек "${trackName}" этого артиста.
+                Раздели ответ так:
+                "=== Артист ===
+                [Артист] - [Информация об артисте]
+                === Трек ===
+                [Название трека] - [Информация о треке]".
+                Не добавляй приветствий, markdown и дополнительных слов, кроме указанного разделения.
+            `.trim();
 
-        const res = await fetch('http://api.onlysq.ru/ai/v2', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                model: 'gpt-4o-mini',
-                request: { messages: [{ role: 'user', content: prompt.trim() }] }
-            }),
-        });
+            const res = await fetch('http://api.onlysq.ru/ai/v2', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    model: 'gpt-4o-mini',
+                    request: { messages: [{ role: 'user', content: prompt }] }
+                })
+            });
 
-        if (!res.ok) throw new Error();
+            if (!res.ok) throw new Error();
 
-        const data = await res.json();
-        const [artistInfo = '', trackInfo = ''] = (data.choices?.[0]?.message?.content || '').split(/=== Трек ===/i);
+            const data = await res.json();
+            const content = data.choices?.[0]?.message?.content || '';
+            const [artistInfo = '', trackInfo = ''] = content.split(/=== Трек ===/i);
 
-        if (artistEl) artistEl.innerText = artistInfo.replace(/=== Артист ===/i, '').trim() || 'Нет информации об артисте';
-        if (trackEl) trackEl.innerText = trackInfo.trim() || 'Нет информации о треке';
-        if (alertEl) alertEl.style.display = 'block';
+            if (artistEl) artistEl.innerText = artistInfo.replace(/=== Артист ===/i, '').trim() || 'Нет информации об артисте';
+            if (trackEl) trackEl.innerText = trackInfo.trim() || 'Нет информации о треке';
+        }
     } catch {
         if (artistEl) artistEl.innerText = 'Ошибка при получении информации об артисте';
         if (trackEl) trackEl.innerText = 'Ошибка при получении информации о треке';
@@ -617,6 +674,9 @@ async function setSettings(newSettings) {
             }
         }
     }
+
+    // Стриминг
+    useStream = newSettings['Действия'].useStream
 
     // Auto Play
     if (newSettings['Developer'].devAutoPlayOnStart && !window.hasRun) {
