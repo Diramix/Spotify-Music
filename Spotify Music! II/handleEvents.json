@@ -22,10 +22,35 @@
                 {
                     "id": "useStream",
                     "name": "Стримминг ответа GPT",
-                    "description": "Текст GPT будет показываться сразу в реальном времени.",
+                    "description": "Текст GPT будет показываться сразу в реальном времени. (Работает не на всех моделях!)",
                     "type": "button",
                     "bool": false,
                     "defaultParameter": false
+                },
+                {
+                    "id": "useModel",
+                    "name": "Модель",
+                    "description": "Модель для поиска информации.",
+                    "type": "selector",
+                    "selected": 5,
+                    "options": {
+                        "1": {
+                            "name": "searchgpt"
+                        },
+                        "2": {
+                            "name": "gpt-4o-mini"
+                        },
+                        "3": {
+                            "name": "llama-3.3"
+                        },
+                        "4": {
+                            "name": "gemini-2.0-flash"
+                        },
+                        "5": {
+                            "name": "gemini-2.0-flash-mini"
+                        }
+                    },
+                    "defaultParameter": 5
                 },
                 {
                     "id": "achtungBypass",

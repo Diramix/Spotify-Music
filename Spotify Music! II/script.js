@@ -196,7 +196,7 @@ const streamContent = async (prompt, targetEl) => {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-            model: 'gpt-4o-mini',
+            model: useModel,
             request: {
                 messages: [{ role: 'user', content: prompt }],
                 stream: true
@@ -266,7 +266,7 @@ const fetchDataAndUpdateNeuro = async (artistName, trackName) => {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    model: 'gpt-4o-mini',
+                    model: useModel,
                     request: { messages: [{ role: 'user', content: prompt }] }
                 })
             });
@@ -598,11 +598,12 @@ async function getSettings() {
             console.warn("Структура данных не соответствует ожидаемой.");
             return {};
         }
+
         return Object.fromEntries(data.data.sections.map(({ title, items }) => [
             title,
             Object.fromEntries(items.map(item => [
                 item.id,
-                item.bool ?? item.input ?? Object.fromEntries(item.buttons?.map(b => [b.name, b.text]) || [])
+                item.selected ?? item.bool ?? item.input ?? Object.fromEntries(item.buttons?.map(b => [b.name, b.text]) || [])
             ]))
         ]));
     } catch (error) {
@@ -684,6 +685,28 @@ async function setSettings(newSettings) {
             ?.click();
         window.hasRun = true;
     }
+
+    // useModel
+    function getModelNameFromValue(value) {
+        switch (value) {
+            case 1: return "searchgpt";
+            case 2: return "gpt-4o-mini";
+            case 3: return "llama-3.3";
+            case 4: return "gemini-2.0-flash";
+            case 5: return "gemini-2.0-flash-lite";
+        }
+    }
+
+    async function updateModelName() {
+        const settings = await getSettings();
+        const selected = settings?.["Действия"]?.["useModel"];
+        if (selected !== undefined) {
+            useModel = getModelNameFromValue(selected);
+            console.log("Текущая модель:", useModel);
+        }
+    }
+
+    updateModelName();
 
     // Update theme settings delay
     if (Object.keys(settings).length === 0 || settings['Особое'].setInterval.text !== newSettings['Особое'].setInterval.text) {

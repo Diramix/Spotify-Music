@@ -7,7 +7,7 @@
   ],
   "type": "theme",
   "description": "Spotify Premium",
-  "version": "2.1.13",
+  "version": "2.1.14",
   "css": "style.css",
   "script": "script.js",
   "tags": [
