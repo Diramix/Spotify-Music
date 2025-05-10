@@ -190,8 +190,9 @@ const fetchDataAndUpdateWiki = async (searchText) => {
 };
 
 let useStream = true;
+let currentAbortController = null;
 
-const streamContent = async (prompt, targetEl) => {
+const streamContent = async (prompt, targetEl, signal) => {
     const res = await fetch('http://api.onlysq.ru/ai/v2', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -201,7 +202,8 @@ const streamContent = async (prompt, targetEl) => {
                 messages: [{ role: 'user', content: prompt }],
                 stream: true
             }
-        })
+        }),
+        signal
     });
 
     if (!res.ok || !res.body) throw new Error();
@@ -236,6 +238,10 @@ const streamContent = async (prompt, targetEl) => {
 };
 
 const fetchDataAndUpdateNeuro = async (artistName, trackName) => {
+    if (currentAbortController) currentAbortController.abort();
+    currentAbortController = new AbortController();
+    const signal = currentAbortController.signal;
+
     const artistEl = document.querySelector(Search_InfoSelector);
     const trackEl = document.querySelector(GPT_Search_InfoSelector);
     const alertEl = document.querySelector(AchtungAlertSelector);
@@ -247,8 +253,8 @@ const fetchDataAndUpdateNeuro = async (artistName, trackName) => {
     try {
         if (useStream) {
             await Promise.all([
-                streamContent(`Расскажи кратко про артиста "${artistName}", без приветствий, без использования markdown и дополнительных слов.`, artistEl),
-                streamContent(`Расскажи кратко про трек "${trackName}" артиста "${artistName}", без приветствий, без использования markdown и дополнительных слов.`, trackEl)
+                streamContent(`Расскажи кратко про артиста "${artistName}", без приветствий, без использования markdown и дополнительных слов.`, artistEl, signal),
+                streamContent(`Расскажи кратко про трек "${trackName}" артиста "${artistName}", без приветствий, без использования markdown и дополнительных слов.`, trackEl, signal)
             ]);
         } else {
             const prompt = `
@@ -268,7 +274,8 @@ const fetchDataAndUpdateNeuro = async (artistName, trackName) => {
                 body: JSON.stringify({
                     model: useModel,
                     request: { messages: [{ role: 'user', content: prompt }] }
-                })
+                }),
+                signal
             });
 
             if (!res.ok) throw new Error();
