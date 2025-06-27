@@ -3,6 +3,9 @@
 
 ### Powered by
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" height="40px" width="40px" /></a><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" height="40px" width="40px" /></a>
+
+> [!Warning]
+> Development of this theme has been suspended indefinitely because I don’t want to work on something I don’t use. It may also not work with the latest versions of Yandex Music or the PulseSync mod. Feel free to fork it to keep the theme alive — I believe you can create your own version based on mine, and it might even surpass the original!
     
 # Spotify Music! II
 
